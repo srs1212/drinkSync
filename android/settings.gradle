@@ -1,0 +1,3 @@
+rootProject.name = 'drinkSync'
+
+include ':app'
