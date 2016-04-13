@@ -1,36 +1,50 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- */
+'use strict';
+var React = require('react-native');
+var Landing = require('./landing');
+var DrinkComp = require('./drinkComp');
 
-import React, {
-  AppRegistry,
-  Component,
+var {
   StyleSheet,
   Text,
-  View
-} from 'react-native';
+  TextInput,
+  View,
+  TouchableHighlight,
+  ActivityIndicatorIOS,
+  Image,
+  Component,
+  Button,
+} = React;
 
-class drinkSync extends Component {
-  render() {
+
+
+
+var drinkSync = React.createClass({
+  getInitialState: function() {
+    return {
+      legal: true
+    }
+  },
+  showWhichComponent: function() {
+    return this.state.legal ? <DrinkComp /> : <Landing handleLegalSubmit={this.handleLegalSubmit} handleNotLegalSubmit={this.handleNotLegalSubmit}/>
+  },
+  handleLegalSubmit: function() {
+    this.setState({
+      legal: true
+    })
+  },
+  handleNotLegalSubmit: function() {
+    console.log("inside not legal");
+  },
+  render: function (){
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Drink SYNC!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
-      </View>
+     <View > 
+      {this.showWhichComponent()}
+     </View>      
     );
   }
-}
+});
 
-const styles = StyleSheet.create({
+var styles = React.StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -49,4 +63,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('drinkSync', () => drinkSync);
+React.AppRegistry.registerComponent('drinkSync', () => drinkSync);
