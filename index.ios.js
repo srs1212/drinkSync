@@ -2,6 +2,8 @@
 var React = require('react-native');
 var Landing = require('./landing');
 var DrinkComp = require('./drinkComp');
+var Dimensions = require('Dimensions');
+var windowSize = Dimensions.get('window');
 
 var {
   StyleSheet,
@@ -15,7 +17,15 @@ var {
   Button,
 } = React;
 
+const styles = React.StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
 
+
+});
 
 
 var drinkSync = React.createClass({
@@ -37,30 +47,20 @@ var drinkSync = React.createClass({
   },
   render: function (){
     return (
-     <View > 
+     <View style={[styles.container, testBorder('black')]}> 
       {this.showWhichComponent()}
      </View>      
     );
   }
 });
 
-var styles = React.StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+var testBorder = function(color){
+  return {
+    borderColor: color,
+    borderWidth: 2
+  }
+}
+
+
 
 React.AppRegistry.registerComponent('drinkSync', () => drinkSync);

@@ -1,5 +1,8 @@
 'use strict';
 var React = require('react-native');
+var Nav = require('./nav');
+var Dimensions = require('Dimensions');
+var windowSize = Dimensions.get('window');
 // var Button = require('apsl-react-native-button');
 
 var {
@@ -21,20 +24,49 @@ var {
 
 
 const styles = React.StyleSheet.create({
-  text: {
-    color: 'black',
-    backgroundColor: 'white',
-    fontSize: 30,
-    margin: 80
-  },
-  header: {
-  	color: 'blue',
-  	fontSize: 30,
-  	margin: 80,
-  	flex: 1,
-  	justifyContent: 'flex-start',
+
+  containerD: {
+    flex: 1,
+    flexDirection: 'column',
+    width: windowSize.width,
+    height: windowSize.height,
+    justifyContent: 'center',
     alignItems: 'center',
   },
+
+  bg: {
+    position: 'absolute',
+    left: 0,
+    top: 0,
+    width: windowSize.width,
+    height: windowSize.height
+  },
+
+  navHeight: {
+    flex: .2,
+    width: windowSize.width,
+    backgroundColor: 'pink',
+    alignItems: 'center', 
+    justifyContent: 'center'
+  }, 
+
+  bodyHeight: {
+    flex: .8,
+    width: windowSize.width,
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+
+  halfHeight: {
+    flex: .5,
+    backgroundColor: 'grey'
+  },
+
+  quarterHeight: {
+    flex: .25,
+    backgroundColor: 'grey'
+  },
+
 
 });
 
@@ -71,14 +103,26 @@ var filterDrinkData = React.createClass({
 	render: function (){
 	console.log("hello world");
 		return (
-			<View>
-				<Text style={styles.header}>
-						filter Drink Data File
-         </Text>
-			</View>
+			<View style={[ styles.containerD, testBorder('yellow')]}>
+          <View style={[ styles.navHeight, testBorder('red')]}>
+            <Nav/>
+          </View>
+          <View style={[testBorder('pink'), styles.bodyHeight]}>
+    				<Text>
+    						{this.convertToFahrenheit(283)}
+             </Text>
+    			</View>
+      </View>
 			);
 	}
 });
+
+var testBorder = function(color){
+  return {
+    borderColor: color,
+    borderWidth: 2
+  }
+}
 
 
 

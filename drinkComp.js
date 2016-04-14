@@ -16,33 +16,21 @@ var {
  
 
 
-const style = React.StyleSheet.create({
-  text: {
-    color: 'black',
-    backgroundColor: 'white',
-    fontSize: 30,
-    margin: 80
-  },
-  container: {
-    flex: 1
-  },
-  header: {
-    color: 'blue',
-    fontSize: 50,
-    margin: 80
-  }
-});
-
 var DrinkComp = React.createClass({
   render: function (){
     return (
-      <View style={style.header}>
+       <View > 
         <FilterDrinkData />
       </View>
       );
   }
 });
 
-
+var testBorder = function(color){
+  return {
+    borderColor: color,
+    borderWidth: 2
+  }
+}
 
 module.exports = DrinkComp;
