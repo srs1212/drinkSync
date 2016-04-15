@@ -1,15 +1,16 @@
 # drinkSync
 
 <!-- 
-APP (State)
-	-Landing
-	-drinkComp
-		-filterDrinkData
-			-nav
-			-showDrink
-				-titleWeather
-				-drinkDetails
-			-showFilter
-				-showMebutton
-				-sweetSavoryFilter
-				-liquorFilter
+Index (State)
+    -Landing
+    -DataAndLogic
+        -MainNav
+            -ShowDrink
+                -Title
+                -Weather
+                -Ingredients
+                -Recipe
+            -ShowFilter
+                -sweetSavoryFilter
+                -liquorFilter
+                -showMebutton

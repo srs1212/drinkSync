@@ -5,7 +5,8 @@ var DrinkSchema = new Schema({
  drinkName: String,
  ingredients: [String],
  recipe: String,
- alcohol: [String]
+ alcohol: [String],
+ image: String
 });
 
 module.exports = mongoose.model('Drink', DrinkSchema);

@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageViewManager.m \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageViewManager.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageViewManager.m \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageViewManager.h \
   ../../React/Views/RCTViewManager.h ../../React/Base/RCTBridgeModule.h \
   ../../React/Base/RCTDefines.h ../../React/Base/RCTConvert.h \
   ../../React/Layout/Layout.h ../../React/Views/RCTAnimationType.h \
@@ -12,10 +12,10 @@ dependencies: \
   ../../React/Base/RCTBridgeDelegate.h ../../React/Base/RCTFrameUpdate.h \
   ../../React/Base/RCTInvalidating.h \
   ../../React/Base/RCTJavaScriptExecutor.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageLoader.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageLoader.h \
   ../../React/Base/RCTURLRequestHandler.h \
   ../../React/Base/RCTURLRequestDelegate.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
   ../../React/Base/RCTImageSource.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageView.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageView.h \
   ../../React/Views/RCTImageComponent.h

@@ -1,24 +1,24 @@
 dependencies: \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTMap.m \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTMap.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTConvert+MapKit.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTConvert.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Layout/Layout.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTAnimationType.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTBorderStyle.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTDefines.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTLog.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTAssert.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTPointerEvents.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTComponent.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTEventDispatcher.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTBridge.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTBridgeModule.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTFrameUpdate.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTInvalidating.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTJavaScriptExecutor.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTMapAnnotation.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTMapOverlay.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Base/RCTUtils.h
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTMap.m \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTMap.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTConvert+MapKit.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTConvert.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Layout/Layout.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTAnimationType.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTBorderStyle.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTTextDecorationLineType.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTDefines.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTLog.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTAssert.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTPointerEvents.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTComponent.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTEventDispatcher.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTBridge.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTBridgeDelegate.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTBridgeModule.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTFrameUpdate.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTInvalidating.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTJavaScriptExecutor.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTMapAnnotation.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTMapOverlay.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Base/RCTUtils.h

@@ -1,8 +1,8 @@
 dependencies: \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageView.m \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageView.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageView.m \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageView.h \
   ../../React/Views/RCTImageComponent.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
   ../../React/Base/RCTConvert.h ../../React/Layout/Layout.h \
   ../../React/Views/RCTAnimationType.h \
   ../../React/Views/RCTBorderStyle.h \
@@ -14,11 +14,11 @@ dependencies: \
   ../../React/Base/RCTInvalidating.h \
   ../../React/Base/RCTJavaScriptExecutor.h \
   ../../React/Base/RCTEventDispatcher.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageLoader.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageLoader.h \
   ../../React/Base/RCTURLRequestHandler.h \
   ../../React/Base/RCTURLRequestDelegate.h \
   ../../React/Base/RCTImageSource.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageUtils.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageUtils.h \
   ../../React/Base/RCTUtils.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageBlurUtils.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageBlurUtils.h \
   ../../React/Views/UIView+React.h ../../React/Views/RCTComponent.h

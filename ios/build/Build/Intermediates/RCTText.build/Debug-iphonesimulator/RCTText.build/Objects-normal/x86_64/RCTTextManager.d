@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Text/RCTTextManager.m \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Text/RCTTextManager.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Text/RCTTextManager.m \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Text/RCTTextManager.h \
   ../../React/Views/RCTViewManager.h ../../React/Base/RCTBridgeModule.h \
   ../../React/Base/RCTDefines.h ../../React/Base/RCTConvert.h \
   ../../React/Layout/Layout.h ../../React/Views/RCTAnimationType.h \
@@ -13,9 +13,9 @@ dependencies: \
   ../../React/Base/RCTInvalidating.h \
   ../../React/Base/RCTJavaScriptExecutor.h \
   ../../React/Modules/RCTAccessibilityManager.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Text/RCTShadowRawText.h \
   ../../React/Views/RCTShadowView.h ../../React/Base/RCTRootView.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Text/RCTShadowText.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Text/RCTText.h \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Text/RCTTextView.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Text/RCTShadowText.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Text/RCTText.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Text/RCTTextView.h \
   ../../React/Views/RCTView.h ../../React/Views/UIView+React.h

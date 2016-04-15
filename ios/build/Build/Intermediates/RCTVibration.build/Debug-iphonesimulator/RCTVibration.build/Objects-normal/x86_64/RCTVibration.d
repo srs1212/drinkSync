@@ -1,4 +1,4 @@
 dependencies: \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Vibration/RCTVibration.m \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Vibration/RCTVibration.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Vibration/RCTVibration.m \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Vibration/RCTVibration.h \
   ../../React/Base/RCTBridgeModule.h ../../React/Base/RCTDefines.h

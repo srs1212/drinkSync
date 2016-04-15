@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Network/RCTNetworkTask.m \
-  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Network/RCTNetworkTask.h \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Network/RCTNetworkTask.m \
+  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Network/RCTNetworkTask.h \
   ../../React/Base/RCTURLRequestDelegate.h \
   ../../React/Base/RCTURLRequestHandler.h \
   ../../React/Base/RCTBridgeModule.h ../../React/Base/RCTDefines.h \
