@@ -1,8 +1,8 @@
-'use strict';
+
 var React = require('react-native');
-var Button = require('apsl-react-native-button');
-var Dimensions = require('Dimensions');
-var windowSize = Dimensions.get('window');
+var Icon = require('react-native-vector-icons/FontAwesome');
+var ScrollableTabView = require('react-native-scrollable-tab-view');
+var FilterDrinkData = require('./filterDrinkData');
 
 var {
   StyleSheet,
@@ -10,56 +10,47 @@ var {
   TextInput,
   View,
   TouchableHighlight,
+  TouchableOpacity,
   ActivityIndicatorIOS,
   Image,
+  ScrollView,
   Component,
 } = React;
 
 
-// customize the material design theme
-
-
-
-
-const styles = React.StyleSheet.create({
-  containerNav: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    margin: 0 
-  },
-  buttonWrapperNav: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'stretch',
-    padding: 10
-  },
-
-
-
-});
-
-var Nav = React.createClass({
-  render: function (){
-  console.log("renderingNav");
+class FilterPage extends Component {
+  render() {
     return (
-      <View style={[styles.containerNav, testBorder('grey')]}>
-            <Text>
-                  DrinkSync Nav
-            </Text>
-      </View>
-      );
+      <ScrollView>
+          <Image source={{uri: "https://snaplogic-h.s3.amazonaws.com/uploads/snap/image/30/filter.jpg"}} 
+          style={{flex: 1, height: 320}} resizeMode="contain" />
+      </ScrollView>
+    );
   }
-});
+}
+
+class DrinkPage extends Component {
+  render() {
+    return (
+    	<View> 
+    	<FilterDrinkData />
+    	</View>
+    	)
+  }
+};
 
 
-var testBorder = function(color){
-  return {
-    borderColor: color,
-    borderWidth: 2
+class Nav extends Component {
+  render() {
+    return (
+      <ScrollableTabView style={{marginTop: 20, }}>
+      <FilterPage tabLabel='Filter'/>
+      <DrinkPage tabLabel='Drink'/>
+   	  </ScrollableTabView> 
+    )
   }
 }
 
 
-module.exports = Nav;
 
+module.exports = Nav;

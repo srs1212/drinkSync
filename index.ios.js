@@ -1,7 +1,8 @@
 'use strict';
 var React = require('react-native');
+var Nav = require('./nav');
 var Landing = require('./landing');
-var DrinkComp = require('./drinkComp');
+var ScrollBar = require('./scrollBar');
 var Dimensions = require('Dimensions');
 var windowSize = Dimensions.get('window');
 
@@ -31,11 +32,11 @@ const styles = React.StyleSheet.create({
 var drinkSync = React.createClass({
   getInitialState: function() {
     return {
-      legal: true
+      legal: false
     }
   },
   showWhichComponent: function() {
-    return this.state.legal ? <DrinkComp /> : <Landing handleLegalSubmit={this.handleLegalSubmit} handleNotLegalSubmit={this.handleNotLegalSubmit}/>
+    return this.state.legal ? <ScrollBar /> : <Landing handleLegalSubmit={this.handleLegalSubmit} handleNotLegalSubmit={this.handleNotLegalSubmit}/>
   },
   handleLegalSubmit: function() {
     this.setState({
@@ -47,9 +48,7 @@ var drinkSync = React.createClass({
   },
   render: function (){
     return (
-     <View style={[styles.container, testBorder('black')]}> 
-      {this.showWhichComponent()}
-     </View>      
+   this.showWhichComponent()
     );
   }
 });

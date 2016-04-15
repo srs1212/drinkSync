@@ -1,5 +1,7 @@
 'use strict';
 var React = require('react-native');
+var Nav = require('./nav');
+var Navtwo = require('./navtwo');
 var FilterDrinkData = require ('./filterDrinkData');
 // var Button = require('apsl-react-native-button');
 
@@ -16,12 +18,13 @@ var {
  
 
 
-var DrinkComp = React.createClass({
+var ScrollBar = React.createClass({
   render: function (){
     return (
-       <View > 
-        <FilterDrinkData />
-      </View>
+
+        <Navtwo/>
+
+
       );
   }
 });
@@ -33,4 +36,4 @@ var testBorder = function(color){
   }
 }
 
-module.exports = DrinkComp;
+module.exports = ScrollBar;

@@ -1,6 +1,7 @@
 'use strict';
 var React = require('react-native');
 var Nav = require('./nav');
+var Navtwo = require('./navtwo');
 var Dimensions = require('Dimensions');
 var windowSize = Dimensions.get('window');
 // var Button = require('apsl-react-native-button');
@@ -45,7 +46,7 @@ const styles = React.StyleSheet.create({
   navHeight: {
     flex: .2,
     width: windowSize.width,
-    backgroundColor: 'pink',
+    backgroundColor: 'transparent',
     alignItems: 'center', 
     justifyContent: 'center'
   }, 
