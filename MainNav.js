@@ -12,6 +12,9 @@ render() {
               <ShowDrink tabLabel='Drink'
               location = {this.props.location}
               temp = {this.props.temp}
+              precip = {this.props.precip}
+              icon = {this.props.icon}
+              icon_url = {this.props.icon_url}
               drinkName = {this.props.drinkName}
               image = {this.props.image}
               />

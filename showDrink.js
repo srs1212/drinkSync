@@ -43,7 +43,7 @@ var ShowDrink = React.createClass({
           <View style={styles.container}>
             <View style={[styles.header, this.border('green')]}>
               <View style={[styles.weatherWrapper, this.border('red')]}> 
-                <Weather location={this.props.location} temp={this.props.temp}/>
+                <Weather location={this.props.location} temp={this.props.temp} icon={this.props.icon} icon_url={this.props.icon_url}/>
               </View>
               <View style={[styles.drinkNameWrapper, this.border('yellow')]}> 
                 <DrinkName image={this.props.image} drinkName={this.props.drinkName} />
