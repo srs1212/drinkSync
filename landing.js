@@ -10,6 +10,7 @@ var {
   Text,
   View,
   Image,
+  Alert
 } = React;
 
 // customize the material design theme

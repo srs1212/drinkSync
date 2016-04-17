@@ -1,8 +1,8 @@
 dependencies: \
-  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/WebSocket/RCTWebSocketModule.m \
-  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/WebSocket/RCTWebSocketModule.h \
+  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/WebSocket/RCTWebSocketModule.m \
+  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/WebSocket/RCTWebSocketModule.h \
   ../../React/Base/RCTBridgeModule.h ../../React/Base/RCTDefines.h \
-  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.h \
+  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/WebSocket/RCTSRWebSocket.h \
   ../../React/Base/RCTBridge.h ../../React/Base/RCTBridgeDelegate.h \
   ../../React/Base/RCTFrameUpdate.h ../../React/Base/RCTInvalidating.h \
   ../../React/Base/RCTJavaScriptExecutor.h \

@@ -12,6 +12,8 @@ render() {
               <ShowDrink tabLabel='Drink'
               location = {this.props.location}
               temp = {this.props.temp}
+              drinkName = {this.props.drinkName}
+              image = {this.props.image}
               />
               <ShowFilter tabLabel='Filter'/>
             </ScrollableTabView>

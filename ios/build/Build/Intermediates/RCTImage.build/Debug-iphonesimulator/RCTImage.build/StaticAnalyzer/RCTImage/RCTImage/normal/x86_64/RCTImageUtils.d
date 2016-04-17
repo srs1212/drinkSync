@@ -1,8 +1,8 @@
 dependencies: \
-  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageUtils.m \
-  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTImageUtils.h \
+  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageUtils.m \
+  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTImageUtils.h \
   ../../React/Base/RCTDefines.h \
-  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
+  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Image/RCTResizeMode.h \
   ../../React/Base/RCTConvert.h ../../React/Layout/Layout.h \
   ../../React/Views/RCTAnimationType.h \
   ../../React/Views/RCTBorderStyle.h \

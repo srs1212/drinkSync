@@ -7,7 +7,7 @@ var DataAndLogic = require('./DataAndLogic');
 var drinkSync = React.createClass({
   getInitialState: function() {
     return {
-      legal: false
+      legal: true
     };
   },
   handleLegalSubmit: function() {

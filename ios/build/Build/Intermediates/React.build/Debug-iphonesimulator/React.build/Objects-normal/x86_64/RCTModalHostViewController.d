@@ -1,3 +1,3 @@
 dependencies: \
-  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTModalHostViewController.m \
-  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/React/Views/RCTModalHostViewController.h
+  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTModalHostViewController.m \
+  /Users/evanadmin/code/drinkSync/node_modules/react-native/React/Views/RCTModalHostViewController.h

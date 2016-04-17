@@ -1,6 +1,6 @@
 dependencies: \
-  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Geolocation/RCTLocationObserver.m \
-  /Users/johnseyfert/code/personalProjects/drinkSync/node_modules/react-native/Libraries/Geolocation/RCTLocationObserver.h \
+  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Geolocation/RCTLocationObserver.m \
+  /Users/evanadmin/code/drinkSync/node_modules/react-native/Libraries/Geolocation/RCTLocationObserver.h \
   ../../React/Base/RCTBridgeModule.h ../../React/Base/RCTDefines.h \
   ../../React/Base/RCTAssert.h ../../React/Base/RCTBridge.h \
   ../../React/Base/RCTBridgeDelegate.h ../../React/Base/RCTFrameUpdate.h \

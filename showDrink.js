@@ -1,33 +1,29 @@
 'use strict';
-
 var React = require('react-native');
 var Weather = require('./Weather');
-
+var DrinkName = require('./DrinkName');
 var {
   StyleSheet,
   Text,
   View,
 } = React;
-
 var styles = StyleSheet.create({
   container: {
     flex: 1, 
     alignItems: 'stretch'
   },
   header: { 
-    flex: 8
+    flex: 1
   },
   drinkDetails: { 
-    flex: 10,
+    flex: 1,
     flexDirection: 'row',
   },
   drinkNameWrapper: { 
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center' 
   },
   weatherWrapper: { 
-    flex: 3,
+    flex: 1,
   },
   ingredientWrapper: { 
     flex: 1,
@@ -40,19 +36,17 @@ var styles = StyleSheet.create({
     alignItems: 'center'
   },
 });
-
 var ShowDrink = React.createClass({
   render: function(){
+    console.log('in ShowDrink', this.props.image);
     return( 
           <View style={styles.container}>
             <View style={[styles.header, this.border('green')]}>
-              <View style={[styles.drinkNameWrapper, this.border('yellow')]}> 
-                <Text>
-                  DRINK NAME
-                </Text>
-              </View>
               <View style={[styles.weatherWrapper, this.border('red')]}> 
                 <Weather location={this.props.location} temp={this.props.temp}/>
+              </View>
+              <View style={[styles.drinkNameWrapper, this.border('yellow')]}> 
+                <DrinkName image={this.props.image} drinkName={this.props.drinkName} />
               </View>
             </View>
             <View style={[styles.drinkDetails, this.border('blue')]}> 
@@ -73,10 +67,8 @@ var ShowDrink = React.createClass({
   border: function(color){
     return {
       borderColor: color,
-      borderWidth: 4
+      borderWidth: 0
     }
   }
 }); 
-
-
 module.exports = ShowDrink;
