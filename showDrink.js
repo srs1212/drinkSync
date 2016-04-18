@@ -2,11 +2,15 @@
 var React = require('react-native');
 var Weather = require('./Weather');
 var DrinkName = require('./DrinkName');
+var Ingredients = require('./Ingredients');
+var Recipe = require('./Recipe');
+
 var {
   StyleSheet,
   Text,
   View,
 } = React;
+
 var styles = StyleSheet.create({
   container: {
     flex: 1, 
@@ -51,14 +55,10 @@ var ShowDrink = React.createClass({
             </View>
             <View style={[styles.drinkDetails, this.border('blue')]}> 
               <View style={[styles.ingredientWrapper, this.border('green')]}>
-                <Text>
-                  Ingredients
-                </Text>
+                <Ingredients image={this.props.image} Ingredients={this.props.ingredients} />
               </View>
              <View style={[styles.recipeWrapper, this.border('yellow')]}>
-                <Text>
-                  Recipe
-                </Text>
+                <Recipe image={this.props.image} Recipe={this.props.recipe} />
              </View>
             </View>
           </View>

@@ -14,6 +14,8 @@ render() {
               temp = {this.props.temp}
               drinkName = {this.props.drinkName}
               image = {this.props.image}
+              ingredients = {this.props.ingredients}
+              recipe = {this.props.recipe}
               />
               <ShowFilter tabLabel='Filter'/>
             </ScrollableTabView>

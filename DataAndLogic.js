@@ -6,6 +6,7 @@ var ratingFactors = require ('./RatingFactors');
 var userLocation = '59802';
 var fetchUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=' + userLocation + ',us&appid=22a1e092f3c7508f8ed419614d5ae7b5';
 var DrinkData = require ('./DrinkData');
+
 var DataAndLogic = React.createClass({
   getInitialState: function(){
     return {
@@ -14,8 +15,8 @@ var DataAndLogic = React.createClass({
       drinkName: 'Between the Sheets',
       image: 'http://recipes-drinks.ru/coctails/between-the-sheets.png',
       ingredients: ['lemon juice'],
-      // recipe: '',
-      // alcohol: [''],
+      recipe: '',
+      alcohol: [''],
       }
   },
   componentDidMount: function(){
@@ -64,6 +65,8 @@ var DataAndLogic = React.createClass({
             temp = {this.state.temp}
             drinkName = {this.state.drinkName }
             image = {this.state.image}
+            recipe = {this.state.recipe}
+            ingredients = {this.state.ingredients}
             />
           )
     }
