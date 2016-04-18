@@ -7,7 +7,7 @@ var ScrollableTabView = require('react-native-scrollable-tab-view');
 
 var MainNav = React.createClass({
 render() {
-      console.log('in MainNav', this.props.recipe);
+      console.log('in MainNav', this.props.drink);
     return (
             <ScrollableTabView>
               <ShowDrink tabLabel='Drink'

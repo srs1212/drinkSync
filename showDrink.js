@@ -55,10 +55,10 @@ var ShowDrink = React.createClass({
             </View>
             <View style={[styles.drinkDetails, this.border('blue')]}> 
               <View style={[styles.ingredientWrapper, this.border('green')]}>
-                  <Ingredients ingredients={this.props.ingredients} />
+                  <Ingredients ingredients={this.props.drink ? this.props.drink.ingredients : ''} />
               </View>
               <View style={[styles.recipeWrapper, this.border('yellow')]}>
-                  <Recipe recipe={this.props.recipe} />
+                  <Recipe recipe={this.props.drink ? this.props.drink.recipe : ''} />
               </View>
             </View>
           </View>
