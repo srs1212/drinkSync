@@ -1,5 +1,4 @@
-var DrinkData =
-drinkData: [
+var DrinkData = [
   { drinkName: 'Bijou',
     ingredients: ['Gin', 'Chartreuse', 'Vermouth', 'Dash of Bitters'],
     recipe: "Stir in mixing glass with ice and strain",
@@ -13,15 +12,12 @@ drinkData: [
         wC: 4,
         wD: 5
       },
-      cloudyValue:{
-       cA: 4,
-       cB: 3,
-       cC: 1
-      },
+
+
       precipValue:{
         pA: 5,
-        pB: 3,
-        pC: 1
+        pB: 2,
+
       },
       seasonValue:{
         sSp: 3,
@@ -40,7 +36,8 @@ drinkData: [
         tN: 5,
         wS: 0
       }
-  },
+  }
+},
 
   { drinkName: 'Dark N Stormy',
     ingredients: ['6cl Dark Rum', '10cl Ginger Beer' ],
@@ -55,15 +52,11 @@ drinkData: [
         wC: 4,
         wD: 4
       },
-      cloudyValue:{
-       cA: 4,
-       cB: 4,
-       cC: 4
-      },
+
       precipValue:{
         pA: 4,
-        pB: 4,
-        pC: 4
+        pB: 1,
+ 
       },
       seasonValue:{
         sSp: 3,
@@ -84,8 +77,7 @@ drinkData: [
       }, 
     }
   }
-}]
-};
+];
   // {drinkName: 'Pink Lady',
   //   ingredients: ['1.5oz Gin', '4 dashes Grenadine', '1 egg white'],
   //   recipe: "Shake ingredients very well with ice and strain into cocktail glass. Garnish with a cherry.",

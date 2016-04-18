@@ -2,6 +2,7 @@
 
 var React = require('react-native');
 var MainNav = require('./MainNav');
+var Logic  = require ('./logic');
 // var ratingFactors = require ('./RatingFactors');
 // var userLocation = '59802';
 var userLocationLat = '46.93';
@@ -9,6 +10,10 @@ var userLocationLon = '-114.1';
 // var fetchUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=' + userLocation + ',us&appid=22a1e092f3c7508f8ed419614d5ae7b5';
 var fetchUrl = 'http://api.wunderground.com/api/0cbb2794fb744644/conditions/q/' + userLocationLat + ',' + userLocationLon + '.json';
 // var DrinkData = require ('./DrinkData');
+
+
+
+
 var DataAndLogic = React.createClass({
   getInitialState: function(){
     return {
@@ -22,6 +27,7 @@ var DataAndLogic = React.createClass({
       ingredients: ['lemon juice'],
       recipe: '',
       alcohol: [''],
+      date: null
       }
   },
   componentDidMount: function(){
@@ -38,7 +44,7 @@ var DataAndLogic = React.createClass({
     fetch(fetchUrl)
     .then((response) => response.json())
     .then((responseText) => {
-      console.log("Data Here", responseText.current_observation.icon_url);
+      // console.log("Data Here", responseText.current_observation.icon_url);
       temp = responseText.current_observation.temp_f;
       location = responseText.current_observation.display_location.city;
       precip = responseText.current_observation.precip_1hr_in;
@@ -57,18 +63,6 @@ var DataAndLogic = React.createClass({
     });
   },
 
-  weatherValue: function(temp){
-    var Weather = this.props.drinkRating.weatherValue;
-    if ( this.props.temp <= 29 ){
-      return Weather.wA(value);
-    } else if ( this.props.temp >= 30 && temp <= 49 ){
-        return Weather.wB(value);
-    } else if ( this.props.temp >= 50 && temp <= 80 ){
-      return Weather.wC(value);
-    } else {
-      return Weather.wD(value);
-    }
-  },
 
   render: function(){
       return( 

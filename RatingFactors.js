@@ -2,7 +2,6 @@
 
 module.exports = {
  	weatherValue: 10,
-	cloudyValue: 2,
  	precipValue: 3,
  	seasonValue: 7,
  	dayValue: 6,

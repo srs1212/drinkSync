@@ -4,6 +4,8 @@
 Index (State)
     -Landing
     -DataAndLogic
+        -Logic
+        -DrinkData
         -MainNav
             -ShowDrink
                 -Title

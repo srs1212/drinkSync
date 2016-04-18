@@ -15,10 +15,7 @@ var DrinkSchema = new Schema({
  		wC: Number,
  		wD: Number
  	},
- 	cloudyValue:{
- 		cA: Number,
- 		cB: Number
- 	},
+
  	precipValue:{
  		pA: Number,
  		pB: Number,
