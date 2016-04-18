@@ -13,6 +13,7 @@ var styles = StyleSheet.create({
  container: {
    flex: 1, 
    flexDirection: 'row',
+   justifyContent: 'center',
  },
  ingredientWrapper: { 
    flex: 10,
@@ -32,13 +33,13 @@ var styles = StyleSheet.create({
 
 var Ingredients = React.createClass({
  render: function(){
-   // var displayIngredients = this.props.ingredients
-   // console.log("in drinkName", image);
+          // console.log('in ingredients', this.props.ingredients);
+   var displayIngredients = this.props.ingredients
    return( 
-         <View style={[styles.container, this.border('green')]}>
-           <View style={[styles.ingredientWrapper, this.border('yellow')]}>
+         <View style={[styles.container, this.border('yellow')]}>
+           <View style={[styles.ingredientWrapper, this.border('blue')]}>
              <Text>
-               {ingredients}
+               {displayIngredients}
              </Text>
            </View>
          </View>

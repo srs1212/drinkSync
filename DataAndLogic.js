@@ -25,7 +25,7 @@ var DataAndLogic = React.createClass({
       drinkName: 'Between the Sheets',
       image: 'http://recipes-drinks.ru/coctails/between-the-sheets.png',
       ingredients: ['lemon juice'],
-      recipe: '',
+      recipe: 'Pour all ingredients into shaker with ice cubes, shake, strain into chilled cocktail glass',
       alcohol: [''],
       date: null
       }
@@ -65,6 +65,7 @@ var DataAndLogic = React.createClass({
 
 
   render: function(){
+      console.log('in DataAndLogic', this.state.recipe);
       return( 
             <MainNav
             location = {this.state.location}
@@ -74,6 +75,8 @@ var DataAndLogic = React.createClass({
             icon_url = {this.state.icon_url}
             drinkName = {this.state.drinkName}
             image = {this.state.image}
+            ingredients = {this.state.ingredients}
+            recipe = {this.state.recipe}
             />
           )
     }

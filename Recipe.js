@@ -13,8 +13,7 @@ container: {
 },
 RecipeWrapper: { 
   flex: 10,
-  justifyContent: 'center',
-  alignItems: 'center'
+
 },
 bg: {
   position: 'absolute',
@@ -29,13 +28,13 @@ base: {
 
 var Recipe = React.createClass({
 render: function(){
-  // var displayIngredients = this.props.ingredients
-  // console.log("in drinkName", image);
+  console.log("in Recipe", this.props.recipe);
+  var displayRecipe = this.props.recipe
   return( 
-        <View style={[styles.container, this.border('green')]}>
-          <View style={[styles.recipeWrapper, this.border('yellow')]}>
+        <View style={[styles.container, this.border('yellow')]}>
+          <View style={[styles.recipeWrapper, this.border('purple')]}>
             <Text>
-              {recipe}
+              {displayRecipe}
             </Text>
           </View>
         </View>
