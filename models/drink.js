@@ -8,37 +8,36 @@ var DrinkSchema = new Schema({
  alcohol: [String],
  image: String,
  sweetNeat: String,
- drinkRating: {
- 	 weatherValue:{
- 		wA: Number,
- 		wB: Number,
- 		wC: Number,
- 		wD: Number
- 	},
+  drinkRating: {
+      weatherValue:{
+        wCold: Number,
+        wMod: Number,
+        wWarm: Number,
+        wHot: Number
+      },
 
- 	precipValue:{
- 		pA: Number,
- 		pB: Number,
- 		pC: Number
- 	},
- 	seasonValue:{
- 		sSp: Number,
- 		sSu: Number,
- 		sFa: Number,
- 		sWi: Number
- 	},
- 	dayValue:{
- 		dA: Number,
- 		dB: Number,
- 		dC: Number
- 	},
-	timeValue:{
- 		tM: Number,
- 		tA: Number,
- 		tN: Number,
- 		wS: Number
- 	}, 
-
+      precipValue:{
+        pNone: Number,
+        pSome: Number,
+ 
+      },
+      seasonValue:{
+        sSpr: Number,
+        sSum: Number,
+        sFal: Number,
+        sWin: Number
+      },
+      dayValue:{
+        dMTRS: Number,
+        dW: Number,
+        dFS: Number
+      },
+      timeValue:{
+        tMrn: Number,
+        tAft: Number,
+        tNt: Number,
+        wSleep: Number
+      }, 
  }
 });
 

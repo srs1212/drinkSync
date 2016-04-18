@@ -38,15 +38,17 @@ var styles = StyleSheet.create({
 });
 var ShowDrink = React.createClass({
   render: function(){
-    console.log('in ShowDrink', this.props.image);
+    console.log('in ShowDrink', this.props.drink);
     return( 
           <View style={styles.container}>
             <View style={[styles.header, this.border('green')]}>
               <View style={[styles.weatherWrapper, this.border('red')]}> 
-                <Weather location={this.props.location} temp={this.props.temp} icon={this.props.icon} icon_url={this.props.icon_url}/>
+                <Weather location={this.props.location} temp={this.props.temp}
+                 icon={this.props.icon} icon_url={this.props.icon_url}/>
               </View>
               <View style={[styles.drinkNameWrapper, this.border('yellow')]}> 
-                <DrinkName image={this.props.image} drinkName={this.props.drinkName} />
+                <DrinkName image={this.props.drink ? this.props.drink.image : ''} 
+                drinkName={this.props.drink ? this.props.drink.drinkName : ''} />
               </View>
             </View>
             <View style={[styles.drinkDetails, this.border('blue')]}> 

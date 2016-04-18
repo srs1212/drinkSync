@@ -2,17 +2,15 @@
 
 var React = require('react-native');
 var MainNav = require('./MainNav');
-var Logic  = require ('./logic');
 // var ratingFactors = require ('./RatingFactors');
 // var userLocation = '59802';
 var userLocationLat = '46.93';
 var userLocationLon = '-114.1';
 // var fetchUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=' + userLocation + ',us&appid=22a1e092f3c7508f8ed419614d5ae7b5';
 var fetchUrl = 'http://api.wunderground.com/api/0cbb2794fb744644/conditions/q/' + userLocationLat + ',' + userLocationLon + '.json';
-// var DrinkData = require ('./DrinkData');
+var DrinkList = require ('./DrinkList');
 
-
-
+var drinkList = new DrinkList();
 
 var DataAndLogic = React.createClass({
   getInitialState: function(){
@@ -22,12 +20,14 @@ var DataAndLogic = React.createClass({
       precip: 0,
       icon: null,
       icon_url: '',
-      drinkName: 'Between the Sheets',
-      image: 'http://recipes-drinks.ru/coctails/between-the-sheets.png',
-      ingredients: ['lemon juice'],
-      recipe: '',
-      alcohol: [''],
-      date: null
+      date: null,
+      drink: {
+        drinkName: 'Between the Sheets',
+        image: 'http://recipes-drinks.ru/coctails/between-the-sheets.png',
+        ingredients: ['lemon juice'],
+        recipe: '',
+        alcohol: ['']
+        }
       }
   },
   componentDidMount: function(){
@@ -49,13 +49,15 @@ var DataAndLogic = React.createClass({
       location = responseText.current_observation.display_location.city;
       precip = responseText.current_observation.precip_1hr_in;
       icon = responseText.current_observation.icon;
-      icon_url = responseText.current_observation.icon_url
+      icon_url = responseText.current_observation.icon_url;
+      var bestDrink = drinkList.bestDrinkOfTemp(temp);
       this.setState({
         temp: temp,
         location: location,
         precip: precip, 
         icon: icon,
-        icon_url: icon_url
+        icon_url: icon_url,
+        drink: bestDrink
       });
     })
     .catch((error) => {
@@ -66,15 +68,17 @@ var DataAndLogic = React.createClass({
 
   render: function(){
       return( 
-            <MainNav
-            location = {this.state.location}
-            temp = {this.state.temp}
-            precip = {this.state.precip}
-            icon = {this.state.icon}
-            icon_url = {this.state.icon_url}
-            drinkName = {this.state.drinkName}
-            image = {this.state.image}
-            />
+
+              <MainNav
+              location = {this.state.location}
+              temp = {this.state.temp}
+              precip = {this.state.precip}
+              icon = {this.state.icon}
+              icon_url = {this.state.icon_url}
+              drink = {this.state.drink}
+              />
+
+
           )
     }
 }); 

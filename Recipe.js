@@ -29,7 +29,7 @@ base: {
 
 var Recipe = React.createClass({
 render: function(){
-  // var displayIngredients = this.props.ingredients
+  // var displayIngredients = this.props.drink.ingredients
   // console.log("in drinkName", image);
   return( 
         <View style={[styles.container, this.border('green')]}>

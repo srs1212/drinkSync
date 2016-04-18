@@ -15,8 +15,7 @@ render() {
               precip = {this.props.precip}
               icon = {this.props.icon}
               icon_url = {this.props.icon_url}
-              drinkName = {this.props.drinkName}
-              image = {this.props.image}
+              drink = {this.props.drink}   
               />
               <ShowFilter tabLabel='Filter'/>
             </ScrollableTabView>

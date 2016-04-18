@@ -37,9 +37,9 @@ var styles = StyleSheet.create({
 
 var DrinkName = React.createClass({
  render: function(){
-   var displayDrinkName = this.props.drinkName
-   var image = this.props.image
-   // console.log("in drinkName", image);
+   var displayDrinkName = this.props.drinkName;
+   var image = this.props.image;
+   console.log("in drinkName", displayDrinkName);
    return( 
          <View style={[styles.container, this.border('green')]}>
            <View style={[styles.iconWrapper, this.border('red')]}>

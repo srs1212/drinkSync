@@ -1,4 +1,4 @@
-var DrinkData = [
+var AllDrinks = [
   { drinkName: 'Bijou',
     ingredients: ['Gin', 'Chartreuse', 'Vermouth', 'Dash of Bitters'],
     recipe: "Stir in mixing glass with ice and strain",
@@ -7,34 +7,31 @@ var DrinkData = [
     sweetNeat: "sweet",
     drinkRating: {
       weatherValue:{
-        wA: 1,
-        wB: 2,
-        wC: 4,
-        wD: 5
+        wCold: 1,
+        wMod: 2,
+        wWarm: 4,
+        wHot: 5
       },
-
-
       precipValue:{
-        pA: 5,
-        pB: 2,
-
+        pNone: 5,
+        pSome: 2
       },
       seasonValue:{
-        sSp: 3,
-        sSu: 5,
-        sFa: 2,
-        sWi: 1
+        sSpr: 3,
+        sSum: 5,
+        sFal: 2,
+        sWin: 1
       },
       dayValue:{
-        dA: 2,
-        dB: 4,
-        dC: 5
+        dMTRS: 2,
+        dW: 4,
+        dFS: 5
       },
       timeValue:{
-        tM: 0,
-        tA: 3,
-        tN: 5,
-        wS: 0
+        tMrn: 0,
+        tAft: 3,
+        tNt: 5,
+        wSleep: 0
       }
   }
 },
@@ -47,34 +44,32 @@ var DrinkData = [
     sweetNeat: "neat",
     drinkRating: {
       weatherValue:{
-        wA: 3,
-        wB: 3,
-        wC: 4,
-        wD: 4
+        wCold: 3,
+        wMod: 3,
+        wWarm: 4,
+        wHot: 4
       },
-
       precipValue:{
-        pA: 4,
-        pB: 1,
- 
+        pNone: 4,
+        pSome: 1
       },
       seasonValue:{
-        sSp: 3,
-        sSu: 5,
-        sFa: 4,
-        sWi: 4
+        sSpr: 3,
+        sSum: 5,
+        sFal: 4,
+        sWin: 4
       },
       dayValue:{
-        dA: 2,
-        dB: 4,
-        dC: 5
+        dMTRS: 2,
+        dW: 4,
+        dFS: 5
       },
       timeValue:{
-        tM: 0,
-        tA: 3,
-        tN: 5,
-        wS: 0
-      }, 
+        tMrn: 0,
+        tAft: 3,
+        tNt: 5,
+        wSleep: 0
+      }
     }
   }
 ];
@@ -100,4 +95,5 @@ var DrinkData = [
   //   image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Tequila_Sunrise_garnished_with_orange_and_cherry_-_Evan_Swigart.jpg/220px-Tequila_Sunrise_garnished_with_orange_and_cherry_-_Evan_Swigart.jpg'}
   // ]
 
+module.exports = AllDrinks;
 
