@@ -28,6 +28,7 @@ var DataAndLogic = React.createClass({
         recipe: '',
         alcohol: ['']
         }
+
       }
   },
   componentDidMount: function(){
@@ -67,8 +68,8 @@ var DataAndLogic = React.createClass({
 
 
   render: function(){
+      console.log('in DataAndLogic', this.state.recipe);
       return( 
-
               <MainNav
               location = {this.state.location}
               temp = {this.state.temp}
@@ -77,8 +78,6 @@ var DataAndLogic = React.createClass({
               icon_url = {this.state.icon_url}
               drink = {this.state.drink}
               />
-
-
           )
     }
 }); 

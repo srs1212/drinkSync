@@ -2,11 +2,16 @@
 var React = require('react-native');
 var Weather = require('./Weather');
 var DrinkName = require('./DrinkName');
+var Ingredients = require('./Ingredients');
+var Recipe = require('./Recipe');
+
+
 var {
   StyleSheet,
   Text,
   View,
 } = React;
+
 var styles = StyleSheet.create({
   container: {
     flex: 1, 
@@ -27,18 +32,15 @@ var styles = StyleSheet.create({
   },
   ingredientWrapper: { 
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center' 
   },
   recipeWrapper: { 
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
   },
 });
 var ShowDrink = React.createClass({
   render: function(){
     console.log('in ShowDrink', this.props.drink);
+
     return( 
           <View style={styles.container}>
             <View style={[styles.header, this.border('green')]}>
@@ -53,15 +55,11 @@ var ShowDrink = React.createClass({
             </View>
             <View style={[styles.drinkDetails, this.border('blue')]}> 
               <View style={[styles.ingredientWrapper, this.border('green')]}>
-                <Text>
-                  Ingredients
-                </Text>
+                  <Ingredients ingredients={this.props.ingredients} />
               </View>
-             <View style={[styles.recipeWrapper, this.border('yellow')]}>
-                <Text>
-                  Recipe
-                </Text>
-             </View>
+              <View style={[styles.recipeWrapper, this.border('yellow')]}>
+                  <Recipe recipe={this.props.recipe} />
+              </View>
             </View>
           </View>
           )
