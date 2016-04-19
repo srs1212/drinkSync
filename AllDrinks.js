@@ -4,7 +4,6 @@ var AllDrinks = [
     recipe: "Stir in mixing glass with ice and strain",
     alcohol: ['Gin'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Bijou_Cocktail.jpg/220px-Bijou_Cocktail.jpg',
-    sweetNeat: "sweet",
     drinkRating: {
       weatherValue:{
         wCold: 1,
@@ -13,7 +12,7 @@ var AllDrinks = [
         wHot: 5
       },
       precipValue:{
-        pNone: 5,
+        pNone: 3,
         pSome: 2
       },
       seasonValue:{
@@ -41,7 +40,6 @@ var AllDrinks = [
     recipe: "  In a highball glass filled with ice add 6cl dark rum and top with ginger beer. Garnish with lime wedge.",
     alcohol: ['Rum'],
     image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Dark_n_Stormy.jpg/220px-Dark_n_Stormy.jpg',
-    sweetNeat: "neat",
     drinkRating: {
       weatherValue:{
         wCold: 3,
@@ -50,8 +48,8 @@ var AllDrinks = [
         wHot: 4
       },
       precipValue:{
-        pNone: 4,
-        pSome: 1
+        pNone: 3,
+        pSome: 5
       },
       seasonValue:{
         sSpr: 3,
@@ -71,7 +69,43 @@ var AllDrinks = [
         wSleep: 0
       }
     }
+  },
+
+  { drinkName: 'Long Island Iced Tea',
+    ingredients: ['1.5 cl Tequila, 1.5 cl Vodka,1.5 cl White rum, 1.5 cl Triple sec, 1.5 cl Gin, 2.5 cl Lemon juice, 3.0 cl Gomme Syrup, 1 dash of Cola'],
+    recipe: "Add all ingredients into highball glass filled with ice. Stir gently. Garnish with lemon spiral.",
+    alcohol: ['Gin', 'Tequila', 'Vodka', 'Rum, Triple Sec'],
+    image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Long_Island_Iced_Teas.jpg/220px-Long_Island_Iced_Teas.jpg',
+    drinkRating: {
+      weatherValue:{
+        wCold: 1,
+        wMod: 2,
+        wWarm: 4,
+        wHot: 4
+      },
+      precipValue:{
+        pNone: 4,
+        pSome: 3
+      },
+      seasonValue:{
+        sSpr: 4,
+        sSum: 5,
+        sFal: 2,
+        sWin: 2
+      },
+      dayValue:{
+        dMTRS: 2,
+        dW: 2,
+        dFS: 5
+      },
+      timeValue:{
+        tMrn: 0,
+        tAft: 1,
+        tNt: 5,
+        wSleep: 0
+      }
   }
+},
 ];
   // {drinkName: 'Pink Lady',
   //   ingredients: ['1.5oz Gin', '4 dashes Grenadine', '1 egg white'],
