@@ -6,14 +6,40 @@ var theDate = new Date();
 var dayDate = theDate.getDate();
 var monthDate = theDate.toString().substr(4,4);
 var monthForSeason = theDate.getMonth();
+var ratingFactors = [{
+ 	weatherValue: 10,
+ 	precipValue: 3,
+ 	seasonValue: 7,
+ 	dayValue: 6,
+ 	timeValue: 8
+}];
 
 var DrinkList = function(drinkData){ //the _ in _allDrinks is syntax suggesting internal data usage.
  	this._allDrinks = drinkData || AllDrinks;
 };
-DrinkList.prototype.bestDrinkOfTemp = function(temp){
-	return this._allDrinks[0];
+DrinkList.prototype.bestDrink = function(temp, precip){ //temp passed
+ 	return this._allDrinks.reduce(function(prev, cur){
+		var scoreC = drinkScore(cur, temp, precip);
+		var scoreP = drinkScore(prev, temp, precip);
+		return scoreC > scoreP ? cur : prev;
+	  });
+
 };
 
+// DrinkList.prototype.bestDrink = function(precip){ //precip
+//  	return this._allDrinks.reduce(function(prev, cur){
+// 		var pvc = precipValue(precip, cur);
+// 		var pvp = precipValue(precip, prev);
+// 		return pvc > pvp ? cur : prev;
+// 	  });	 
+// };
+function drinkScore (drink, temp, precip) {
+	precip = precip || 0;
+	var score = weatherValue(drink, temp) + precipValue(drink, precip);
+	console.log("SCORE", drink.drinkName, score);
+	return score;
+};
+		
 var alcoholFilter = function(){ //filters drinks and excludes those from computations
 };
 
@@ -29,61 +55,53 @@ var theSeason = function(){
   }
 };
 
-var weatherValue = function (){ //oooof no can do. i why declare wvc and wvp?? 
-	//no idea on declaring those to what 
-		var dr = this._allDrinks.reduce(function(temp, prev, cur){
-			var wvc = this._allDrinks.drinkRating.weatherValue;
-			var wvp = DrinkData.drinkRating.weatherValue;
-			if ( temp <= 29 ){
-				return WeatherLoop.wCold;
-			} else if ( temp >= 30 && temp <= 49 ){
-			   	return WeatherLoop.wMod;
-			} else if ( temp >= 50 && temp <= 80 ){
-				return WeatherLoop.wWarm;
-			} else {
-				return WeatherLoop.wHot;
-			}
-		})
-		return dr;
-};
-
-var	precipValue = function (){// returns precip rating for each drink * importance 
-
-		if ( this.props.precip === 0){
-			return PrecipLoop.pNone;
+function weatherValue(drink, temp){
+		var wv = drink.drinkRating.weatherValue;
+		if ( temp <= 29 ) {
+			return wv.wCold;
+		} else if ( temp >= 30 && temp <= 49 ) {
+		   	return wv.wMod;
+		} else if ( temp >= 50 && temp <= 80 ) {
+			return wv.wWarm;
 		} else {
-		   	return PrecipLoop.pSome;
-		} 
-	}
+			return wv.wHot;
+		}
+};	
+
+function weatherValueRated (drink, temp){
+	return weatherValue * ratingFactors.weatherValue;
 };
 
-var seasonValue = function (){ //returns season rating for each drink * importance
-			if ( theSeason() === "winter"){
-				return SeasonLoop.sWin;
-			} else if( theSeason() === "spring"){
-			   	return SeasonLoop.sSpr;
-			} else if( theSeason() === "summer") {
-				return SeasonLoop.sSum;
-			} else if( theSeason() === "fall"){
-				return SeasonLoop.sFal;
-			}
-	  	}	
+var	precipValue = function (drink, precip){// returns precip rating for each drink  
+	// console.log("DRINK", drink.drinkRating);
+	var pv = drink.drinkRating.precipValue;
+	console.log('PV', pv, drink.drinkName);
+	if ( precip > .0001){
+		return pv.pSome;
+	} else {
+		return pv.pNone;
+	} 
 };
 
-var dayValue = function (){ //returns day rating for each drink * importance
-	};
+// var seasonValue = function (){ //returns season rating for each drink * importance
+// 			if ( theSeason() === "winter"){
+// 				return SeasonLoop.sWin;
+// 			} else if( theSeason() === "spring"){
+// 			   	return SeasonLoop.sSpr;
+// 			} else if( theSeason() === "summer") {
+// 				return SeasonLoop.sSum;
+// 			} else if( theSeason() === "fall"){
+// 				return SeasonLoop.sFal;
+// 			}
+// 	  	}	
+// };
 
-var timeValue = function (){ //returns time value for each drink * importance
-};
+// var dayValue = function (){ //returns day rating for each drink * importance
+// 	};
 
-var sweetValue = function(){ //returns sweetValue (user entered) for each drink * importance
-};
+// var timeValue = function (){ //returns time value for each drink * importance
+// };
 
-var totalDrinkRating = function(){ // sums the 6 Values for each drink
-};
-
-var bestDrink = function(){ // sorts and displays highest rated drinks
-};
 
 
 module.exports = DrinkList;

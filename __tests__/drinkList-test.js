@@ -1,51 +1,145 @@
 jest.unmock('../DrinkList');
 jest.unmock('../AllDrinks');
 const DrinkList = require('../DrinkList');
-
-var DrinkData = [
-{ drinkName: 'Bijou',
-	ingredients: ['Gin', 'Chartreuse', 'Vermouth', 'Dash of Bitters'],
-	recipe: "Stir in mixing glass with ice and strain",
-	alcohol: ['Gin'],
-	image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Bijou_Cocktail.jpg/220px-Bijou_Cocktail.jpg',
-	sweetNeat: "sweet",
-	drinkRating: {
-		weatherValue:{
-			wCold: 1,
-			wMod: 2,
-			wWarm: 4,
-			wHot: 5
-		},
-	}
+var drinkDataTemp = [
+  { drinkName: 'Bijou',
+   	drinkRating: {
+      weatherValue:{
+        wCold: 1,
+        wMod: 2,
+        wWarm: 4,
+        wHot: 5
+      }, 
+       precipValue:{
+        pNone: 0,
+        pSome: 0
+      },     
+  }
 },
 
-{ drinkName: 'Dark N Stormy',
-	ingredients: ['6cl Dark Rum', '10cl Ginger Beer' ],
+  { drinkName: 'Dark N Stormy',
 	drinkRating: {
-		weatherValue:{
-			wCold: 3,
-			wMod: 3,
-			wWarm: 4,
-			wHot: 4
-		},
-	}, 
-}
+      weatherValue:{
+        wCold: 3,
+        wMod: 3,
+        wWarm: 4,
+        wHot: 4
+      },
+      precipValue:{
+        pNone: 0,
+        pSome: 0
+      },
+   }
+  },
+
 ];
+
+var drinkDataPrecip = [
+  { drinkName: 'Bijou',
+   	drinkRating: {
+      weatherValue:{
+        wCold: 0,
+        wMod: 0,
+        wWarm: 0,
+        wHot: 0
+      }, 
+       precipValue:{
+        pNone: 3,
+        pSome: 2
+      },     
+  }
+},
+
+  { drinkName: 'Dark N Stormy',
+	drinkRating: {
+      weatherValue:{
+        wCold: 0,
+        wMod: 0,
+        wWarm: 0,
+        wHot: 0
+      },
+      precipValue:{
+        pNone: 3,
+        pSome: 5
+      },
+   }
+  },
+
+];
+
+  var drinkDataTempAndPrecip = [
+  { drinkName: 'Bijou',
+   	drinkRating: {
+      weatherValue:{
+        wCold: 1,
+        wMod: 2,
+        wWarm: 4,
+        wHot: 5
+      }, 
+       precipValue:{
+        pNone: 3,
+        pSome: 2
+      },     
+  }
+},
+
+  { drinkName: 'Dark N Stormy',
+	drinkRating: {
+      weatherValue:{
+        wCold: 3,
+        wMod: 3,
+        wWarm: 4,
+        wHot: 4
+      },
+      precipValue:{
+        pNone: 3,
+        pSome: 5
+      },
+   }
+ }
+
+];
+
 
 describe('drinkList', () => {  //just return something not null
   it('works??', () => {
   	var drinkList = new DrinkList();
-    expect(drinkList.bestDrinkOfTemp(60)).toBeTruthy();
+    expect(drinkList.bestDrink(60)).toBeTruthy();
   });
 
-  it('returns Bijou when hot', () => { //using fake data this file but bestOfDrinkOfTemp () from DrinkList, return Bijou
-  	var drinkList = new DrinkList(DrinkData);
-    expect(drinkList.bestDrinkOfTemp(90).drinkName).toBe('Bijou');
+  it('returns Bijou when hot', () => { 
+  	var drinkList = new DrinkList(drinkDataTemp);
+    expect(drinkList.bestDrink(90).drinkName).toBe('Bijou');
   });
 
-  it('returns DNS when its cold', () => { //using fake data this file, bestOfDrinkOfTemp () from DrinkList, return DNS 
-  	var drinkList = new DrinkList(DrinkData);
-    expect(drinkList.bestDrinkOfTemp(0).drinkName).toBe('Dark N Stormy');
+  it('returns DNS when its cold', () => { 
+  	var drinkList = new DrinkList(drinkDataTemp);
+    expect(drinkList.bestDrink(0).drinkName).toBe('Dark N Stormy');
   });
 
-});
+  it('returns DNS as highest rating when no rain in last hour', () => { 
+  	var drinkList = new DrinkList(drinkDataPrecip);
+  	var drinkNoRain = drinkList.bestDrink(0, 0);
+  	var drinkWithRain = drinkList.bestDrink(0, .2);
+    expect(drinkNoRain !== drinkWithRain).toBeTruthy();
+  });
+
+   it('returns DNS as highest rating when some rain in last hour', () => { 
+  	var drinkList = new DrinkList(drinkDataPrecip);
+  	// console.log("Last Test", drinkNoRain, drinkWithRain);
+    expect(drinkList.bestDrink(0,.3).drinkName).toBe('Dark N Stormy');
+  });
+
+    it('returns Bijou summing Temp and Precip', () => { 
+  	var drinkList = new DrinkList(drinkDataTempAndPrecip);
+    expect(drinkList.bestDrink(90, 0).drinkName).toBe('Bijou');
+  });
+
+
+
+ 
+
+ });
+
+
+

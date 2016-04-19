@@ -45,13 +45,13 @@ var DataAndLogic = React.createClass({
     fetch(fetchUrl)
     .then((response) => response.json())
     .then((responseText) => {
-      // console.log("Data Here", responseText.current_observation.icon_url);
+      // console.log("Data Here", responseText.current_observation.precip_1hr_in);
       temp = responseText.current_observation.temp_f;
       location = responseText.current_observation.display_location.city;
       precip = responseText.current_observation.precip_1hr_in;
       icon = responseText.current_observation.icon;
       icon_url = responseText.current_observation.icon_url;
-      var bestDrink = drinkList.bestDrinkOfTemp(temp);
+      var bestDrink = drinkList.bestDrink(temp, precip);
       this.setState({
         temp: temp,
         location: location,
