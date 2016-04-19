@@ -21,6 +21,8 @@ var DataAndLogic = React.createClass({
       icon: null,
       icon_url: '',
       date: null,
+      filterAlcohol: [],
+      changePage: false,
       drink: {
         drinkName: 'Between the Sheets',
         image: 'http://recipes-drinks.ru/coctails/between-the-sheets.png',
@@ -28,14 +30,22 @@ var DataAndLogic = React.createClass({
         recipe: 'put a bunch of stuff in there and shake it up',
         alcohol: ['gin']
         }
-
       }
   },
   componentDidMount: function(){
-   this.fetchWeatherData()
-
+    this.fetchWeatherData()
+  },  
+  handleFilterAlcoholState: function(item){
+    this.setState({
+      filterAlcohol: item
+    });
   },
-
+  handleApplyFilterButton: function(){
+    console.log('it should be working!!!');
+    this.setState({
+      navPage: 0
+    });
+  },
   fetchWeatherData: function(){
     var temp = 0
     var location = ''
@@ -75,7 +85,12 @@ var DataAndLogic = React.createClass({
               precip = {this.state.precip}
               icon = {this.state.icon}
               icon_url = {this.state.icon_url}
+              sweetValue = {this.state.sweetValue}
               drink = {this.state.drink}
+              filterAlcohol = {this.state.filterAlcohol}
+              changePage = {this.state.changePage}
+              handleFilterAlcoholState = {this.handleFilterAlcoholState}
+              handleApplyFilterButton = {this.handleApplyFilterButton}
               />
           )
     }

@@ -54,7 +54,6 @@ var	precipValue = function (){// returns precip rating for each drink * importan
 		} else {
 		   	return PrecipLoop.pSome;
 		} 
-	}
 };
 
 var seasonValue = function (){ //returns season rating for each drink * importance
@@ -67,7 +66,6 @@ var seasonValue = function (){ //returns season rating for each drink * importan
 			} else if( theSeason() === "fall"){
 				return SeasonLoop.sFal;
 			}
-	  	}	
 };
 
 var dayValue = function (){ //returns day rating for each drink * importance

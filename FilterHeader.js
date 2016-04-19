@@ -10,21 +10,26 @@ var styles = StyleSheet.create({
 container: {
   flex: 1, 
 },
-recipe: {
+header: {
   flex: 1, 
   justifyContent: 'center',
+  alignItems: 'center' 
 }
 });
 
-var Recipe = React.createClass({
+var FilterHeader = React.createClass({
 render: function(){
-  // console.log("in Recipe", this.props.recipe);
-  var displayRecipe = this.props.recipe
   return( 
         <View style={[styles.container, this.border('yellow')]}>
-        <View style={[styles.recipe, this.border('green')]}>
+        <View style={[styles.header, this.border('green')]}>
             <Text>
-              {displayRecipe}
+               Distill your spirits
+            </Text>
+            <Text>
+               Shrink your drink
+            </Text>
+            <Text>
+               Omit your poison below
             </Text>
         </View>
         </View>
@@ -40,4 +45,4 @@ border: function(color){
 
 
 
-module.exports = Recipe;
+module.exports = FilterHeader;

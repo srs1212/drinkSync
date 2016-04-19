@@ -39,7 +39,7 @@ var styles = StyleSheet.create({
 });
 var ShowDrink = React.createClass({
   render: function(){
-    console.log('in ShowDrink', this.props.drink);
+    // console.log('in ShowDrink', this.props.drink);
 
     return( 
           <View style={styles.container}>

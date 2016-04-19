@@ -1,6 +1,9 @@
 'use strict';
 
 var React = require('react-native');
+var AlcoholFilterButtons = require('./AlcoholFilterButtons');
+var ApplyFilterButton = require('./ApplyFilterButton');
+var FilterHeader = require('./FilterHeader');
 
 var {
   StyleSheet,
@@ -15,20 +18,17 @@ var styles = StyleSheet.create({
   },
   ssFilters: { 
     flex: 3,
-    flexDirection: 'row',
+    // flexDirection: 'row',
   },
   footer: { 
     flex: 10
   },
-  drinkButton: { 
+  applyFilterButton: { 
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center' 
   },
   alcoholFilters: { 
     flex: 4,
-    justifyContent: 'center',
-    alignItems: 'center' 
   },
   sweetFilter: { 
     flex: 1,
@@ -48,27 +48,17 @@ var ShowFilter = React.createClass({
     return( 
           <View style={styles.container}>
             <View style={[styles.ssFilters, this.border('green')]}> 
-              <View style={[styles.sweetFilter, this.border('red')]}>
-                <Text>
-                  SWEET FILTER
-                </Text>
-              </View>
-             <View style={[styles.savoryFilter, this.border('yellow')]}>
-                <Text>
-                  SAVORY FILTER
-                </Text>
-             </View>
+               <FilterHeader /> 
             </View>
             <View style={[styles.footer, this.border('yellow')]}>
               <View style={[styles.alcoholFilters, this.border('blue')]}> 
-                <Text>
-                  ALCOHOL FILTERS
-                </Text>
+                <AlcoholFilterButtons 
+                  filterAlcohol = {this.props.filterAlcohol}
+                  handleFilterAlcoholState = {this.props.handleFilterAlcoholState} />
               </View>
-              <View style={[styles.drinkButton, this.border('red')]}> 
-                <Text>
-                  APPLY(OR TOGGLE) FILTERS BUTTON
-                </Text>
+              <View style={[styles.applyFilterButton, this.border('red')]}> 
+                <ApplyFilterButton 
+                  handleApplyFilterButton = {this.props.handleApplyFilterButton}/>
               </View>
             </View>
           </View>
@@ -77,7 +67,7 @@ var ShowFilter = React.createClass({
   border: function(color){
     return {
       borderColor: color,
-      borderWidth: 4
+      borderWidth: 0
     }
   }
 }); 

@@ -12,35 +12,34 @@ var {
 var styles = StyleSheet.create({
  container: {
    flex: 1, 
-   flexDirection: 'row',
-   justifyContent: 'center',
+   // flexDirection: 'row',
+   // justifyContent: 'center',
  },
  ingredientWrapper: { 
-   flex: 10,
-   justifyContent: 'center',
-   alignItems: 'center'
- },
- bg: {
-   position: 'absolute',
-   left: 0,
-   top: 0,
- },
- base: {
-   width: 100,
-   height: 100,
- },
+   flex: 1,
+     justifyContent: 'center',
+   // justifyContent: 'center',
+   // alignItems: 'center'
+ }
 });
 
 var Ingredients = React.createClass({
+ createListItem: function(){
+   var ingredientArray = this.props.ingredients
+   // console.log('create list item', this.props.ingredients);
+   return ingredientArray.map(function(item){
+      return (
+              <Text key={item}>
+              {item}
+              </Text>
+            )
+   })
+ },
  render: function(){
-          // console.log('in ingredients', this.props.ingredients);
-   var displayIngredients = this.props.ingredients
    return( 
          <View style={[styles.container, this.border('yellow')]}>
            <View style={[styles.ingredientWrapper, this.border('blue')]}>
-             <Text>
-               {displayIngredients}
-             </Text>
+               {this.createListItem()}
            </View>
          </View>
          )
@@ -48,7 +47,7 @@ var Ingredients = React.createClass({
  border: function(color){
    return {
      borderColor: color,
-     borderWidth: 4
+     borderWidth: 0
    }
  }
 });

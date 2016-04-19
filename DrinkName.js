@@ -39,7 +39,7 @@ var DrinkName = React.createClass({
  render: function(){
    var displayDrinkName = this.props.drinkName;
    var image = this.props.image;
-   console.log("in drinkName", displayDrinkName);
+   // console.log("in drinkName", image);
    return( 
          <View style={[styles.container, this.border('green')]}>
            <View style={[styles.iconWrapper, this.border('red')]}>
@@ -56,7 +56,7 @@ var DrinkName = React.createClass({
  border: function(color){
    return {
      borderColor: color,
-     borderWidth: 4
+     borderWidth: 0
    }
  }
 });
