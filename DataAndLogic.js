@@ -68,7 +68,6 @@ var DataAndLogic = React.createClass({
 
 
   render: function(){
-      console.log('in DataAndLogic', this.state.drink.recipe);
       return( 
               <MainNav
               location = {this.state.location}

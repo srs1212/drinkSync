@@ -11,10 +11,10 @@ var DrinkData = [
 	sweetNeat: "sweet",
 	drinkRating: {
 		weatherValue:{
-			wA: 1,
-			wB: 2,
-			wC: 4,
-			wD: 5
+			wCold: 1,
+			wMod: 2,
+			wWarm: 4,
+			wHot: 5
 		},
 	}
 },
@@ -23,27 +23,27 @@ var DrinkData = [
 	ingredients: ['6cl Dark Rum', '10cl Ginger Beer' ],
 	drinkRating: {
 		weatherValue:{
-			wA: 3,
-			wB: 3,
-			wC: 4,
-			wD: 4
+			wCold: 3,
+			wMod: 3,
+			wWarm: 4,
+			wHot: 4
 		},
 	}, 
 }
 ];
 
-describe('drinkList', () => {
+describe('drinkList', () => {  //just return something not null
   it('works??', () => {
   	var drinkList = new DrinkList();
     expect(drinkList.bestDrinkOfTemp(60)).toBeTruthy();
   });
 
-  it('returns Bijou when hot', () => {
+  it('returns Bijou when hot', () => { //using fake data this file but bestOfDrinkOfTemp () from DrinkList, return Bijou
   	var drinkList = new DrinkList(DrinkData);
     expect(drinkList.bestDrinkOfTemp(90).drinkName).toBe('Bijou');
   });
 
-  it('returns DNS when its cold', () => {
+  it('returns DNS when its cold', () => { //using fake data this file, bestOfDrinkOfTemp () from DrinkList, return DNS 
   	var drinkList = new DrinkList(DrinkData);
     expect(drinkList.bestDrinkOfTemp(0).drinkName).toBe('Dark N Stormy');
   });

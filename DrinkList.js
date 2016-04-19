@@ -7,11 +7,14 @@ var dayDate = theDate.getDate();
 var monthDate = theDate.toString().substr(4,4);
 var monthForSeason = theDate.getMonth();
 
-var DrinkList = function(drinkData){
+var DrinkList = function(drinkData){ //the _ in _allDrinks is syntax suggesting internal data usage.
  	this._allDrinks = drinkData || AllDrinks;
 };
 DrinkList.prototype.bestDrinkOfTemp = function(temp){
 	return this._allDrinks[0];
+};
+
+var alcoholFilter = function(){ //filters drinks and excludes those from computations
 };
 
 var theSeason = function(){
@@ -26,10 +29,11 @@ var theSeason = function(){
   }
 };
 
-var weatherValue = function (){
-		var temp = this.props.temp;
-		for (var i = 0; i <DrinkData.length; i++) {
-			var WeatherLoop = DrinkData[i].drinkRating.weatherValue;
+var weatherValue = function (){ //oooof no can do. i why declare wvc and wvp?? 
+	//no idea on declaring those to what 
+		var dr = this._allDrinks.reduce(function(temp, prev, cur){
+			var wvc = this._allDrinks.drinkRating.weatherValue;
+			var wvp = DrinkData.drinkRating.weatherValue;
 			if ( temp <= 29 ){
 				return WeatherLoop.wCold;
 			} else if ( temp >= 30 && temp <= 49 ){
@@ -39,13 +43,12 @@ var weatherValue = function (){
 			} else {
 				return WeatherLoop.wHot;
 			}
-		}
+		})
+		return dr;
 };
 
-var	precipValue = function (){
-	var precip = this.props.precip;
-	for (var i = 0; i <DrinkData.length; i++) {
-	var PrecipLoop = DrinkData[i].drinkRating.precipValue;
+var	precipValue = function (){// returns precip rating for each drink * importance 
+
 		if ( this.props.precip === 0){
 			return PrecipLoop.pNone;
 		} else {
@@ -54,9 +57,7 @@ var	precipValue = function (){
 	}
 };
 
-var seasonValue = function (){ 
-		var SeasonLoop = DrinkData[i].drinkRating.seasonValue;
-		for (var i = 0; i < DrinkData.length; i++) {
+var seasonValue = function (){ //returns season rating for each drink * importance
 			if ( theSeason() === "winter"){
 				return SeasonLoop.sWin;
 			} else if( theSeason() === "spring"){
@@ -66,10 +67,23 @@ var seasonValue = function (){
 			} else if( theSeason() === "fall"){
 				return SeasonLoop.sFal;
 			}
-	  	}
-	
+	  	}	
 };
 
+var dayValue = function (){ //returns day rating for each drink * importance
+	};
+
+var timeValue = function (){ //returns time value for each drink * importance
+};
+
+var sweetValue = function(){ //returns sweetValue (user entered) for each drink * importance
+};
+
+var totalDrinkRating = function(){ // sums the 6 Values for each drink
+};
+
+var bestDrink = function(){ // sorts and displays highest rated drinks
+};
 
 
 module.exports = DrinkList;
