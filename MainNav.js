@@ -7,10 +7,17 @@ var ScrollableTabView = require('react-native-scrollable-tab-view');
 
 var MainNav = React.createClass({
 render() {
-       var changePage = this.props.changePage ? 0 : null;
-       console.log('in MainNav', changePage);
+       // var changePage = this.props.changePage ? 0 : null;
+       // console.log('in MainNav', this.props.mainNavPage);
     return (
-            <ScrollableTabView>
+            <ScrollableTabView
+              initialPage={1}
+              page={this.props.mainNavPage}>
+
+              <ShowFilter tabLabel='Filter' 
+                filterAlcohol = {this.props.filterAlcohol}
+                handleFilterAlcoholState = {this.props.handleFilterAlcoholState}
+                handleApplyFilterButton = {this.props.handleApplyFilterButton} />
 
               <ShowDrink tabLabel='Drink'
                 location = {this.props.location}
@@ -19,11 +26,6 @@ render() {
                 icon = {this.props.icon}
                 icon_url = {this.props.icon_url}  
                 drink = {this.props.drink} />
-             
-              <ShowFilter tabLabel='Filter' 
-                filterAlcohol = {this.props.filterAlcohol}
-                handleFilterAlcoholState = {this.props.handleFilterAlcoholState}
-                handleApplyFilterButton = {this.props.handleApplyFilterButton} />
 
             </ScrollableTabView>
             );

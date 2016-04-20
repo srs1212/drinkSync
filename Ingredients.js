@@ -39,7 +39,7 @@ var Ingredients = React.createClass({
    return( 
          <View style={[styles.container, this.border('yellow')]}>
            <View style={[styles.ingredientWrapper, this.border('blue')]}>
-               {this.createListItem()}
+             {this.createListItem()}
            </View>
          </View>
          )

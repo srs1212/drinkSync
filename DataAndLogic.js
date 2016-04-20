@@ -22,7 +22,7 @@ var DataAndLogic = React.createClass({
       icon_url: '',
       date: null,
       filterAlcohol: [],
-      changePage: false,
+      mainNavPage: 1,
       drink: {
         drinkName: 'Between the Sheets',
         image: 'http://recipes-drinks.ru/coctails/between-the-sheets.png',
@@ -37,13 +37,13 @@ var DataAndLogic = React.createClass({
   },  
   handleFilterAlcoholState: function(item){
     this.setState({
-      filterAlcohol: item
+      filterAlcohol: item,
+      mainNavPage: 0
     });
   },
   handleApplyFilterButton: function(){
-    console.log('it should be working!!!');
     this.setState({
-      navPage: 0
+      mainNavPage: 1
     });
   },
   fetchWeatherData: function(){
@@ -55,7 +55,6 @@ var DataAndLogic = React.createClass({
     fetch(fetchUrl)
     .then((response) => response.json())
     .then((responseText) => {
-      // console.log("Data Here", responseText.current_observation.precip_1hr_in);
       temp = responseText.current_observation.temp_f;
       location = responseText.current_observation.display_location.city;
       precip = responseText.current_observation.precip_1hr_in;
@@ -88,7 +87,7 @@ var DataAndLogic = React.createClass({
               sweetValue = {this.state.sweetValue}
               drink = {this.state.drink}
               filterAlcohol = {this.state.filterAlcohol}
-              changePage = {this.state.changePage}
+              mainNavPage = {this.state.mainNavPage}
               handleFilterAlcoholState = {this.handleFilterAlcoholState}
               handleApplyFilterButton = {this.handleApplyFilterButton}
               />
