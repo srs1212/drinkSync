@@ -66,7 +66,7 @@ var AllDrinks = [
         tMrn: 0,
         tAft: 3,
         tNt: 5,
-        wSleep: 0
+        tSleep: 0
       }
     }
   },
@@ -100,9 +100,9 @@ var AllDrinks = [
       },
       timeValue:{
         tMrn: 0,
-        tAft: 1,
+        tAft: 1, 
         tNt: 5,
-        wSleep: 0
+        tSleep: 0
       }
   }
 },

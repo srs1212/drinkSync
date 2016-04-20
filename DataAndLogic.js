@@ -21,6 +21,7 @@ var DataAndLogic = React.createClass({
       icon: null,
       icon_url: '',
       date: null,
+      day: null,
       filterAlcohol: [],
       changePage: false,
       drink: {
@@ -50,6 +51,9 @@ var DataAndLogic = React.createClass({
     var temp = 0
     var location = ''
     var precip = 0
+    var day = ''
+    var season = ''
+    var time = ''
     var icon = ''
     var icon_url = ''
     fetch(fetchUrl)
@@ -61,11 +65,14 @@ var DataAndLogic = React.createClass({
       precip = responseText.current_observation.precip_1hr_in;
       icon = responseText.current_observation.icon;
       icon_url = responseText.current_observation.icon_url;
-      var bestDrink = drinkList.bestDrink(temp, precip);
+      var bestDrink = drinkList.bestDrink(temp, precip, day, season, time);
       this.setState({
         temp: temp,
         location: location,
         precip: precip, 
+        day: day,
+        season: season,
+        time: time,
         icon: icon,
         icon_url: icon_url,
         drink: bestDrink

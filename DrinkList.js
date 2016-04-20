@@ -3,24 +3,28 @@
 
 var AllDrinks = require('./AllDrinks');
 var theDate = new Date();
-var dayDate = theDate.getDate();
-var monthDate = theDate.toString().substr(4,4);
+var dayDate = theDate.getDate(); //returns day of month ex: April 20, returns 20.
+var monthDate = theDate.toString().substr(4,4); //returns shorthand of month name ex: Apr
+var dayDay = theDate.toString().substr(0,3);// returns shorthand day, ex: Thu
+var timeAmPm = theDate.toLocaleTimeString().replace(/([\d]+:[\d]{2}).*([A-Z]{2}$)/, "$1$2");
+var dateToDisplay = "it's "  + timeAmPm + " on " + theDate.toString().substr(0,10);
 var monthForSeason = theDate.getMonth();
-var ratingFactors = [{
- 	weatherValue: 10,
- 	precipValue: 3,
- 	seasonValue: 7,
- 	dayValue: 6,
- 	timeValue: 8
-}];
+var hoursForTime = theDate.getHours();
+var ratingFactors = {
+ 	weatherValue: 15,
+ 	precipValue: 5,
+ 	seasonValue: 8,
+ 	dayValue: 11,
+ 	timeValue: 12
+};
 
 var DrinkList = function(drinkData){ //the _ in _allDrinks is syntax suggesting internal data usage.
  	this._allDrinks = drinkData || AllDrinks;
 };
-DrinkList.prototype.bestDrink = function(temp, precip){ //temp passed
+DrinkList.prototype.bestDrink = function(temp, precip, day, season, time){ //temp passed, precip passed
  	return this._allDrinks.reduce(function(prev, cur){
-		var scoreC = drinkScore(cur, temp, precip);
-		var scoreP = drinkScore(prev, temp, precip);
+		var scoreC = drinkScore(cur, temp, precip, day, season, time);
+		var scoreP = drinkScore(prev, temp, precip, day, season, time);
 		return scoreC > scoreP ? cur : prev;
 	  });
 
@@ -33,10 +37,21 @@ DrinkList.prototype.bestDrink = function(temp, precip){ //temp passed
 // 		return pvc > pvp ? cur : prev;
 // 	  });	 
 // };
-function drinkScore (drink, temp, precip) {
+function drinkScore (drink, temp, precip, day, season, time) {
 	precip = precip || 0;
-	var score = weatherValue(drink, temp) + precipValue(drink, precip);
-	console.log("SCORE", drink.drinkName, score);
+	day = day || 0;
+	var score =  weatherValueRated( weatherValue(drink, temp), ratingFactors ) 
+				+ precipValueRated(precipValue(drink, precip), ratingFactors )
+				+ dayValueRated( dayValue(drink, day), ratingFactors )
+				+ seasonValueRated ( seasonValue(drink, season), ratingFactors)
+				+ timeValueRated ( timeValue(drink, time), ratingFactors);	
+	console.log("SCORE", weatherValueRated( weatherValue(drink, temp), ratingFactors ),
+				precipValueRated(precipValue(drink, precip), ratingFactors ),
+				dayValueRated( dayValue(drink, day), ratingFactors ),
+				seasonValueRated( seasonValue(drink, season), ratingFactors),
+				timeAmPm, hoursForTime,
+				timeValueRated ( timeValue(drink, time), ratingFactors),
+				drink.drinkName, score);
 	return score;
 };
 		
@@ -44,7 +59,7 @@ var alcoholFilter = function(){ //filters drinks and excludes those from computa
 };
 
 var theSeason = function(){
-  if (monthForSeason === 11 || monthForSeason === 0 || monthForSeason ===1) {
+  if (monthForSeason === 11 || monthForSeason === 0 || monthForSeason === 1) {
     return "winter";
   } else  if (monthForSeason === 2 || monthForSeason === 3 || monthForSeason === 4){
     return "spring";
@@ -68,14 +83,14 @@ function weatherValue(drink, temp){
 		}
 };	
 
-function weatherValueRated (drink, temp){
-	return weatherValue * ratingFactors.weatherValue;
+function weatherValueRated (wv, rf){
+	return wv * rf.weatherValue;
 };
 
 var	precipValue = function (drink, precip){// returns precip rating for each drink  
 	// console.log("DRINK", drink.drinkRating);
 	var pv = drink.drinkRating.precipValue;
-	console.log('PV', pv, drink.drinkName);
+	// console.log('PV', pv, drink.drinkName);
 	if ( precip > .0001){
 		return pv.pSome;
 	} else {
@@ -83,24 +98,69 @@ var	precipValue = function (drink, precip){// returns precip rating for each dri
 	} 
 };
 
-// var seasonValue = function (){ //returns season rating for each drink * importance
-// 			if ( theSeason() === "winter"){
-// 				return SeasonLoop.sWin;
-// 			} else if( theSeason() === "spring"){
-// 			   	return SeasonLoop.sSpr;
-// 			} else if( theSeason() === "summer") {
-// 				return SeasonLoop.sSum;
-// 			} else if( theSeason() === "fall"){
-// 				return SeasonLoop.sFal;
-// 			}
-// 	  	}	
-// };
+function precipValueRated (pv, rf){
+	return pv * rf.precipValue;
+};
 
-// var dayValue = function (){ //returns day rating for each drink * importance
-// 	};
+var seasonValue = function (drink){ //returns season rating for each drink 
+	var season = theSeason();
+	var sv = drink.drinkRating.seasonValue;
+	if ( season === "winter"){
+		return sv.sWin;
+	} else if( season === "spring"){
+	   	return sv.sSpr;
+	} else if( season === "summer") {
+		return sv.sSum;
+	} else if( season === "fall"){
+		return sv.sFal;
+	} else {
+		throw new Error('no season found: ' + season);
+	}
+};
 
-// var timeValue = function (){ //returns time value for each drink * importance
-// };
+function seasonValueRated (sv, rf){
+	return sv * rf.seasonValue;
+};
+
+var dayValue = function (drink, day){ //returns day rating for each drink 
+	var dv = drink.drinkRating.dayValue;
+	// console.log('the drink value', dayDay, dv, drink.drinkName);
+	if ( dayDay === 'Mon' || dayDay === 'Tue' || dayDay === 'Thu' || dayDay === 'Sun' ) {
+			return dv.dMTRS;
+		} else if ( dayDay === 'Wed' ) {
+		   	return dv.dW;
+		} else if ( dayDay === 'Fri' || dayDay === 'Sat' ) {
+			return dv.dFS;
+		}
+};	
+
+function dayValueRated (dv, rf){
+	return dv * rf.dayValue;
+};
+
+var timeValue = function (drink, time){ //returns day rating for each drink 
+	var tv = drink.drinkRating.timeValue;
+	if ( hoursForTime >= 0 && hoursForTime <= 2) {
+			return tv.tNt;
+		} else if ( hoursForTime >= 3 && hoursForTime <= 6) {
+		   	return tv.tSleep;
+		} else if ( hoursForTime >= 7 && hoursForTime <= 11) {
+			return tv.tMrn;
+		} else if ( hoursForTime >= 12 && hoursForTime <= 16) {
+			return tv.tAft;
+		} else if ( hoursForTime >= 17 && hoursForTime <= 24) {
+			return tv.tNt;
+		} else {
+			throw new Error('no season found: ' + time);
+		}
+};	
+
+function timeValueRated (tv, rf){
+	return tv * rf.timeValue;
+};
+
+
+
 
 
 
