@@ -10,12 +10,18 @@ var {
   StyleSheet,
   Text,
   View,
+  ActivityIndicatorIOS
 } = React;
 
 var styles = StyleSheet.create({
   container: {
     flex: 1, 
     alignItems: 'stretch'
+  },
+  containerDrinkNotReady: {
+    flex: 1, 
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   header: { 
     flex: 1
@@ -38,9 +44,15 @@ var styles = StyleSheet.create({
   },
 });
 var ShowDrink = React.createClass({
-  render: function(){
-    // console.log('in ShowDrink', this.props.drink);
-
+  drinkNotReady: function(){
+    return (
+        <ActivityIndicatorIOS
+          style={[styles.containerDrinkNotReady , this.border('red')]}
+          size="large"
+          color="black"/>
+      )
+  },
+  showDrink: function(){
     return( 
           <View style={styles.container}>
             <View style={[styles.header, this.border('green')]}>
@@ -63,6 +75,13 @@ var ShowDrink = React.createClass({
             </View>
           </View>
           )
+  },  
+  render: function(){
+    var  isDrinkReady = this.props.drink.drinkName === '' ? this.drinkNotReady() : this.showDrink();
+    console.log('in is derinkg ready', isDrinkReady);
+    return (
+      isDrinkReady
+      )
   },
   border: function(color){
     return {

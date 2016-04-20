@@ -30,14 +30,18 @@ var styles = StyleSheet.create({
 
 
 var ApplyFilterButton = React.createClass({
+  isDisabled: function(){
+    return this.props.filterAlcohol.length ? false : true
+  },
   render: function(){
     return( 
           <View style={[styles.container, this.border('red')]}>
                 <Button 
                   style={styles.buttonStyleUp} 
-                  textStyle={styles.textStyleUp} 
+                  textStyle={styles.textStyleUp}
+                  isDisabled={this.isDisabled()} 
                   onPress={() => {this.props.handleApplyFilterButton()}}>
-                    APPLY FILTERS 
+                    {this.props.filterAlcohol.length ? 'Apply Filters' : 'Select Filters'}
                 </Button>                
           </View>
           )

@@ -57,7 +57,8 @@ var ShowFilter = React.createClass({
                   handleFilterAlcoholState = {this.props.handleFilterAlcoholState} />
               </View>
               <View style={[styles.applyFilterButton, this.border('red')]}> 
-                <ApplyFilterButton 
+                <ApplyFilterButton
+                  filterAlcohol = {this.props.filterAlcohol} 
                   handleApplyFilterButton = {this.props.handleApplyFilterButton}/>
               </View>
             </View>

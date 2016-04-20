@@ -19,17 +19,17 @@ var DataAndLogic = React.createClass({
       temp: 0,
       precip: 0,
       icon: null,
-      icon_url: '',
       date: null,
       day: null,
+      icon_url: '',
+      mainNavPage: 1,
       filterAlcohol: [],
-      changePage: false,
       drink: {
-        drinkName: 'Between the Sheets',
-        image: 'http://recipes-drinks.ru/coctails/between-the-sheets.png',
-        ingredients: ['lemon juice'],
-        recipe: 'put a bunch of stuff in there and shake it up',
-        alcohol: ['gin']
+        drinkName: '',
+        image: '',
+        ingredients: [],
+        recipe: '',
+        alcohol: []
         }
       }
   },
@@ -38,13 +38,13 @@ var DataAndLogic = React.createClass({
   },  
   handleFilterAlcoholState: function(item){
     this.setState({
-      filterAlcohol: item
+      filterAlcohol: item,
+      mainNavPage: 0
     });
   },
   handleApplyFilterButton: function(){
-    console.log('it should be working!!!');
     this.setState({
-      navPage: 0
+      mainNavPage: 1
     });
   },
   fetchWeatherData: function(){
@@ -59,7 +59,6 @@ var DataAndLogic = React.createClass({
     fetch(fetchUrl)
     .then((response) => response.json())
     .then((responseText) => {
-      // console.log("Data Here", responseText.current_observation.precip_1hr_in);
       temp = responseText.current_observation.temp_f;
       location = responseText.current_observation.display_location.city;
       precip = responseText.current_observation.precip_1hr_in;
@@ -95,7 +94,7 @@ var DataAndLogic = React.createClass({
               sweetValue = {this.state.sweetValue}
               drink = {this.state.drink}
               filterAlcohol = {this.state.filterAlcohol}
-              changePage = {this.state.changePage}
+              mainNavPage = {this.state.mainNavPage}
               handleFilterAlcoholState = {this.handleFilterAlcoholState}
               handleApplyFilterButton = {this.handleApplyFilterButton}
               />
