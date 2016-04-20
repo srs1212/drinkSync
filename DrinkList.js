@@ -36,7 +36,7 @@ DrinkList.prototype.bestDrink = function(temp, precip){ //temp passed
 function drinkScore (drink, temp, precip) {
 	precip = precip || 0;
 	var score = weatherValue(drink, temp) + precipValue(drink, precip);
-	console.log("SCORE", drink.drinkName, score);
+	// console.log("SCORE", drink.drinkName, score);
 	return score;
 };
 		
@@ -75,7 +75,7 @@ function weatherValueRated (drink, temp){
 var	precipValue = function (drink, precip){// returns precip rating for each drink  
 	// console.log("DRINK", drink.drinkRating);
 	var pv = drink.drinkRating.precipValue;
-	console.log('PV', pv, drink.drinkName);
+	// console.log('PV', pv, drink.drinkName);
 	if ( precip > .0001){
 		return pv.pSome;
 	} else {

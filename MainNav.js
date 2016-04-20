@@ -11,7 +11,7 @@ render() {
        // console.log('in MainNav', this.props.mainNavPage);
     return (
             <ScrollableTabView
-              initialPage={1}
+              initialPage={0}
               page={this.props.mainNavPage}>
 
               <ShowFilter tabLabel='Filter' 

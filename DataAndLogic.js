@@ -19,16 +19,16 @@ var DataAndLogic = React.createClass({
       temp: 0,
       precip: 0,
       icon: null,
-      icon_url: '',
       date: null,
-      filterAlcohol: [],
+      icon_url: '',
       mainNavPage: 1,
+      filterAlcohol: [],
       drink: {
-        drinkName: 'Between the Sheets',
-        image: 'http://recipes-drinks.ru/coctails/between-the-sheets.png',
-        ingredients: ['lemon juice'],
-        recipe: 'put a bunch of stuff in there and shake it up',
-        alcohol: ['gin']
+        drinkName: '',
+        image: '',
+        ingredients: [],
+        recipe: '',
+        alcohol: []
         }
       }
   },
