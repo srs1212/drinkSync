@@ -34,11 +34,12 @@ var styles = StyleSheet.create({
     // flexWrap: 'wrap' 
   },
   textStyleUp: {
-    color: 'white'
+    color: 'white',
+    fontFamily: 'Cochin-Bold',
   },
   textStyleDown: {
     color: '#8e44ad',
-    fontFamily: 'Avenir',
+    fontFamily: 'Cochin',
     fontWeight: 'bold'
   },
   buttonStyleUp: {
