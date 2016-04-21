@@ -9,6 +9,7 @@ var {
   StyleSheet,
   Text,
   View,
+  Image
 } = React;
 
 var styles = StyleSheet.create({
@@ -25,7 +26,8 @@ var styles = StyleSheet.create({
   },
   applyFilterButton: { 
     flex: 1,
-    justifyContent: 'center',
+    // justifyContent: 'center',
+    // alignItems: 'center' 
   },
   alcoholFilters: { 
     flex: 4,
@@ -40,6 +42,20 @@ var styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center'
   },
+  imageContainer: {
+    flex: 1,
+    // position: 'absolute',
+    // bottom: 0
+    // paddingTop: 10
+    // remove width and height to override fixed static size
+    // width: null,
+    // height: null,
+  },
+  bottomImageWrapper: {
+  flex: 2, 
+  // justifyContent: 'center',
+  // alignItems: 'center' 
+},
 });
 
 
@@ -60,6 +76,9 @@ var ShowFilter = React.createClass({
                 <ApplyFilterButton
                   filterAlcohol = {this.props.filterAlcohol} 
                   handleApplyFilterButton = {this.props.handleApplyFilterButton}/>
+              </View>
+              <View style={[styles.bottomImageWrapper, this.border('red')]}> 
+                <Image style={[styles.imageContainer, this.border('red')]} source={{uri: 'http://i.imgur.com/Q5u47Kj.jpg'}} />
               </View>
             </View>
           </View>

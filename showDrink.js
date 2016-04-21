@@ -10,15 +10,17 @@ var {
   StyleSheet,
   Text,
   View,
-  ActivityIndicatorIOS
+  ActivityIndicatorIOS,
+  Image
 } = React;
 
 var styles = StyleSheet.create({
   container: {
     flex: 1, 
-    alignItems: 'stretch'
+    alignItems: 'stretch',
+    // paddingTop: 10
   },
-  containerDrinkNotReady: {
+  containerdataNotReady: {
     flex: 1, 
     justifyContent: 'center',
     alignItems: 'center'
@@ -42,19 +44,28 @@ var styles = StyleSheet.create({
   recipeWrapper: { 
     flex: 1,
   },
+  imageContainer: {
+    flex: 1,
+    // paddingTop: 10
+    // remove width and height to override fixed static size
+    // width: null,
+    // height: null,
+  }
 });
+// this.props.drink.drinkName && 
 var ShowDrink = React.createClass({
-  drinkNotReady: function(){
+  dataNotReady: function(){
     return (
         <ActivityIndicatorIOS
-          style={[styles.containerDrinkNotReady , this.border('red')]}
+          style={[styles.containerdataNotReady , this.border('red')]}
           size="large"
           color="black"/>
       )
   },
   showDrink: function(){
     return( 
-          <View style={styles.container}>
+      <Image source={{uri: 'http://i.imgur.com/G2yKzki.jpg'}} style={[styles.imageContainer, this.border('yellow')]}>
+          <View style={[styles.container, this.border('green')]}>
             <View style={[styles.header, this.border('green')]}>
               <View style={[styles.weatherWrapper, this.border('red')]}> 
                 <Weather location={this.props.location} temp={this.props.temp}
@@ -62,7 +73,8 @@ var ShowDrink = React.createClass({
               </View>
               <View style={[styles.drinkNameWrapper, this.border('yellow')]}> 
                 <DrinkName image={this.props.drink ? this.props.drink.image : ''} 
-                drinkName={this.props.drink ? this.props.drink.drinkName : ''} />
+                drinkName={this.props.drink ? this.props.drink.drinkName : ''}
+                handleNextDrinkButton = {this.props.handleNextDrinkButton} />
               </View>
             </View>
             <View style={[styles.drinkDetails, this.border('blue')]}> 
@@ -74,13 +86,14 @@ var ShowDrink = React.createClass({
               </View>
             </View>
           </View>
+      </Image>
           )
   },  
   render: function(){
-    var  isDrinkReady = this.props.drink.drinkName === '' ? this.drinkNotReady() : this.showDrink();
-    console.log('in is derinkg ready', isDrinkReady);
+    var  isDataReady = (this.props.location && this.props.drink.drinkName) === '' ? this.dataNotReady() : this.showDrink();
+    console.log('in is drinkis ready', this.props.drink.drinkName, this.props.location);
     return (
-      isDrinkReady
+      isDataReady
       )
   },
   border: function(color){

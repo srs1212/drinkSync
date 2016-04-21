@@ -12,22 +12,30 @@ var {
 
 var styles = StyleSheet.create({
   container: {
-    flex: 1, 
+    flex: 1,
     justifyContent: 'center',
-    alignItems: 'stretch'
+    alignItems: 'center',
+    marginLeft: 50,
+    marginRight: 50
   },
   textStyleUp: {
     color: 'white'
   },
   buttonStyleUp: {
     flex: 1,
-    borderColor: '#2980b9',
-    backgroundColor: '#3498db',
-    marginLeft: 3,
-    marginRight: 3,
+    borderColor: 'black',
+    backgroundColor: '#6f0909',
+    width: 150, 
+    marginLeft: 60,
+    marginRight: 50
+    // marginLeft: 3,
+    // marginRight: 3,
   },
 });
 
+
+    // borderColor: 'rgb(97,126,60)',
+    // backgroundColor: '#617e3c',
 
 var ApplyFilterButton = React.createClass({
   isDisabled: function(){
@@ -39,9 +47,9 @@ var ApplyFilterButton = React.createClass({
                 <Button 
                   style={styles.buttonStyleUp} 
                   textStyle={styles.textStyleUp}
-                  isDisabled={this.isDisabled()} 
+                  // isDisabled={this.isDisabled()} 
                   onPress={() => {this.props.handleApplyFilterButton()}}>
-                    {this.props.filterAlcohol.length ? 'Apply Filters' : 'Select Filters'}
+                    {this.props.filterAlcohol.length ? 'Show Drink' : 'Select Filters'}
                 </Button>                
           </View>
           )

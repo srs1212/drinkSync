@@ -2,6 +2,7 @@
 
 var React = require('react-native');
 var Button = require('apsl-react-native-button');
+var Icon = require('react-native-vector-icons/Ionicons');
 
 
 
@@ -34,31 +35,46 @@ var styles = StyleSheet.create({
     // flexWrap: 'wrap' 
   },
   textStyleUp: {
-    color: 'white',
+    color: 'black',
     fontFamily: 'Cochin-Bold',
   },
   textStyleDown: {
-    color: '#8e44ad',
+    color: '#6f0909',
     fontFamily: 'Cochin',
     fontWeight: 'bold'
   },
   buttonStyleUp: {
     flex: 1,
-    borderColor: '#8e44ad',
-    backgroundColor: '#9b59b6',
+    backgroundColor: 'rgba(0,0,0, .4)',
+    borderColor: '#6f0909',
     marginLeft: 3,
     marginRight: 3,
   },
   buttonStyleDown: {
     flex: 1,
-    borderColor: '#8e44ad',
+    borderColor: '#6f0909',
     backgroundColor: 'white',
     marginLeft: 9,
     marginRight: 9,
-  }
+  },
+  // buttonStyleUp: {
+  //   flex: 1,
+  //   borderColor: '#8e44ad',
+  //   backgroundColor: '#9b59b6',
+  //   marginLeft: 3,
+  //   marginRight: 3,
+
+  // },
+  // buttonStyleDown: {
+  //   flex: 1,
+  //   borderColor: '#8e44ad',
+  //   backgroundColor: 'white',
+  //   marginLeft: 9,
+  //   marginRight: 9,
+  // }
 });
 
-var allAlcoholButtons = ["Gin", "Tequila", "vodka", "brandy", "whiskey", "Rum", "Liqueur", "champagne", "beer","wine"];
+var allAlcoholButtons = ["Gin", "Tequila", "Vodka", "Brandy", "Whiskey", "Rum", "Liqueur", "Champagne", "Beer","Wine"];
 
 var AlcoholFilterButtons = React.createClass({
   chooseButtonStyle: function(item){

@@ -1,6 +1,7 @@
 'use strict';
 
 var React = require('react-native');
+var Button = require('apsl-react-native-button');
 
 var {
  StyleSheet,
@@ -17,7 +18,9 @@ var styles = StyleSheet.create({
  iconWrapper: { 
    flex: 4,
    justifyContent: 'center',
-   alignItems: 'center' 
+   alignItems: 'center' ,
+   borderColor: 'black',
+   borderWidth: 1
  },
  drinkNameWrapper: { 
    flex: 10,
@@ -32,6 +35,7 @@ var styles = StyleSheet.create({
  base: {
    width: 100,
    height: 100,
+
  },
 });
 
@@ -49,6 +53,10 @@ var DrinkName = React.createClass({
              <Text>
                {displayDrinkName}
              </Text>
+                  <Button
+                    onPress={() => {this.props.handleNextDrinkButton()}}>
+                     #2 Recommended Drink
+                  </Button> 
            </View>
          </View>
          )

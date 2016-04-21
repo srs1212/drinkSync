@@ -12,6 +12,15 @@ var DrinkList = require ('./DrinkList');
 
 var drinkList = new DrinkList();
 
+// smallest data
+//       drink: {
+//         drinkName: 'Kir',
+//         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Mai_Tai.jpg/220px-Mai_Tai.jpg',
+//         ingredients: ['Gin'],
+//         recipe: 'Mix and serve well chilled.',
+//         alcohol: []
+//         }
+
 var DataAndLogic = React.createClass({
   getInitialState: function(){
     return {
@@ -25,10 +34,10 @@ var DataAndLogic = React.createClass({
       mainNavPage: 1,
       filterAlcohol: [],
       drink: {
-        drinkName: '',
-        image: '',
-        ingredients: [],
-        recipe: '',
+        drinkName: 'Kentucky Corpse Reviver',
+        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Cloverclub.jpg/220px-Cloverclub.jpg',
+        ingredients: ["Sugar syrup (according to individual preference of sweetness)", "½ oz Tequila","½ oz Vodka","½ oz White rum","½ oz Triple sec","½ oz Gin","¾ oz Lemon juice","1 oz Gomme Syrup","1 dash of Cola"],
+        recipe: 'Combine all ingredients with 2 scoops of crushed ice in a blender, blend briefly, then pour into the volcano bowl. Pour some rum into the central crater of the volcano bowl and light it. For garnish score pineapple or orange slices with a knife and insert onto rim of bowl; optionally add maraschino cherries to the main drink. Multiply recipe to adjust to the size of the container (e.g. x2 for a 32-US-fluid-ounce (950 ml) volcano bowl).',
         alcohol: []
         }
       }
@@ -45,6 +54,18 @@ var DataAndLogic = React.createClass({
   handleApplyFilterButton: function(){
     this.setState({
       mainNavPage: 1
+    });
+  },  
+  handleNextDrinkButton: function(){
+    // console.log('in next drink button');
+    this.setState({
+      drink: {
+        drinkName: 'Kir',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Mai_Tai.jpg/220px-Mai_Tai.jpg',
+        ingredients: ['Gin'],
+        recipe: 'Mix and serve well chilled.',
+        alcohol: []
+        },
     });
   },
   fetchWeatherData: function(){
@@ -74,7 +95,7 @@ var DataAndLogic = React.createClass({
         time: time,
         icon: icon,
         icon_url: icon_url,
-        drink: bestDrink
+        drinkZZZ: bestDrink
       });
     })
     .catch((error) => {
@@ -97,6 +118,7 @@ var DataAndLogic = React.createClass({
               mainNavPage = {this.state.mainNavPage}
               handleFilterAlcoholState = {this.handleFilterAlcoholState}
               handleApplyFilterButton = {this.handleApplyFilterButton}
+              handleNextDrinkButton = {this.handleNextDrinkButton}
               />
           )
     }

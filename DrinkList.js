@@ -45,18 +45,24 @@ function drinkScore (drink, temp, precip, day, season, time) {
 				+ dayValueRated( dayValue(drink, day), ratingFactors )
 				+ seasonValueRated ( seasonValue(drink, season), ratingFactors)
 				+ timeValueRated ( timeValue(drink, time), ratingFactors);	
-	console.log("SCORE", weatherValueRated( weatherValue(drink, temp), ratingFactors ),
-				precipValueRated(precipValue(drink, precip), ratingFactors ),
-				dayValueRated( dayValue(drink, day), ratingFactors ),
-				seasonValueRated( seasonValue(drink, season), ratingFactors),
-				timeAmPm, hoursForTime,
-				timeValueRated ( timeValue(drink, time), ratingFactors),
-				drink.drinkName, score);
+	// console.log("SCORE", weatherValueRated( weatherValue(drink, temp), ratingFactors ),
+	// 			precipValueRated(precipValue(drink, precip), ratingFactors ),
+	// 			dayValueRated( dayValue(drink, day), ratingFactors ),
+	// 			seasonValueRated( seasonValue(drink, season), ratingFactors),
+	// 			timeAmPm, hoursForTime,
+	// 			timeValueRated ( timeValue(drink, time), ratingFactors),
+	// 			drink.drinkName, score);
+	// console.log(bestDrinkSorted());
 	return score;
 };
+
+// var bestDrinkSorted = function(){
+// 	return DrinkList.bestDrink.sort();
+// };
 		
-var alcoholFilter = function(){ //filters drinks and excludes those from computations
-};
+// var alcoholFilter = function(){ //filters drinks and excludes those from computations
+
+// };
 
 var theSeason = function(){
   if (monthForSeason === 11 || monthForSeason === 0 || monthForSeason === 1) {

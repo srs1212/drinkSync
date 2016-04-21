@@ -12,14 +12,16 @@ var {
 var styles = StyleSheet.create({
  container: {
    flex: 1, 
-   // flexDirection: 'row',
-   // justifyContent: 'center',
+   flexDirection: 'row',
+   justifyContent: 'center',
  },
  ingredientWrapper: { 
    flex: 1,
-     justifyContent: 'center',
    // justifyContent: 'center',
    // alignItems: 'center'
+ },
+ text: {
+  backgroundColor: 'rgba(0,0,0,0)'
  }
 });
 
@@ -29,8 +31,8 @@ var Ingredients = React.createClass({
    // console.log('create list item', this.props.ingredients);
    return ingredientArray.map(function(item){
       return (
-              <Text key={item}>
-              {item}
+              <Text key={item} style={styles.text}>
+                • {item}
               </Text>
             )
    })

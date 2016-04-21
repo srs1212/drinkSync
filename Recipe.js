@@ -12,8 +12,11 @@ container: {
 },
 recipe: {
   flex: 1, 
-  justifyContent: 'center',
-}
+  // justifyContent: 'center',
+},
+ text: {
+  backgroundColor: 'rgba(0,0,0,0)'
+ }
 });
 
 var Recipe = React.createClass({
@@ -23,7 +26,7 @@ render: function(){
   return( 
         <View style={[styles.container, this.border('yellow')]}>
         <View style={[styles.recipe, this.border('green')]}>
-            <Text>
+            <Text style={styles.text}>
               {displayRecipe}
             </Text>
         </View>

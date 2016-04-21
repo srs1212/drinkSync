@@ -13,67 +13,68 @@ var {
   Alert
 } = React;
 
-// customize the material design theme
 const styles = React.StyleSheet.create({
   containerLanding: {
     flex: 1,
-    justifyContent: 'center',
-    margin: 0 
+  },
+  topContainer: {
+    flex: 1,
+  },
+  bottomContainer: {
+    flex: 1,
+  },
+  topTextWrapper1: {
+    flex: 1,
+    backgroundColor: 'transparent',
+  },  
+  topTextWrapper2: {
+    flex: 2.5,
+    backgroundColor: 'transparent',
+    paddingLeft: 10
+  },  
+  buttonWrapper: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    paddingLeft: 10
+    // justifyContent: 'center',
+    // alignItems: 'center',
+  },  
+  bottomTextWrapper: {
+    flex: 1,
+    backgroundColor: 'transparent',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    paddingBottom: 40
   },
   bg: {
     position: 'absolute',
     left: 0,
-    top: 0,
+    bottom: 0,
     width: windowSize.width,
     height: windowSize.height,
   },
-  halfHeight: {
-    flex: .5,
-    backgroundColor: 'grey'
-  },
-  quarterHeight: {
-    flex: .25,
-    backgroundColor: 'transparent'
-  },
-  header: {
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
   body1: {
-    justifyContent: 'center',
     fontWeight: 'bold',
     fontSize: 16,
-    color: 'white'
+    color: 'black'
   },
   h1: {
     fontSize: 30,
     fontFamily: 'AvenirNext-DemiBold',
     fontStyle: 'italic',
     fontWeight: 'bold',
-    color: 'white'
-  },
-  buttonWrapper: {
-    flexDirection: 'column',
-    padding: 10 
-  },
-  bodyBox: {
-    width: 140,
-    alignItems: 'flex-start',
-    paddingLeft: 15,
+    color: 'black'
   },
   buttonA: {
     width: 140,
-    backgroundColor: 'rgba(255, 255, 255, .4)',
-    borderColor: 'rgba(255, 255, 255, .7)',
+    backgroundColor: 'rgba(0,0,0, .2)',
+    borderColor: 'rgba(0,0,0, .7)',
   },
   buttonD: {
     width: 140,
-    backgroundColor: 'rgba(255, 255, 255, .4)',
-    borderColor: 'rgba(255, 255, 255, .7)',
+    backgroundColor: 'rgba(0,0,0, .2)',
+    borderColor: 'rgba(0,0,0, .7)',
   },
-  whiteText: {
-    color: 'white'
-  }
 });
 
 var Landing = React.createClass({
@@ -82,30 +83,37 @@ var Landing = React.createClass({
   },
   render: function (){
     return (
-            <View style={[styles.containerLanding,  testBorder('white')]}>
-              <Image style={styles.bg} source={{uri: 'http://imgur.com/4cTJ7wR.jpg'}} />
-              <View style ={[styles.quarterHeight, testBorder('yellow'), styles.header]}>
-                <Text style={styles.h1}>
-                  Welcome to DrinkSync
-                </Text>   
+            <View style={[styles.containerLanding,  testBorder('black')]}>
+              <Image style={styles.bg} source={{uri: 'http://i.imgur.com/LFHJJh2.jpg'}} />
+              <View style={[styles.topContainer,  testBorder('red')]}>
+                <View style={[styles.topTextWrapper1,  testBorder('green')]}>
+                </View>
+                <View style={[styles.topTextWrapper2,  testBorder('purple')]}>
+                  <Text style={styles.body1}>
+                    By clicking the Agree button, you 
+                  </Text>                 
+                  <Text style={styles.body1}>
+                    confirm that you are over
+                  </Text>
+                  <Text style={styles.body1}>
+                    the age of 21.
+                  </Text>
+                </View>
               </View>
-              <View style ={[styles.quarterHeight, testBorder('pink'), styles.bodyBox]}>
-                <Text style={styles.body1}>
-                  By clicking the Agree button, you confirm that you are over the age of 21.
-                </Text>
-              </View>
-              <View style ={[styles.quarterHeight,  testBorder('green'), styles.buttonWrapper]}>
-                <Button onPress={this.props.handleLegalSubmit} style={styles.buttonA} >
-                  Agree
-                </Button>
-                <Button onPress={this.handleNotLegalSubmit} style={styles.buttonD}>
-                  Disagree
-                </Button>
-              </View>
-              <View style ={[styles.quarterHeight,  testBorder('red'), styles.bodyBox]}>
-                <Text style={styles.body1}>
-                  Please drink responsibily
-                </Text>
+              <View style={[styles.bottomContainer,  testBorder('yellow')]}>
+                <View style={[styles.buttonWrapper,  testBorder('green')]}>
+                  <Button onPress={this.props.handleLegalSubmit} style={styles.buttonA} >
+                    Agree
+                  </Button>
+                  <Button onPress={this.handleNotLegalSubmit} style={styles.buttonD}>
+                    Disagree
+                  </Button>
+                </View>
+                <View style={[styles.bottomTextWrapper,  testBorder('purple')]}>
+                  <Text style={styles.body1}>
+                    Please drink responsibily
+                  </Text>
+                </View>
               </View>
             </View>
             );

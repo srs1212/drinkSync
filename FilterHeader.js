@@ -4,13 +4,19 @@ var {
 StyleSheet,
 Text,
 View,
+Image
 } = React;
 
 var styles = StyleSheet.create({
 container: {
   flex: 1, 
 },
-header: {
+headerTop: {
+  flex: 1, 
+  // justifyContent: 'center',
+  // alignItems: 'center' 
+},
+headerBottom: {
   flex: 1, 
   justifyContent: 'center',
   alignItems: 'center' 
@@ -18,7 +24,16 @@ header: {
 textStyle: {
   fontFamily: 'Cochin-BoldItalic',
   fontSize: 30
-}
+},
+imageContainer: {
+   flex: 1,
+   // width: 100,
+   // height: 100,
+    // paddingTop: 10
+    // remove width and height to override fixed static size
+    // width: null,
+    // height: null,
+  }
 });
 //Cochin-BoldItalic
 //Cochin-Italic 
@@ -26,11 +41,14 @@ var FilterHeader = React.createClass({
 render: function(){
   return( 
         <View style={[styles.container, this.border('yellow')]}>
-        <View style={[styles.header, this.border('green')]}>
-            <Text style={styles.textStyle}>
-               Omit your poison below...
-            </Text>
-        </View>
+          <View style={[styles.headerTop, this.border('green')]}>
+            <Image style={[styles.imageContainer, this.border('red')]} source={{uri: 'http://i.imgur.com/k58TZ8S.jpg'}} />
+          </View>
+          <View style={[styles.headerBottom, this.border('blue')]}>
+              <Text style={styles.textStyle}>
+                Omit your poison below...
+              </Text>
+          </View>
         </View>
         )
 },

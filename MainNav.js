@@ -5,13 +5,34 @@ var ShowDrink = require('./ShowDrink');
 var ShowFilter = require('./ShowFilter');
 var ScrollableTabView = require('react-native-scrollable-tab-view');
 
+var {
+  StyleSheet,
+  Text,
+  View,
+  ActivityIndicatorIOS,
+  Image
+} = React;
+
+var styles = StyleSheet.create({
+  imageContainer: {
+    flex: 1,
+    // remove width and height to override fixed static size
+    width: null,
+    height: null,
+  }
+});
+
 var MainNav = React.createClass({
-render() {
+render: function() {
        // var changePage = this.props.changePage ? 0 : null;
        // console.log('in MainNav', this.props.mainNavPage);
     return (
             <ScrollableTabView
+              style={this.border('green')}
               initialPage={0}
+              tabBarTextStyle={{fontSize: 16}}
+              tabBarUnderlineColor={'#6f0909'}
+              tabBarActiveTextColor={'#6f0909'}
               page={this.props.mainNavPage}>
 
               <ShowFilter tabLabel='Filter' 
@@ -25,11 +46,18 @@ render() {
                 precip = {this.props.precip}
                 icon = {this.props.icon}
                 icon_url = {this.props.icon_url}  
-                drink = {this.props.drink} />
+                drink = {this.props.drink}
+                handleNextDrinkButton = {this.props.handleNextDrinkButton} />
 
             </ScrollableTabView>
             );
-        }
+        },
+  border: function(color){
+    return {
+      borderColor: color,
+      borderWidth: 0
+    }
+  }
 });
 
 module.exports = MainNav;
