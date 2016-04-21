@@ -43,14 +43,14 @@ const styles = React.StyleSheet.create({
     justifyContent: 'center',
     fontWeight: 'bold',
     fontSize: 16,
-    color: 'white'
+    color: 'black'
   },
   h1: {
     fontSize: 30,
     fontFamily: 'AvenirNext-DemiBold',
     fontStyle: 'italic',
     fontWeight: 'bold',
-    color: 'white'
+    color: 'black'
   },
   buttonWrapper: {
     flexDirection: 'column',
@@ -63,27 +63,27 @@ const styles = React.StyleSheet.create({
   },
   buttonA: {
     width: 140,
-    backgroundColor: 'rgba(255, 255, 255, .4)',
-    borderColor: 'rgba(255, 255, 255, .7)',
+    backgroundColor: 'rgba(0, 0, 0, .2)',
+    borderColor: 'rgba(0, 0, 0, .7)',
   },
   buttonD: {
     width: 140,
-    backgroundColor: 'rgba(255, 255, 255, .4)',
-    borderColor: 'rgba(255, 255, 255, .7)',
+    backgroundColor: 'rgba(0, 0, 0, .2)',
+    borderColor: 'rgba(0, 0, 0, .7)',
   },
   whiteText: {
     color: 'white'
   }
 });
 
-var Landing = React.createClass({
+var Landing = React.createClass({    
   handleNotLegalSubmit: function(){
-    Alert.alert('Please come back when you are 21.')
+    Alert.alert('Please come back when you are 21.')  
   },
   render: function (){
     return (
             <View style={[styles.containerLanding,  testBorder('white')]}>
-              <Image style={styles.bg} source={{uri: 'http://imgur.com/4cTJ7wR.jpg'}} />
+              <Image style={styles.bg} source={{uri: 'http://imgur.com/HTpvsTq.jpg'}} />
               <View style ={[styles.quarterHeight, testBorder('yellow'), styles.header]}>
                 <Text style={styles.h1}>
                   Welcome to DrinkSync

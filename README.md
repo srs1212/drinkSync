@@ -17,6 +17,3 @@ Index (State)
                 -liquorFilter
                 -showMebutton
 
-
-ss changes Wed.
-Data&Logic - add day:null to initial state and to params in fetchweater bestDrink variable as well as states

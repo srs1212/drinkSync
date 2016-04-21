@@ -4,53 +4,75 @@ var React = require('react-native');
 var AlcoholFilterButtons = require('./AlcoholFilterButtons');
 var ApplyFilterButton = require('./ApplyFilterButton');
 var FilterHeader = require('./FilterHeader');
+var Dimensions = require('Dimensions');
+var windowSize = Dimensions.get('window');
 
 var {
   StyleSheet,
   Text,
+  Image,
   View,
 } = React;
 
 var styles = StyleSheet.create({
-  container: {
-    flex: 1, 
+
+  bgTop: {
+  flex: 1,
+  },
+
+   bgBot: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    width: windowSize.width,
+    height: windowSize.height,
+  },
+    containerFilter: {
+    flex: 10, 
     alignItems: 'stretch'
   },
-  ssFilters: { 
-    flex: 3,
+   headerSpace: {
+    flex: 1, 
+  },
+    headerFilter: { 
+    flex: 1,
     // flexDirection: 'row',
   },
-  footer: { 
-    flex: 10
+  buttonBody: { 
+    flex: 7
   },
-  applyFilterButton: { 
-    flex: 1,
-    justifyContent: 'center',
+    alcoholFilterButtons: {
+      flex: .5,
   },
-  alcoholFilters: { 
-    flex: 4,
+    applyFilterButton: { 
+      flex: .5,
+      justifyContent: 'center',
   },
-  sweetFilter: { 
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center' 
+  footerSpace: {
+    flex: 1 
   },
-  savoryFilter: { 
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
+
 });
 
+//containerFilter -- pink
+    //headerSpace -- orange
+    //headerFilter -- orange
+    //buttonBody -- yellow
+      //alcohol filters --blue
+      //apply filters button  --red 
+    //footerSpace -- black 
 
-var ShowFilter = React.createClass({
+var ShowFilter = React.createClass({   
   render: function(){
     return( 
-          <View style={styles.container}>
-            <View style={[styles.ssFilters, this.border('green')]}> 
+          <View style={[styles.containerFilter,  this.border('pink')]}>
+            <View style={[styles.headerSpace, this.border('orange')]}> 
+            <Image style={styles.bgTop} source={{uri:'http://i.imgur.com/k58TZ8S.jpg'}} />
+            </View>
+            <View style={[styles.headerFilter, this.border('orange')]}> 
                <FilterHeader /> 
             </View>
-            <View style={[styles.footer, this.border('yellow')]}>
+            <View style={[styles.buttonBody, this.border('yellow')]}>
               <View style={[styles.alcoholFilters, this.border('blue')]}> 
                 <AlcoholFilterButtons 
                   filterAlcohol = {this.props.filterAlcohol}
@@ -62,13 +84,16 @@ var ShowFilter = React.createClass({
                   handleApplyFilterButton = {this.props.handleApplyFilterButton}/>
               </View>
             </View>
+            <View style={[styles.footerSpace, this.border('black')]}> 
+            </View>
           </View>
           )
   },
+
   border: function(color){
     return {
       borderColor: color,
-      borderWidth: 0
+      borderWidth: 3
     }
   }
 }); 
