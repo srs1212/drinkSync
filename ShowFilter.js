@@ -80,7 +80,7 @@ var ShowFilter = React.createClass({
   border: function(color){
     return {
       borderColor: color,
-      borderWidth: 0
+      borderWidth: 2
     }
   }
 }); 

@@ -13,15 +13,6 @@ var DrinkList = require ('./DrinkList');
 
 var drinkList = new DrinkList();
 
-// smallest data
-//       drink: {
-//         drinkName: 'Kir',
-//         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Mai_Tai.jpg/220px-Mai_Tai.jpg',
-//         ingredients: ['Gin'],
-//         recipe: 'Mix and serve well chilled.',
-//         alcohol: []
-//         }
-
 var DataAndLogic = React.createClass({
   getInitialState: function(){
     return {
@@ -38,43 +29,43 @@ var DataAndLogic = React.createClass({
       mainNavPage: 1,
       filterAlcohol: [],
       drink: {
-        drinkName: 'Kentucky Corpse Reviver',
-        image: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/99/Cloverclub.jpg/220px-Cloverclub.jpg',
-        ingredients: ["Sugar syrup (according to individual preference of sweetness)", "½ oz Tequila","½ oz Vodka","½ oz White rum","½ oz Triple sec","½ oz Gin","¾ oz Lemon juice","1 oz Gomme Syrup","1 dash of Cola"],
-        recipe: 'Combine all ingredients with 2 scoops of crushed ice in a blender, blend briefly, then pour into the volcano bowl. Pour some rum into the central crater of the volcano bowl and light it. For garnish score pineapple or orange slices with a knife and insert onto rim of bowl; optionally add maraschino cherries to the main drink. Multiply recipe to adjust to the size of the container (e.g. x2 for a 32-US-fluid-ounce (950 ml) volcano bowl).',
+        drinkName: '',
+        image: '',
+        ingredients: [],
+        recipe: '',
         alcohol: []
-        }
-      }
+        },
+       sortedDrinkList: []
+      }   
   },
   componentDidMount: function(){
     this.fetchGeolocation()
     this.fetchWeatherData()
   },  
   handleFilterAlcoholState: function(item){
+    console.log("handling filter etoh state");
     this.setState({
       filterAlcohol: item,
       mainNavPage: 0
     });
   },
   handleApplyFilterButton: function(){
-    // console.log('in apply filter button', this.state.initialLoad);
+    //moves page to drink page - now we have to remove those 'items' from the actual array
+    //use sortedDrinkList and filter through on each
+    console.log('applying filter button');
     this.setState({
       mainNavPage: 1,
       initialLoad: false,
     });
   },  
   handleNextDrinkButton: function(){
-    // console.log('in next drink button', this.state.initialLoad);
+   this.state.sortedDrinkList.shift();
+    var nextDrink = this.state.sortedDrinkList;
     this.setState({
-      drink: {
-        drinkName: 'Kir',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Mai_Tai.jpg/220px-Mai_Tai.jpg',
-        ingredients: ['Gin'],
-        recipe: 'Mix and serve well chilled.',
-        alcohol: []
-        },
+      drink: nextDrink[0],
     });
   },
+
   fetchGeolocation: function(){
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -109,6 +100,7 @@ var DataAndLogic = React.createClass({
       precip = responseText.current_observation.precip_1hr_in;
       icon = responseText.current_observation.icon;
       icon_url = responseText.current_observation.icon_url;
+      var sortedDrinkList = drinkList.getSortedDrinkList(temp, precip, day, season, time);
       var bestDrink = drinkList.getSortedDrinkList(temp, precip, day, season, time)[0];
       this.setState({
         temp: temp,
@@ -119,7 +111,8 @@ var DataAndLogic = React.createClass({
         time: time,
         icon: icon,
         icon_url: icon_url,
-        drink: bestDrink
+        drink: bestDrink,
+        sortedDrinkList: sortedDrinkList
       });
     })
     .catch((error) => {

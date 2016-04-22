@@ -62,16 +62,16 @@ var ShowDrink = React.createClass({
           color="black"/>
       )
   },
-  showDrink: function(){
+  showDrink: function(){  
     return( 
-      <Image source={{uri: 'http://i.imgur.com/G2yKzki.jpg'}} style={[styles.imageContainer, this.border('yellow')]}>
+      <Image source={{uri: 'http://i.imgur.com/23jLqI0.jpg'}} style={[styles.imageContainer, this.border('yellow')]}>
           <View style={[styles.container, this.border('green')]}>
-            <View style={[styles.header, this.border('green')]}>
+            <View style={[styles.header, this.border('orange')]}>
               <View style={[styles.weatherWrapper, this.border('red')]}> 
                 <Weather location={this.props.location} temp={this.props.temp}
                  icon={this.props.icon} icon_url={this.props.icon_url}/>
               </View>
-              <View style={[styles.drinkNameWrapper, this.border('yellow')]}> 
+              <View style={[styles.drinkNameWrapper, this.border('pink')]}> 
                 <DrinkName image={this.props.drink ? this.props.drink.image : ''} 
                 drinkName={this.props.drink ? this.props.drink.drinkName : ''}
                 handleNextDrinkButton = {this.props.handleNextDrinkButton} />

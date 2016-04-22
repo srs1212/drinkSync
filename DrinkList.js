@@ -40,7 +40,7 @@ DrinkList.prototype.getSortedDrinkList = function(temp, precip, day, season, tim
 // 		var pvp = precipValue(precip, prev);
 // 		return pvc > pvp ? cur : prev;
 // 	  });	 
-// };
+// };   
 function drinkScore (drink, temp, precip, day, season, time) {
 	precip = precip || 0;
 	day = day || 0;
@@ -60,11 +60,9 @@ function drinkScore (drink, temp, precip, day, season, time) {
 	return score;
 };
 
-// var bestDrinkSorted = function(){
-// 	return DrinkList.bestDrink.sort();
-// };
 		
-// var alcoholFilter = function(){ //filters drinks and excludes those from computations
+// var alcoholFilter = function(){
+// 	if 
 
 // };
 
