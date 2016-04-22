@@ -2,16 +2,14 @@
 
 var React = require('react-native');
 var MainNav = require('./MainNav');
+var DrinkList = require ('./DrinkList');
+var drinkList = new DrinkList();
 
 // var ratingFactors = require ('./RatingFactors');
 // var userLocation = '59802';
-
-var userLocationLat = '37.785834';
-var userLocationLon = '-122.406417';
+// var userLocationLat = '37.785834';
+// var userLocationLon = '-122.406417';
 // var fetchUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=' + userLocation + ',us&appid=22a1e092f3c7508f8ed419614d5ae7b5';
-var DrinkList = require ('./DrinkList');
-
-var drinkList = new DrinkList();
 
 var DataAndLogic = React.createClass({
   getInitialState: function(){
@@ -38,49 +36,21 @@ var DataAndLogic = React.createClass({
        sortedDrinkList: []
       }   
   },
-  componentDidMount: function(){
+  componentWillMount: function(){
     this.fetchGeolocation()
+  }, 
+  componentDidMount: function(){
     this.fetchWeatherData()
   },  
-  handleFilterAlcoholState: function(item){
-    console.log("handling filter etoh state");
+  fetchGeolocation: function(){
+    var userLocationLat = this.props.initialPosition.coords.latitude
+    var userLocationLon = this.props.initialPosition.coords.longitude
     this.setState({
-      filterAlcohol: item,
-      mainNavPage: 0
-    });
-  },
-  handleApplyFilterButton: function(){
-    //moves page to drink page - now we have to remove those 'items' from the actual array
-    //use sortedDrinkList and filter through on each
-    console.log('applying filter button');
-    this.setState({
-      mainNavPage: 1,
-      initialLoad: false,
-    });
-  },  
-  handleNextDrinkButton: function(){
-   this.state.sortedDrinkList.shift();
-    var nextDrink = this.state.sortedDrinkList;
-    this.setState({
-      drink: nextDrink[0],
+      userLocationLat: userLocationLat,
+      userLocationLon: userLocationLon
     });
   },
 
-  fetchGeolocation: function(){
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        var initialPosition = position;
-        var userLocationLat = initialPosition.coords.latitude;
-        var userLocationLon = initialPosition.coords.longitude;
-        this.setState({
-          userLocationLat: userLocationLat,
-          userLocationLon: userLocationLon
-        });
-      },
-      (error) => alert(error.message),
-      {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
-    );
-  },
   fetchWeatherData: function(){
     var fetchUrl = 'http://api.wunderground.com/api/0cbb2794fb744644/conditions/q/' + this.state.userLocationLat + ',' + this.state.userLocationLon + '.json';
 
@@ -119,10 +89,30 @@ var DataAndLogic = React.createClass({
       console.warn(error);
     });
   },
-
-
+  handleFilterAlcoholState: function(item){
+    console.log("handling filter etoh state");
+    this.setState({
+      filterAlcohol: item,
+      mainNavPage: 0
+    });
+  },
+  handleApplyFilterButton: function(){
+    //moves page to drink page - now we have to remove those 'items' from the actual array
+    //use sortedDrinkList and filter through on each
+    console.log('applying filter button');
+    this.setState({
+      mainNavPage: 1,
+      initialLoad: false,
+    });
+  },  
+  handleNextDrinkButton: function(){
+   this.state.sortedDrinkList.shift();
+    var nextDrink = this.state.sortedDrinkList;
+    this.setState({
+      drink: nextDrink[0],
+    });
+  },
   render: function(){
-    console.log('user lat & lon', this.state.userLocationLat, this.state.userLocationLon);
       return( 
               <MainNav
               location = {this.state.location}
