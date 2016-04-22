@@ -21,14 +21,18 @@ var ratingFactors = {
 var DrinkList = function(drinkData){ //the _ in _allDrinks is syntax suggesting internal data usage.
  	this._allDrinks = drinkData || AllDrinks;
 };
-DrinkList.prototype.bestDrink = function(temp, precip, day, season, time){ //temp passed, precip passed
- 	return this._allDrinks.reduce(function(prev, cur){
-		var scoreC = drinkScore(cur, temp, precip, day, season, time);
-		var scoreP = drinkScore(prev, temp, precip, day, season, time);
-		return scoreC > scoreP ? cur : prev;
-	  });
 
-};
+
+DrinkList.prototype.getSortedDrinkList = function(temp, precip, day, season, time) {
+	var comparator = function(a, b) {
+		var scoreA = drinkScore(a, temp, precip, day, season, time);
+		var scoreB = drinkScore(b, temp, precip, day, season, time);
+		return scoreB - scoreA;
+	};
+	var sortedArray = this._allDrinks.sort(comparator);
+	console.log(sortedArray);
+	return sortedArray;
+}
 
 // DrinkList.prototype.bestDrink = function(precip){ //precip
 //  	return this._allDrinks.reduce(function(prev, cur){
@@ -45,14 +49,14 @@ function drinkScore (drink, temp, precip, day, season, time) {
 				+ dayValueRated( dayValue(drink, day), ratingFactors )
 				+ seasonValueRated ( seasonValue(drink, season), ratingFactors)
 				+ timeValueRated ( timeValue(drink, time), ratingFactors);	
-	// console.log("SCORE", weatherValueRated( weatherValue(drink, temp), ratingFactors ),
-	// 			precipValueRated(precipValue(drink, precip), ratingFactors ),
-	// 			dayValueRated( dayValue(drink, day), ratingFactors ),
-	// 			seasonValueRated( seasonValue(drink, season), ratingFactors),
-	// 			timeAmPm, hoursForTime,
-	// 			timeValueRated ( timeValue(drink, time), ratingFactors),
-	// 			drink.drinkName, score);
-	// console.log(bestDrinkSorted());
+	console.log("SCORE", weatherValueRated( weatherValue(drink, temp), ratingFactors ),
+				precipValueRated(precipValue(drink, precip), ratingFactors ),
+				dayValueRated( dayValue(drink, day), ratingFactors ),
+				seasonValueRated( seasonValue(drink, season), ratingFactors),
+				timeAmPm, hoursForTime,
+				timeValueRated ( timeValue(drink, time), ratingFactors),
+				drink.drinkName, score);
+
 	return score;
 };
 

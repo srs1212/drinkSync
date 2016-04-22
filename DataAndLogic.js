@@ -85,7 +85,7 @@ var DataAndLogic = React.createClass({
       precip = responseText.current_observation.precip_1hr_in;
       icon = responseText.current_observation.icon;
       icon_url = responseText.current_observation.icon_url;
-      var bestDrink = drinkList.bestDrink(temp, precip, day, season, time);
+      var bestDrink = drinkList.getSortedDrinkList(temp, precip, day, season, time)[0];
       this.setState({
         temp: temp,
         location: location,
@@ -95,7 +95,7 @@ var DataAndLogic = React.createClass({
         time: time,
         icon: icon,
         icon_url: icon_url,
-        drinkZZZ: bestDrink
+        drink: bestDrink
       });
     })
     .catch((error) => {
