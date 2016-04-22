@@ -62,7 +62,7 @@ function drinkScore (drink, temp, precip, day, season, time) {
 
 		
 // var alcoholFilter = function(){
-// 	if 
+// 	if 'item' is selected remove from getSortedDrinkList
 
 // };
 

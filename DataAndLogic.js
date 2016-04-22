@@ -59,8 +59,16 @@ var DataAndLogic = React.createClass({
     });
   },  
   handleNextDrinkButton: function(){
-   this.state.sortedDrinkList.shift();
+    console.log("Length", this.state.sortedDrinkList.length );
+    if(this.state.sortedDrinkList.length === 1){
+      console.log("End of List");
+      alert ("You've reached the end of our drink list");
+      return;
+    } 
+    this.state.sortedDrinkList.shift(); 
+
     var nextDrink = this.state.sortedDrinkList;
+
     this.setState({
       drink: nextDrink[0],
     });

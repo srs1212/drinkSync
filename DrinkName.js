@@ -55,7 +55,7 @@ var DrinkName = React.createClass({
              </Text>
                   <Button
                     onPress={() => {this.props.handleNextDrinkButton()}}>
-                     #2 Recommended Drink
+                     Next Best Drink
                   </Button> 
            </View>
          </View>
