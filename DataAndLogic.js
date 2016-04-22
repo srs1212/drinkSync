@@ -2,12 +2,13 @@
 
 var React = require('react-native');
 var MainNav = require('./MainNav');
+
 // var ratingFactors = require ('./RatingFactors');
 // var userLocation = '59802';
-var userLocationLat = '46.93';
-var userLocationLon = '-114.1';
+
+var userLocationLat = '37.785834';
+var userLocationLon = '-122.406417';
 // var fetchUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=' + userLocation + ',us&appid=22a1e092f3c7508f8ed419614d5ae7b5';
-var fetchUrl = 'http://api.wunderground.com/api/0cbb2794fb744644/conditions/q/' + userLocationLat + ',' + userLocationLon + '.json';
 var DrinkList = require ('./DrinkList');
 
 var drinkList = new DrinkList();
@@ -25,11 +26,14 @@ var DataAndLogic = React.createClass({
   getInitialState: function(){
     return {
       location: '',
+      userLocationLat: 46.93,
+      userLocationLon: -114.1,
       temp: 0,
       precip: 0,
       icon: null,
       date: null,
       day: null,
+      initialLoad: true,
       icon_url: '',
       mainNavPage: 1,
       filterAlcohol: [],
@@ -43,6 +47,7 @@ var DataAndLogic = React.createClass({
       }
   },
   componentDidMount: function(){
+    this.fetchGeolocation()
     this.fetchWeatherData()
   },  
   handleFilterAlcoholState: function(item){
@@ -52,12 +57,14 @@ var DataAndLogic = React.createClass({
     });
   },
   handleApplyFilterButton: function(){
+    // console.log('in apply filter button', this.state.initialLoad);
     this.setState({
-      mainNavPage: 1
+      mainNavPage: 1,
+      initialLoad: false,
     });
   },  
   handleNextDrinkButton: function(){
-    // console.log('in next drink button');
+    // console.log('in next drink button', this.state.initialLoad);
     this.setState({
       drink: {
         drinkName: 'Kir',
@@ -68,7 +75,24 @@ var DataAndLogic = React.createClass({
         },
     });
   },
+  fetchGeolocation: function(){
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        var initialPosition = position;
+        var userLocationLat = initialPosition.coords.latitude;
+        var userLocationLon = initialPosition.coords.longitude;
+        this.setState({
+          userLocationLat: userLocationLat,
+          userLocationLon: userLocationLon
+        });
+      },
+      (error) => alert(error.message),
+      {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
+    );
+  },
   fetchWeatherData: function(){
+    var fetchUrl = 'http://api.wunderground.com/api/0cbb2794fb744644/conditions/q/' + this.state.userLocationLat + ',' + this.state.userLocationLon + '.json';
+
     var temp = 0
     var location = ''
     var precip = 0
@@ -105,6 +129,7 @@ var DataAndLogic = React.createClass({
 
 
   render: function(){
+    console.log('user lat & lon', this.state.userLocationLat, this.state.userLocationLon);
       return( 
               <MainNav
               location = {this.state.location}
@@ -116,6 +141,7 @@ var DataAndLogic = React.createClass({
               drink = {this.state.drink}
               filterAlcohol = {this.state.filterAlcohol}
               mainNavPage = {this.state.mainNavPage}
+              initialLoad = {this.state.initialLoad}
               handleFilterAlcoholState = {this.handleFilterAlcoholState}
               handleApplyFilterButton = {this.handleApplyFilterButton}
               handleNextDrinkButton = {this.handleNextDrinkButton}

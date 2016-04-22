@@ -19,15 +19,14 @@ var styles = StyleSheet.create({
   },
   ssFilters: { 
     flex: 3,
-    // flexDirection: 'row',
   },
   footer: { 
     flex: 10
   },
   applyFilterButton: { 
     flex: 1,
-    // justifyContent: 'center',
-    // alignItems: 'center' 
+    justifyContent: 'center',
+    alignItems: 'center' 
   },
   alcoholFilters: { 
     flex: 4,
@@ -44,17 +43,10 @@ var styles = StyleSheet.create({
   },
   imageContainer: {
     flex: 1,
-    // position: 'absolute',
-    // bottom: 0
-    // paddingTop: 10
-    // remove width and height to override fixed static size
-    // width: null,
-    // height: null,
   },
   bottomImageWrapper: {
-  flex: 2, 
-  // justifyContent: 'center',
-  // alignItems: 'center' 
+    flex: 2, 
+
 },
 });
 
@@ -74,6 +66,7 @@ var ShowFilter = React.createClass({
               </View>
               <View style={[styles.applyFilterButton, this.border('red')]}> 
                 <ApplyFilterButton
+                  initialLoad = {this.props.initialLoad}
                   filterAlcohol = {this.props.filterAlcohol} 
                   handleApplyFilterButton = {this.props.handleApplyFilterButton}/>
               </View>

@@ -91,7 +91,7 @@ var ShowDrink = React.createClass({
   },  
   render: function(){
     var  isDataReady = (this.props.location && this.props.drink.drinkName) === '' ? this.dataNotReady() : this.showDrink();
-    console.log('in is drinkis ready', this.props.drink.drinkName, this.props.location);
+    // console.log('in is drinkis ready', this.props.drink.drinkName, this.props.location);
     return (
       isDataReady
       )

@@ -30,7 +30,7 @@ render: function() {
             <ScrollableTabView
               style={this.border('green')}
               initialPage={0}
-              tabBarTextStyle={{fontSize: 16}}
+              tabBarTextStyle={{fontSize: 14}}
               tabBarUnderlineColor={'#6f0909'}
               tabBarActiveTextColor={'#6f0909'}
               page={this.props.mainNavPage}>
@@ -38,6 +38,7 @@ render: function() {
               <ShowFilter tabLabel='Filter' 
                 filterAlcohol = {this.props.filterAlcohol}
                 handleFilterAlcoholState = {this.props.handleFilterAlcoholState}
+                initialLoad = {this.props.initialLoad}
                 handleApplyFilterButton = {this.props.handleApplyFilterButton} />
 
               <ShowDrink tabLabel='Drink'
