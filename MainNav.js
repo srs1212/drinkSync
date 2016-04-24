@@ -46,7 +46,7 @@ render: function() {
                 temp = {this.props.temp}
                 precip = {this.props.precip}
                 icon = {this.props.icon}
-                icon_url = {this.props.icon_url}  
+                icon_url = {this.props.icon_url} 
                 drink = {this.props.drink}
                 handleNextDrinkButton = {this.props.handleNextDrinkButton} />
 

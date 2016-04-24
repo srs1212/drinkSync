@@ -1,21 +1,24 @@
 # drinkSync
 
 <!-- 
-Index (State)
+DrinkList (State) - holds all JS functionality- No React
+Index (State and ultimate rendering)
     -Landing
     -DataAndLogic
-        -Logic
-        -DrinkData
+        -AllDrinks
         -MainNav
+            -HeaderLogo
             -ShowDrink
-                -Title
                 -Weather
+                -DrinkName
                 -Ingredients
                 -Recipe
+                -ShowNextButton
             -ShowFilter
-                -sweetSavoryFilter
-                -liquorFilter
-                -showMebutton
+                -AlcoholFilterButtons (State)
+                -ApplyFilterButton (State)
+               
+
 
 
 ss changes Wed.

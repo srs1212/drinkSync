@@ -59,9 +59,8 @@ var DataAndLogic = React.createClass({
     });
   },  
   handleNextDrinkButton: function(){
-    console.log("Length", this.state.sortedDrinkList.length );
+    // console.log("Length", this.state.sortedDrinkList.length );
     if(this.state.sortedDrinkList.length === 1){
-      console.log("End of List");
       alert ("You've reached the end of our drink list");
       return;
     } 
@@ -100,6 +99,7 @@ var DataAndLogic = React.createClass({
     var time = ''
     var icon = ''
     var icon_url = ''
+
     fetch(fetchUrl)
     .then((response) => response.json())
     .then((responseText) => {
@@ -130,7 +130,8 @@ var DataAndLogic = React.createClass({
 
 
   render: function(){
-    console.log('user lat & lon', this.state.userLocationLat, this.state.userLocationLon);
+    // console.log('user lat & lon', this.state.userLocationLat, this.state.userLocationLon);
+      console.log("DATE from D&L", this.state.dateToDisplay, "day from D&L", this.state.day);
       return( 
               <MainNav
               location = {this.state.location}
@@ -138,6 +139,7 @@ var DataAndLogic = React.createClass({
               precip = {this.state.precip}
               icon = {this.state.icon}
               icon_url = {this.state.icon_url}
+              dateToDisplay = {this.state.dateToDisplay}
               sweetValue = {this.state.sweetValue}
               drink = {this.state.drink}
               filterAlcohol = {this.state.filterAlcohol}

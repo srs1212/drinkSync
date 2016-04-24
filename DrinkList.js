@@ -6,8 +6,6 @@ var theDate = new Date();
 var dayDate = theDate.getDate(); //returns day of month ex: April 20, returns 20.
 var monthDate = theDate.toString().substr(4,4); //returns shorthand of month name ex: Apr
 var dayDay = theDate.toString().substr(0,3);// returns shorthand day, ex: Thu
-var timeAmPm = theDate.toLocaleTimeString().replace(/([\d]+:[\d]{2}).*([A-Z]{2}$)/, "$1$2");
-var dateToDisplay = "it's "  + timeAmPm + " on " + theDate.toString().substr(0,10);
 var monthForSeason = theDate.getMonth();
 var hoursForTime = theDate.getHours();
 var ratingFactors = {
@@ -30,7 +28,7 @@ DrinkList.prototype.getSortedDrinkList = function(temp, precip, day, season, tim
 		return scoreB - scoreA;
 	};
 	var sortedArray = this._allDrinks.sort(comparator);
-	console.log(sortedArray);
+	// console.log(sortedArray);
 	return sortedArray;
 }
 
@@ -49,13 +47,13 @@ function drinkScore (drink, temp, precip, day, season, time) {
 				+ dayValueRated( dayValue(drink, day), ratingFactors )
 				+ seasonValueRated ( seasonValue(drink, season), ratingFactors)
 				+ timeValueRated ( timeValue(drink, time), ratingFactors);	
-	console.log("SCORE", weatherValueRated( weatherValue(drink, temp), ratingFactors ),
-				precipValueRated(precipValue(drink, precip), ratingFactors ),
-				dayValueRated( dayValue(drink, day), ratingFactors ),
-				seasonValueRated( seasonValue(drink, season), ratingFactors),
-				timeAmPm, hoursForTime,
-				timeValueRated ( timeValue(drink, time), ratingFactors),
-				drink.drinkName, score);
+	// console.log("SCORE", weatherValueRated( weatherValue(drink, temp), ratingFactors ),
+	// 			precipValueRated(precipValue(drink, precip), ratingFactors ),
+	// 			dayValueRated( dayValue(drink, day), ratingFactors ),
+	// 			seasonValueRated( seasonValue(drink, season), ratingFactors),
+	// 			timeAmPm, hoursForTime,
+	// 			timeValueRated ( timeValue(drink, time), ratingFactors),
+	// 			drink.drinkName, score);
 
 	return score;
 };

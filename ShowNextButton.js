@@ -22,24 +22,15 @@ var styles = StyleSheet.create({
    borderColor: 'black',
    borderWidth: 1
  },
- drinkNameWrapper: { 
+ buttonWrapper: { 
    flex: 10,
    justifyContent: 'center',
    alignItems: 'center'
  },
- bg: {
-   position: 'absolute',
-   left: 0,
-   top: 0,
- },
- base: {
-   width: 100,
-   height: 100,
 
- },
 });
 
-var DrinkName = React.createClass({
+var ShowNextButton = React.createClass({
  render: function(){
    var displayDrinkName = this.props.drinkName;
    var image = this.props.image;
@@ -47,12 +38,10 @@ var DrinkName = React.createClass({
    return( 
          <View style={[styles.container, this.border('green')]}>
            <View style={[styles.iconWrapper, this.border('red')]}>
-             <Image style={[styles.base, {overflow: 'visible'}]} source={{uri: image}}  />
-           </View>
-           <View style={[styles.drinkNameWrapper, this.border('yellow')]}>
-             <Text>
-               {displayDrinkName}
-             </Text>
+                  <Button
+                    onPress={() => {this.props.handleNextDrinkButton()}}>
+                     Next Best Drink
+                  </Button> 
            </View>
          </View>
          )
@@ -60,11 +49,11 @@ var DrinkName = React.createClass({
  border: function(color){
    return {
      borderColor: color,
-     borderWidth: 2
+     borderWidth: 1
    }
  }
 });
 
 
 
-module.exports = DrinkName;
+module.exports = ShowNextButton;

@@ -96,6 +96,7 @@ var AlcoholFilterButtons = React.createClass({
       var index = stateArray.indexOf(item)
       if(stateArray.indexOf(item) == -1){
         stateArray.push(item);
+        console.log("filtered array", this.props.filterAlcohol);
       } else {
         stateArray.splice(index, 1);
       }

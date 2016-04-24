@@ -1,6 +1,9 @@
 'use strict';
 
 var React = require('react-native');
+var theDate = new Date();
+var timeAmPm = theDate.toLocaleTimeString().replace(/([\d]+:[\d]{2}).*([A-Z]{2}$)/, "$1$2");
+var dateToDisplay = "it's "  + timeAmPm + " on " + theDate.toString().substr(0,10);
 
 var {
   StyleSheet,
@@ -37,7 +40,7 @@ var Weather = React.createClass({
     var icon = this.props.icon
     var icon_url = this.props.icon_url
     // console.log('here is the icon', icon, icon_url);
-    return( 
+ return( 
           <View style={[styles.container, this.border('green')]}>
             <View style={[styles.iconWrapper, this.border('red')]}>
               <Image style={[styles.weathericon, {overflow: 'visible'}]} source={{uri: icon_url}} />
@@ -47,7 +50,7 @@ var Weather = React.createClass({
             </View>
             <View style={[styles.weatherWrapper, this.border('yellow')]}>
               <Text>
-               It is {temp} in {location} right now
+               {dateToDisplay}
               </Text>
             </View>
           </View>
@@ -56,7 +59,7 @@ var Weather = React.createClass({
   border: function(color){
     return {
       borderColor: color,
-      borderWidth: 0
+      borderWidth: 1
     }
   }
 }); 
