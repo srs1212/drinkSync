@@ -227,11 +227,11 @@ var AllDrinks =
   "alcohol": ["Champagne",], 
   "ingredients": ["2 oz (1 part) orange juice","3½ oz (2 parts) Champagne",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 2, "wMod": 5, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 5, "pSome": 2}, 
+    "seasonValue":{"sSpr": 5, "sSum": 8, "sFal": 6, "sWin": 3}, 
+    "dayValue": {"dMTRS": 5, "dW": 6, "dFS": 8}, 
+    "timeValue": {"tMrn": 4, "tAft": 6, "tNt": 7, "wSleep": 5}
   }
 },
 
@@ -241,11 +241,11 @@ var AllDrinks =
   "alcohol": [], 
   "ingredients": ["2 oz cachaça","Half a lime cut into 4 wedges","2 teaspoons sugar",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 3, "wMod": 4, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 8, "pSome": 5}, 
+    "seasonValue":{"sSpr": 5, "sSum": 8, "sFal": 6, "sWin": 3}, 
+    "dayValue": {"dMTRS": 4, "dW": 6, "dFS": 9}, 
+    "timeValue": {"tMrn": 3, "tAft": 7, "tNt": 6, "wSleep": 2}
   }
 },
 
@@ -255,11 +255,11 @@ var AllDrinks =
   "alcohol": ["Vodka",], 
   "ingredients": ["Vodka","Cranberry juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 3, "wMod": 4, "wWarm": 6, "wHot": 9}, 
+    "precipValue": {"pNone": 3, "pSome": 5}, 
+    "seasonValue":{"sSpr": 4, "sSum": 7, "sFal": 6, "sWin": 2}, 
+    "dayValue": {"dMTRS": 5, "dW": 6, "dFS": 7}, 
+    "timeValue": {"tMrn": 2, "tAft": 6, "tNt": 7, "wSleep": 4}
   }
 },
 
@@ -269,11 +269,11 @@ var AllDrinks =
   "alcohol": ["Tequila",], 
   "ingredients": ["1½ oz Tequila","1 oz apple cider","1/4 oz lemon juice","1/4 oz creme de cassis",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 4, "wMod": 5, "wWarm": 7, "wHot": 8}, 
+    "precipValue": {"pNone": 4, "pSome": 2}, 
+    "seasonValue":{"sSpr": 5, "sSum": 8, "sFal": 7, "sWin": 3}, 
+    "dayValue": {"dMTRS": 4, "dW": 6, "dFS": 9}, 
+    "timeValue": {"tMrn": 4, "tAft": 7, "tNt": 8, "wSleep": 5}
   }
 },
 
@@ -283,11 +283,11 @@ var AllDrinks =
   "alcohol": ["Gin",], 
   "ingredients": ["1½ oz Gin","½ oz Lemon Juice","½ oz Raspberry Syrup","1 Egg White",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 5, "wMod": 6, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 6, "pSome": 4}, 
+    "seasonValue":{"sSpr": 5, "sSum": 8, "sFal": 6, "sWin": 4}, 
+    "dayValue": {"dMTRS": 5, "dW": 7, "dFS": 10}, 
+    "timeValue": {"tMrn": 1, "tAft": 6, "tNt": 8, "wSleep": 5}
   }
 },
 
@@ -297,11 +297,11 @@ var AllDrinks =
   "alcohol": ["Vodka","Liqueur","Brandy",], 
   "ingredients": ["2 parts vodka or brandy","1 part blue Curaçao","1 part grenadine","1 part lemon juice","6 parts orange juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 4, "wMod": 5, "wWarm": 7, "wHot": 9}, 
+    "precipValue": {"pNone": 8, "pSome": 3}, 
+    "seasonValue":{"sSpr": 6, "sSum": 9, "sFal": 7, "sWin": 4}, 
+    "dayValue": {"dMTRS": 5, "dW": 6, "dFS": 8}, 
+    "timeValue": {"tMrn": 3, "tAft": 7, "tNt": 6, "wSleep": 4}
   }
 },
 
@@ -311,11 +311,11 @@ var AllDrinks =
   "alcohol": ["Vodka",], 
   "ingredients": ["1½ oz Vodka Citron","½ oz Cointreau","½ oz Fresh lime juice","1 oz Cranberry juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 2, "wMod": 4, "wWarm": 7, "wHot": 9}, 
+    "precipValue": {"pNone": 5, "pSome": 2}, 
+    "seasonValue":{"sSpr": 6, "sSum": 9, "sFal": 8, "sWin": 4}, 
+    "dayValue": {"dMTRS": 4, "dW": 5, "dFS": 8}, 
+    "timeValue": {"tMrn": 2, "tAft": 5, "tNt": 7, "wSleep": 4}
   }
 },
 
@@ -325,11 +325,11 @@ var AllDrinks =
   "alcohol": ["Rum",], 
   "ingredients": ["1¾ oz Cola","2 oz Light rum","½ oz Fresh lime juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 3, "wMod": 5, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 7, "pSome": 4}, 
+    "seasonValue":{"sSpr": 4, "sSum": 7, "sFal": 6, "sWin": 1}, 
+    "dayValue": {"dMTRS": 6, "dW": 7, "dFS": 9}, 
+    "timeValue": {"tMrn": 4, "tAft": 7, "tNt": 8, "wSleep": 5}
   }
 },
 
@@ -339,11 +339,11 @@ var AllDrinks =
   "alcohol": ["Rum",], 
   "ingredients": ["2 oz dark rum","3½ oz Ginger beer",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 4, "wMod": 5, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 2, "pSome": 8}, 
+    "seasonValue":{"sSpr": 5, "sSum": 7, "sFal": 4, "sWin": 3}, 
+    "dayValue": {"dMTRS": 4, "dW": 6, "dFS": 9}, 
+    "timeValue": {"tMrn": 1, "tAft": 5, "tNt": 7, "wSleep": 4}
   }
 },
 
@@ -353,11 +353,11 @@ var AllDrinks =
   "alcohol": ["Rum","Liqueur","Vermouth",], 
   "ingredients": ["Two parts rum","One part curaçao","One part dry vermouth","Dash grenadine",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 2, "wMod": 4, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 7, "pSome": 5}, 
+    "seasonValue":{"sSpr": 7, "sSum": 9, "sFal": 6, "sWin": 4}, 
+    "dayValue": {"dMTRS": 5, "dW": 6, "dFS": 7}, 
+    "timeValue": {"tMrn": 1, "tAft": 5, "tNt": 7, "wSleep": 2}
   }
 },
 
@@ -367,11 +367,11 @@ var AllDrinks =
   "alcohol": ["Vodka",], 
   "ingredients": ["2 oz Vodka","½ oz Kahlua","Sugar syrup","1 shot strong Espresso",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 1, "wMod": 3, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 4, "pSome": 2}, 
+    "seasonValue":{"sSpr": 5, "sSum": 8, "sFal": 6, "sWin": 4}, 
+    "dayValue": {"dMTRS": 7, "dW": 6, "dFS": 8}, 
+    "timeValue": {"tMrn": 8, "tAft": 7, "tNt": 5, "wSleep": 1}
   }
 },
 
@@ -381,11 +381,11 @@ var AllDrinks =
   "alcohol": ["Vodka",], 
   "ingredients": ["1 shot Apple Vodka","1/2 cup Apple Juice","1/2 cup Lemonade",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 1, "wMod": 2, "wWarm": 6, "wHot": 7}, 
+    "precipValue": {"pNone": 6, "pSome": 4}, 
+    "seasonValue":{"sSpr": 5, "sSum": 8, "sFal": 6, "sWin": 1}, 
+    "dayValue": {"dMTRS": 5, "dW": 6, "dFS": 9}, 
+    "timeValue": {"tMrn": 1, "tAft": 6, "tNt": 7, "wSleep": 2}
   }
 },
 
@@ -395,11 +395,11 @@ var AllDrinks =
   "alcohol": ["Liqueur",], 
   "ingredients": ["1 pint (~13 parts) beer","3 parts Amaretto","1 part high-proof liquor",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 2, "wMod": 4, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 4, "pSome": 1}, 
+    "seasonValue":{"sSpr": 6, "sSum": 8, "sFal": 7, "sWin": 1}, 
+    "dayValue": {"dMTRS": 4, "dW": 3, "dFS": 7}, 
+    "timeValue": {"tMrn": 0, "tAft": 5, "tNt": 8, "wSleep": 2}
   }
 },
 
@@ -409,11 +409,11 @@ var AllDrinks =
   "alcohol": ["Rum","Brandy",], 
   "ingredients": ["1 oz light rum","1 oz brandy","1 oz overproof rum (e.g. Bacardi 151)","4 oz orange juice","2 oz lemon juice","2 oz almond flavored syrup",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 5, "wMod": 6, "wWarm": 7, "wHot": 9}, 
+    "precipValue": {"pNone": 8, "pSome": 3}, 
+    "seasonValue":{"sSpr": 5, "sSum": 8, "sFal": 7, "sWin": 1}, 
+    "dayValue": {"dMTRS": 3, "dW": 5, "dFS": 8}, 
+    "timeValue": {"tMrn": 0, "tAft": 5, "tNt": 8, "wSleep": 2}
   }
 },
 
@@ -423,11 +423,11 @@ var AllDrinks =
   "alcohol": ["Champagne","Gin",], 
   "ingredients": ["1 oz gin","2 dashes simple syrup","½ oz lemon juice","2 oz Champagne",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 1, "wMod": 3, "wWarm": 5, "wHot": 6}, 
+    "precipValue": {"pNone": 6, "pSome": 2}, 
+    "seasonValue":{"sSpr": 5, "sSum": 8, "sFal": 7, "sWin": 3}, 
+    "dayValue": {"dMTRS": 4, "dW": 6, "dFS": 8}, 
+    "timeValue": {"tMrn": 2, "tAft": 6, "tNt": 8, "wSleep": 1}
   }
 },
 
@@ -437,11 +437,11 @@ var AllDrinks =
   "alcohol": ["Gin","Vermouth",], 
   "ingredients": ["2 oz gin","½ oz dry vermouth",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 3, "wMod": 4, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 5, "pSome": 3}, 
+    "seasonValue":{"sSpr": 6, "sSum": 8, "sFal": 7, "sWin": 2}, 
+    "dayValue": {"dMTRS": 5, "dW": 6, "dFS": 8}, 
+    "timeValue": {"tMrn": 2, "tAft": 6, "tNt": 7, "wSleep": 3}
   }
 },
 
@@ -451,11 +451,11 @@ var AllDrinks =
   "alcohol": ["Gin","Vodka",], 
   "ingredients": ["Five parts gin","One part simple syrup","One part sweetened lime juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 4, "wMod": 5, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 7, "pSome": 2}, 
+    "seasonValue":{"sSpr": 6, "sSum": 7, "sFal": 5, "sWin": 3}, 
+    "dayValue": {"dMTRS": 4, "dW": 6, "dFS": 9}, 
+    "timeValue": {"tMrn": 1, "tAft": 5, "tNt": 8, "wSleep": 2}
   }
 },
 
@@ -465,11 +465,11 @@ var AllDrinks =
   "alcohol": ["Gin",], 
   "ingredients": ["Gin",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 6, "wMod": 6, "wWarm": 8, "wHot": 9}, 
+    "precipValue": {"pNone": 9, "pSome": 5}, 
+    "seasonValue":{"sSpr": 8, "sSum": 9, "sFal": 5, "sWin": 2}, 
+    "dayValue": {"dMTRS": 8, "dW": 10, "dFS": 9}, 
+    "timeValue": {"tMrn": 2, "tAft": 7, "tNt": 8, "wSleep": 0}
   }
 },
 
@@ -479,11 +479,11 @@ var AllDrinks =
   "alcohol": ["Whiskey","Liqueur",], 
   "ingredients": ["1 oz scotch whisky","1 oz Disaronno",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 9, "wMod": 8, "wWarm": 7, "wHot": 6}, 
+    "precipValue": {"pNone": 6, "pSome": 8}, 
+    "seasonValue":{"sSpr": 7, "sSum": 8, "sFal": 8, "sWin": 9}, 
+    "dayValue": {"dMTRS": 7, "dW": 8, "dFS": 4}, 
+    "timeValue": {"tMrn": 8, "tAft": 8, "tNt": 4, "wSleep": 2}
   }
 },
 
@@ -493,11 +493,11 @@ var AllDrinks =
   "alcohol": ["Liqueur",], 
   "ingredients": ["¾ oz (2 parts) Galliano","¾ oz (2 parts) Triple Sec","¾ oz (2 parts) Fresh orange juice","½ oz (1 part) Fresh cream",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 7, "wMod": 7, "wWarm": 7, "wHot": 7}, 
+    "precipValue": {"pNone": 7, "pSome": 5}, 
+    "seasonValue":{"sSpr": 8, "sSum": 8, "sFal": 5, "sWin": 5}, 
+    "dayValue": {"dMTRS": 5, "dW": 4, "dFS": 7}, 
+    "timeValue": {"tMrn": 10, "tAft": 9, "tNt": 5, "wSleep": 0}
   }
 },
 
@@ -507,11 +507,11 @@ var AllDrinks =
   "alcohol": ["Liqueur",], 
   "ingredients": ["1 oz Crème de menthe (green)","1 oz Crème de cacao (white)","1 oz Fresh cream",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 5, "wMod": 6, "wWarm": 6, "wHot": 7}, 
+    "precipValue": {"pNone": 4, "pSome": 8}, 
+    "seasonValue":{"sSpr": 7, "sSum": 8, "sFal": 7, "sWin": 5}, 
+    "dayValue": {"dMTRS": 5, "dW": 5, "dFS": 8}, 
+    "timeValue": {"tMrn": 2, "tAft": 9, "tNt": 8, "wSleep": 0}
   }
 },
 
@@ -521,11 +521,11 @@ var AllDrinks =
   "alcohol": ["Gin",], 
   "ingredients": ["2 oz (1 parts) Gin","7 oz (4 parts) Grapefruit juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 4, "wMod": 4, "wWarm": 5, "wHot": 7}, 
+    "precipValue": {"pNone": 4, "pSome": 2}, 
+    "seasonValue":{"sSpr": 8, "sSum": 8, "sFal": 8, "sWin": 6}, 
+    "dayValue": {"dMTRS": 8, "dW": 6, "dFS": 6}, 
+    "timeValue": {"tMrn": 8, "tAft": 4, "tNt": 8, "wSleep": 4}
   }
 },
 
@@ -535,11 +535,11 @@ var AllDrinks =
   "alcohol": ["Vodka","Liqueur",], 
   "ingredients": ["1½ oz (3 parts) Vodka","½ oz (1 part) Galliano","3 oz (6 parts) fresh orange juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 6, "wMod": 7, "wWarm": 8, "wHot": 9}, 
+    "precipValue": {"pNone": 5, "pSome": 5}, 
+    "seasonValue":{"sSpr": 8, "sSum": 9, "sFal": 6, "sWin": 4}, 
+    "dayValue": {"dMTRS": 8, "dW": 7, "dFS": 7}, 
+    "timeValue": {"tMrn": 9, "tAft": 8, "tNt": 6, "wSleep": 0}
   }
 },
 
@@ -549,11 +549,11 @@ var AllDrinks =
   "alcohol": ["Brandy",], 
   "ingredients": ["1½ oz (1 part) Brandy","1¾ oz (3 parts) Ginger ale","Dash of Angostura bitter",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 4, "wMod": 5, "wWarm": 6, "wHot": 7}, 
+    "precipValue": {"pNone": 4, "pSome": 4}, 
+    "seasonValue":{"sSpr": 5, "sSum": 7, "sFal": 9, "sWin": 9}, 
+    "dayValue": {"dMTRS": 7, "dW": 6, "dFS": 5}, 
+    "timeValue": {"tMrn": 2, "tAft": 8, "tNt": 8, "wSleep": 0}
   }
 },
 
@@ -563,11 +563,11 @@ var AllDrinks =
   "alcohol": ["Rum",], 
   "ingredients": ["One part dark rum","One part white rum","Half part over proofed rum","Passion fruit syrup","Lemon juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 2, "wMod": 3, "wWarm": 8, "wHot": 9}, 
+    "precipValue": {"pNone": 8, "pSome": 4}, 
+    "seasonValue":{"sSpr": 7, "sSum": 9, "sFal": 6, "sWin": 4}, 
+    "dayValue": {"dMTRS": 0, "dW": 5, "dFS": 9}, 
+    "timeValue": {"tMrn": 0, "tAft": 0, "tNt": 8, "wSleep": 0}
   }
 },
 
@@ -577,11 +577,11 @@ var AllDrinks =
   "alcohol": ["Whiskey","Liqueur",], 
   "ingredients": ["1/2 oz whiskey","1/2 oz Irish cream liqueur","1/2 pint stout",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 4, "wMod": 4, "wWarm": 5, "wHot": 6}, 
+    "precipValue": {"pNone": 7, "pSome": 6}, 
+    "seasonValue":{"sSpr": 7, "sSum": 8, "sFal": 6, "sWin": 3}, 
+    "dayValue": {"dMTRS": 1, "dW": 5, "dFS": 8}, 
+    "timeValue": {"tMrn": 0, "tAft": 4, "tNt": 9, "wSleep": 6}
   }
 },
 
@@ -591,11 +591,11 @@ var AllDrinks =
   "alcohol": ["Whiskey",], 
   "ingredients": ["1½ oz (2 parts) Irish whiskey","3 oz (4 parts) hot coffee","1 oz (1½ parts) fresh cream","1tsp brown sugar",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 10, "wMod": 8, "wWarm": 2, "wHot": 1}, 
+    "precipValue": {"pNone": 3, "pSome": 9}, 
+    "seasonValue":{"sSpr": 5, "sSum": 5, "sFal": 8, "sWin": 9}, 
+    "dayValue": {"dMTRS": 8, "dW": 5, "dFS": 6}, 
+    "timeValue": {"tMrn": 10, "tAft": 8, "tNt": 2, "wSleep": 2}
   }
 },
 
@@ -605,11 +605,11 @@ var AllDrinks =
   "alcohol": ["Brandy",], 
   "ingredients": ["2 parts applejack","1 part lemon or lime juice","1/2 part grenadine",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 6, "wMod": 4, "wWarm": 5, "wHot": 5}, 
+    "precipValue": {"pNone": 4, "pSome": 4}, 
+    "seasonValue":{"sSpr": 5, "sSum": 4, "sFal": 8, "sWin": 8}, 
+    "dayValue": {"dMTRS": 6, "dW": 4, "dFS": 4}, 
+    "timeValue": {"tMrn": 1, "tAft": 5, "tNt": 6, "wSleep": 0}
   }
 },
 
@@ -619,11 +619,11 @@ var AllDrinks =
   "alcohol": ["Liqueur",], 
   "ingredients": ["1 oz (1 part) Midori","1 oz (1 part) cointreau","1 oz (1 part) lemon juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 3, "wMod": 3, "wWarm": 5, "wHot": 7}, 
+    "precipValue": {"pNone": 7, "pSome": 4}, 
+    "seasonValue":{"sSpr": 6, "sSum": 8, "sFal": 3, "sWin": 4}, 
+    "dayValue": {"dMTRS": 8, "dW": 6, "dFS": 6}, 
+    "timeValue": {"tMrn": 1, "tAft": 8, "tNt": 8, "wSleep": 0}
   }
 },
 
@@ -633,11 +633,11 @@ var AllDrinks =
   "alcohol": ["Wine",], 
   "ingredients": ["One part red wine","One part cola",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 6, "wMod": 7, "wWarm": 7, "wHot": 7}, 
+    "precipValue": {"pNone": 6, "pSome": 9}, 
+    "seasonValue":{"sSpr": 7, "sSum": 8, "sFal": 8, "sWin": 7}, 
+    "dayValue": {"dMTRS": 9, "dW": 10, "dFS": 4}, 
+    "timeValue": {"tMrn": 1, "tAft": 7, "tNt": 8, "wSleep": 0}
   }
 },
 
@@ -647,11 +647,11 @@ var AllDrinks =
   "alcohol": ["Vodka","Liqueur",], 
   "ingredients": ["1 oz vodka","1 oz triple sec","1 oz lime juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 3, "wMod": 5, "wWarm": 5, "wHot": 5}, 
+    "precipValue": {"pNone": 6, "pSome": 6}, 
+    "seasonValue":{"sSpr": 4, "sSum": 6, "sFal": 4, "sWin": 6}, 
+    "dayValue": {"dMTRS": 0, "dW": 4, "dFS": 9}, 
+    "timeValue": {"tMrn": 0, "tAft": 6, "tNt": 7, "wSleep": 0}
   }
 },
 
@@ -661,11 +661,11 @@ var AllDrinks =
   "alcohol": ["Whiskey",], 
   "ingredients": ["1 part Bourbon","1 part Lillet Blanc","1 part Lemon Juice","1 part Cointreau",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 2, "wMod": 3, "wWarm": 6, "wHot": 8}, 
+    "precipValue": {"pNone": 3, "pSome": 9}, 
+    "seasonValue":{"sSpr": 10, "sSum": 8, "sFal": 3, "sWin": 3}, 
+    "dayValue": {"dMTRS": 2, "dW": 6, "dFS": 8}, 
+    "timeValue": {"tMrn": 2, "tAft": 5, "tNt": 7, "wSleep": 2}
   }
 },
 
@@ -675,11 +675,11 @@ var AllDrinks =
   "alcohol": ["Wine",], 
   "ingredients": ["3 oz (9 parts) white wine","½ oz (1 part) crème de cassis",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 4, "wMod": 4, "wWarm": 8, "wHot": 8}, 
+    "precipValue": {"pNone": 5, "pSome": 8}, 
+    "seasonValue":{"sSpr": 8, "sSum": 7, "sFal": 4, "sWin": 4}, 
+    "dayValue": {"dMTRS": 8, "dW": 7, "dFS": 7}, 
+    "timeValue": {"tMrn": 5, "tAft": 5, "tNt": 4, "wSleep": 2}
   }
 },
 
@@ -690,11 +690,11 @@ var AllDrinks =
   "alcohol": ["Champagne",], 
   "ingredients": ["3 oz champagne","½ oz crème de cassis",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 3, "wMod": 6, "wWarm": 6, "wHot": 6}, 
+    "precipValue": {"pNone": 5, "pSome": 8}, 
+    "seasonValue":{"sSpr": 5, "sSum": 5, "sFal": 7, "sWin": 8}, 
+    "dayValue": {"dMTRS": 8, "dW": 7, "dFS": 7}, 
+    "timeValue": {"tMrn": 10, "tAft": 7, "tNt": 2, "wSleep": 0}
   }
 },
 
@@ -704,11 +704,11 @@ var AllDrinks =
   "alcohol": ["Gin","Tequila","Vodka","Rum","Liqueur",], 
   "ingredients": ["½ oz Tequila","½ oz Vodka","½ oz White rum","½ oz Triple sec","½ oz Gin","¾ oz Lemon juice","1 oz Gomme Syrup","1 dash of Cola",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 3, "wMod": 4, "wWarm": 8, "wHot": 9}, 
+    "precipValue": {"pNone": 8, "pSome": 5}, 
+    "seasonValue":{"sSpr": 4, "sSum": 9, "sFal": 8, "sWin": 2}, 
+    "dayValue": {"dMTRS": 2, "dW": 6, "dFS": 10}, 
+    "timeValue": {"tMrn": 2, "tAft": 5, "tNt": 9, "wSleep": 0}
   }
 },
 
@@ -718,11 +718,11 @@ var AllDrinks =
   "alcohol": ["Whiskey",], 
   "ingredients": ["lemon-lime",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 2, "wMod": 2, "wWarm": 5, "wHot": 10}, 
+    "precipValue": {"pNone": 9, "pSome": 7}, 
+    "seasonValue":{"sSpr": 7, "sSum": 9, "sFal": 1, "sWin": 1}, 
+    "dayValue": {"dMTRS": 3, "dW": 6, "dFS": 9}, 
+    "timeValue": {"tMrn": 2, "tAft": 9, "tNt": 8, "wSleep": 0}
   }
 },
 
@@ -732,11 +732,11 @@ var AllDrinks =
   "alcohol": ["Rum","Liqueur",], 
   "ingredients": ["1½ oz white rum","¾ oz dark rum","½ oz orange curaçao","½ oz Orgeat syrup","½ oz fresh lime juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 3, "wMod": 5, "wWarm": 8, "wHot": 9}, 
+    "precipValue": {"pNone": 3, "pSome": 3}, 
+    "seasonValue":{"sSpr": 6, "sSum": 10, "sFal": 4, "sWin": 2}, 
+    "dayValue": {"dMTRS": 2, "dW": 7, "dFS": 8}, 
+    "timeValue": {"tMrn": 1, "tAft": 6, "tNt": 7, "wSleep": 0}
   }
 },
 
@@ -746,11 +746,11 @@ var AllDrinks =
   "alcohol": ["Whiskey","Vermouth",], 
   "ingredients": ["2 oz rye","¾ oz Sweet red vermouth","Dash Angostura bitters",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 7, "wMod": 8, "wWarm": 8, "wHot": 8}, 
+    "precipValue": {"pNone": 6, "pSome": 9}, 
+    "seasonValue":{"sSpr": 7, "sSum": 4, "sFal": 8, "sWin": 8}, 
+    "dayValue": {"dMTRS": 7, "dW": 8, "dFS": 5}, 
+    "timeValue": {"tMrn": 2, "tAft": 9, "tNt": 8, "wSleep": 2}
   }
 },
 
@@ -760,11 +760,11 @@ var AllDrinks =
   "alcohol": ["Tequila",], 
   "ingredients": ["1 oz (7 parts) tequila","¾ oz (4 parts) Cointreau","½ oz (3 parts) lime juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 2, "wMod": 4, "wWarm": 9, "wHot": 10}, 
+    "precipValue": {"pNone": 9, "pSome": 2}, 
+    "seasonValue":{"sSpr": 8, "sSum": 10, "sFal": 3, "sWin": 3}, 
+    "dayValue": {"dMTRS": 6, "dW": 8, "dFS": 9}, 
+    "timeValue": {"tMrn": 1, "tAft": 9, "tNt": 9, "wSleep": 1}
   }
 },
 
@@ -774,11 +774,11 @@ var AllDrinks =
   "alcohol": ["Gin","Vermouth",], 
   "ingredients": ["2 oz (6 parts) gin","½ oz (1 parts) dry vermouth",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 7, "wMod": 7, "wWarm": 8, "wHot": 7}, 
+    "precipValue": {"pNone": 7, "pSome": 8}, 
+    "seasonValue":{"sSpr": 4, "sSum": 6, "sFal": 8, "sWin": 8}, 
+    "dayValue": {"dMTRS": 2, "dW": 8, "dFS": 8}, 
+    "timeValue": {"tMrn": 1, "tAft": 3, "tNt": 8, "wSleep": 1}
   }
 },
 
@@ -788,11 +788,11 @@ var AllDrinks =
   "alcohol": ["Champagne",], 
   "ingredients": ["7.2 oz champagne","7.2 oz orange juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 3, "wMod": 6, "wWarm": 8, "wHot": 8}, 
+    "precipValue": {"pNone": 8, "pSome": 4}, 
+    "seasonValue":{"sSpr": 9, "sSum": 8, "sFal": 5, "sWin": 4}, 
+    "dayValue": {"dMTRS": 6, "dW": 7, "dFS": 9}, 
+    "timeValue": {"tMrn": 9, "tAft": 9, "tNt": 3, "wSleep": 0}
   }
 },
 
@@ -802,11 +802,11 @@ var AllDrinks =
   "alcohol": ["Whiskey",], 
   "ingredients": ["2 oz Bourbon whiskey","4 mint leaves","1 teaspoon powdered sugar","2 teaspoons water",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 1, "wMod": 3, "wWarm": 6, "wHot": 9}, 
+    "precipValue": {"pNone": 10, "pSome": 2}, 
+    "seasonValue":{"sSpr": 9, "sSum": 8, "sFal": 3, "sWin": 1}, 
+    "dayValue": {"dMTRS": 3, "dW": 7, "dFS": 8}, 
+    "timeValue": {"tMrn": 10, "tAft": 8, "tNt": 3, "wSleep": 1}
   }
 },
 
@@ -816,11 +816,11 @@ var AllDrinks =
   "alcohol": ["Gin",], 
   "ingredients": ["2 oz gin","1 oz orange juice","2 drops absinthe","2 drops grenadine",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 1, "wMod": 3, "wWarm": 9, "wHot": 7}, 
+    "precipValue": {"pNone": 6, "pSome": 3}, 
+    "seasonValue":{"sSpr": 8, "sSum": 6, "sFal": 7, "sWin": 1}, 
+    "dayValue": {"dMTRS": 3, "dW": 8, "dFS": 7}, 
+    "timeValue": {"tMrn": 4, "tAft": 6, "tNt": 5, "wSleep": 3}
   }
 },
 
@@ -830,11 +830,11 @@ var AllDrinks =
   "alcohol": ["Vodka",], 
   "ingredients": ["1½ oz (9 parts) vodka","¼ oz (1 part) lime juice","1¾ oz (24 parts) ginger beer",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 2, "wMod": 5, "wWarm": 10, "wHot": 8}, 
+    "precipValue": {"pNone": 6, "pSome": 4}, 
+    "seasonValue":{"sSpr": 10, "sSum": 8, "sFal": 4, "sWin": 2}, 
+    "dayValue": {"dMTRS": 6, "dW": 7, "dFS": 8}, 
+    "timeValue": {"tMrn": 2, "tAft": 8, "tNt": 9, "wSleep": 4}
   }
 },
 
@@ -844,11 +844,11 @@ var AllDrinks =
   "alcohol": ["Gin","Vermouth","Liqueur",], 
   "ingredients": ["1 oz gin","1 oz sweet red vermouth","1 oz campari",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
-    "timeValue": {"tMrn": zzz, "tAft": zzz, "tNt": zzz, "wSleep": zzz}
+    "weatherValue": {"wCold": 2, "wMod": 4, "wWarm": 6, "wHot": 7}, 
+    "precipValue": {"pNone": 7, "pSome": 2}, 
+    "seasonValue":{"sSpr": 6, "sSum": 8, "sFal": 5, "sWin": 3}, 
+    "dayValue": {"dMTRS": 3, "dW": 5, "dFS": 7}, 
+    "timeValue": {"tMrn": 2, "tAft": 8, "tNt": 6, "wSleep": 3}
   }
 },
 
@@ -858,10 +858,11 @@ var AllDrinks =
   "alcohol": ["Brandy",], 
   "ingredients": ["Cognac","Coffee powder","Powdered sugar","Lemon disk, peeled",], 
   "drinkRating": {
-    "weatherValue": {"wCold": zzz, "wMod": zzz, "wWarm": zzz, "wHot": zzz}, 
-    "precipValue": {"pNone": zzz, "pSome": zzz}, 
-    "seasonValue":{"sSpr": zzz, "sSum": zzz, "sFal": zzz, "sWin": zzz}, 
-    "dayValue": {"dMTRS": zzz, "dW": zzz, "dFS": zzz}, 
+    "weatherValue": {"wCold": 3, "wMod": 9, "wWarm": 7, "wHot": 6}, 
+    "precipValue": {"pNone": 8, "pSome": 5}, 
+    "seasonValue": {"sSpr": 7, "sSum": 4, "sFal": 8, "sWin": 3}, 
+    "dayValue": {"dMTRS": 5, "dW": 4, "dFS": 7},
+    "timeValue": {"tMrn": 9, "tAft": 6, "tNt": 5, "wSleep": 1} 
   }
 },
 
@@ -899,7 +900,7 @@ var AllDrinks =
   "alcohol": ["Gin","Brandy",], 
   "ingredients": ["1 oz (7 parts) gin","¾ oz (4 parts) apricot brandy","½ oz (3 parts) orange juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": 3, "wMod": 5, "wWarm": zzz7, "wHot": 8}, 
+    "weatherValue": {"wCold": 3, "wMod": 5, "wWarm": 7, "wHot": 8}, 
     "precipValue": {"pNone": 6, "pSome": 4}, 
     "seasonValue": {"sSpr": 7, "sSum": 8, "sFal": 5, "sWin": 2}, 
     "dayValue": {"dMTRS": 4, "dW": 5, "dFS": 9}, 
@@ -913,9 +914,9 @@ var AllDrinks =
   "alcohol": ["Rum",], 
   "ingredients": ["1 oz (one part) white rum","1 oz (one part) coconut milk","3 oz (3 parts) pineapple juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": 1, "wMod": 4, "wWarm": 8, "wHot": 9}, 
+    "weatherValue": {"wCold": 1, "wMod": 4, "wWarm": 8, "wHot": 10}, 
     "precipValue": {"pNone": 9, "pSome": 1}, 
-    "seasonValue": {"sSpr": 8, "sSum": 9, "sFal": 4, "sWin": 1}, 
+    "seasonValue": {"sSpr": 8, "sSum": 10, "sFal": 4, "sWin": 1}, 
     "dayValue": {"dMTRS": 2, "dW": 5, "dFS": 9}, 
     "timeValue": {"tMrn": 8, "tAft": 9, "tNt": 4, "wSleep": 1}
   }
@@ -1056,8 +1057,8 @@ var AllDrinks =
     "weatherValue": {"wCold": 3, "wMod": 9, "wWarm": 6, "wHot": 7}, 
     "precipValue": {"pNone": 5, "pSome": 4}, 
     "seasonValue": {"sSpr": 8, "sSum": 9, "sFal": 6, "sWin": 5}, 
-    "dayValue": {"dMTRS": 7, "dW": 5, "dFS": 4}, 
-    "timeValue": {"tMrn": 9, "tAft": 8, "tNt": 3, "wSleep": 5}
+    "dayValue": {"dMTRS": 9, "dW": 5, "dFS": 3}, 
+    "timeValue": {"tMrn": 10, "tAft": 8, "tNt": 3, "wSleep": 5}
   }
 },
 
@@ -1081,10 +1082,10 @@ var AllDrinks =
   "alcohol": ["Vodka", "Liqueur",], 
   "ingredients": ["1½ oz Vodka","¾ oz Peach schnapps","1½ oz Orange juice","1½ oz Cranberry juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": 1, "wMod": 4, "wWarm": 5, "wHot": 9}, 
+    "weatherValue": {"wCold": 1, "wMod": 4, "wWarm": 5, "wHot": 10}, 
     "precipValue": {"pNone": 9, "pSome": 2}, 
-    "seasonValue": {"sSpr": 6, "sSum": 9, "sFal": 2, "sWin": 1}, 
-    "dayValue": {"dMTRS": 2, "dW": 6, "dFS": 9}, 
+    "seasonValue": {"sSpr": 6, "sSum": 10, "sFal": 2, "sWin": 1}, 
+    "dayValue": {"dMTRS": 2, "dW": 6, "dFS": 10}, 
     "timeValue": {"tMrn": 7, "tAft": 8, "tNt": 3, "wSleep": 2}
   }
 },
@@ -1169,7 +1170,7 @@ var AllDrinks =
     "precipValue": {"pNone": 9, "pSome": 4}, 
     "seasonValue": {"sSpr": 6, "sSum": 9, "sFal": 4, "sWin": 1}, 
     "dayValue": {"dMTRS": 2, "dW": 3, "dFS": 6}, 
-    "timeValue": {"tMrn": 9, "tAft": 3, "tNt": 2, "wSleep": 1}
+    "timeValue": {"tMrn": 10, "tAft": 3, "tNt": 2, "wSleep": 1}
   }
 },
 
