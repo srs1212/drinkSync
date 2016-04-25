@@ -2,7 +2,8 @@
 
 var React = require('react-native');
 var Landing = require('./Landing');
-var DataAndLogic = require('./DataAndLogic');
+// var DataAndLogic = require('./DataAndLogic');
+var Geolocation = require('./Geolocation');
  
 
 var drinkSync = React.createClass({
@@ -17,7 +18,7 @@ var drinkSync = React.createClass({
     });
   },
   render: function (){
-    return this.state.legal ? <DataAndLogic /> : <Landing handleLegalSubmit={this.handleLegalSubmit}/>
+    return this.state.legal ? <Geolocation /> : <Landing handleLegalSubmit={this.handleLegalSubmit}/>
   }
 });
 
