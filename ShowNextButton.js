@@ -27,6 +27,13 @@ var styles = StyleSheet.create({
    justifyContent: 'center',
    alignItems: 'center'
  },
+  buttonStyleUp: {
+    flex: 1,
+    backgroundColor: 'rgba(0,0,0, .4)',
+    borderColor: '#6f0909',
+    marginLeft: 3,
+    marginRight: 3,
+  },
 
 });
 
@@ -38,7 +45,7 @@ var ShowNextButton = React.createClass({
    return( 
          <View style={[styles.container, this.border('green')]}>
            <View style={[styles.iconWrapper, this.border('red')]}>
-                  <Button
+                  <Button style={styles.buttonStyleUp}
                     onPress={() => {this.props.handleNextDrinkButton()}}>
                      Next Best Drink
                   </Button> 
@@ -49,7 +56,7 @@ var ShowNextButton = React.createClass({
  border: function(color){
    return {
      borderColor: color,
-     borderWidth: 1
+     borderWidth: 0
    }
  }
 });

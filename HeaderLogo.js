@@ -44,7 +44,7 @@ render: function(){
 border: function(color){
   return {
     borderColor: color,
-    borderWidth: 1
+    borderWidth: 0
   }
 }
 });
