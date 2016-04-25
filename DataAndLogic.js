@@ -51,46 +51,6 @@ var DataAndLogic = React.createClass({
     });
   },
 
-  handleApplyFilterButton: function(){
-    //moves page to drink page - now we have to remove those 'items' from the actual array
-    //use sortedDrinkList and filter through on each
-    console.log('applying filter button');
-    this.setState({
-      mainNavPage: 1,
-      initialLoad: false,
-    });
-  },  
-  handleNextDrinkButton: function(){
-    // console.log("Length", this.state.sortedDrinkList.length );
-    if(this.state.sortedDrinkList.length === 1){
-      alert ("You've reached the end of our drink list");
-      return;
-    } 
-    this.state.sortedDrinkList.shift(); 
-
-    var nextDrink = this.state.sortedDrinkList;
-
-    this.setState({
-      drink: nextDrink[0],
-    });
-  },
-
-  fetchGeolocation: function(){
-    navigator.geolocation.getCurrentPosition(
-      (position) => {
-        var initialPosition = position;
-        var userLocationLat = initialPosition.coords.latitude;
-        var userLocationLon = initialPosition.coords.longitude;
-        this.setState({
-          userLocationLat: userLocationLat,
-          userLocationLon: userLocationLon
-        });
-      },
-      (error) => alert(error.message),
-      {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
-    );
-  },
-
   fetchWeatherData: function(){
     var fetchUrl = 'http://api.wunderground.com/api/0cbb2794fb744644/conditions/q/' + this.state.userLocationLat + ',' + this.state.userLocationLon + '.json';
     var temp = 0
@@ -162,11 +122,9 @@ var DataAndLogic = React.createClass({
   },
 
   render: function(){
-<<<<<<< HEAD
     // console.log('user lat & lon', this.state.userLocationLat, this.state.userLocationLon);
       console.log("DATE from D&L", this.state.dateToDisplay, "day from D&L", this.state.day);
-=======
->>>>>>> 54ae305fc4ae69c6a303e71743d9e14c08d03a71
+
       return( 
               <MainNav
               location = {this.state.location}
