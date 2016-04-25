@@ -96,10 +96,11 @@ var ShowDrink = React.createClass({
           color="black"/>
       )
   },
-  showDrink: function(){  
+  showDrink: function(){ 
+   // line 103 <Image source={{uri: 'http://i.imgur.com/23jLqI0.jpg'}} style={[styles.bg, this.border('yellow')]} /> 
     return(   
           <View style={[styles.container, this.border('green')]}>
-            <Image source={{uri: 'http://i.imgur.com/23jLqI0.jpg'}} style={[styles.bg, this.border('yellow')]} />
+          
                 <View style={[styles.headerTop, this.border('blue')]}>
                    <HeaderLogo /> 
                 </View>
@@ -152,7 +153,7 @@ var ShowDrink = React.createClass({
   border: function(color){
     return {
       borderColor: color,
-      borderWidth: 0
+      borderWidth: 1
     }
   }
 }); 

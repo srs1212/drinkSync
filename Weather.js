@@ -24,8 +24,10 @@ var styles = StyleSheet.create({
   },
   textWrapper: { 
     flex: 10,
-    paddingLeft: 10,
-    paddingTop: 15
+    justifyContent: 'center',
+    alignItems: 'center'
+    // paddingLeft: 10,
+    // paddingTop: 15
 
   },
     textNow: {
@@ -71,7 +73,7 @@ var Weather = React.createClass({
   border: function(color){
     return {
       borderColor: color,
-      borderWidth: 0
+      borderWidth: 1
     }
   }
 }); 
