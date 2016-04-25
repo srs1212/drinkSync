@@ -74,7 +74,7 @@ var styles = StyleSheet.create({
   // }
 });
 
-var allAlcoholButtons = ["Gin", "Tequila", "Vodka", "Brandy", "Whiskey", "Rum", "Liqueur", "Champagne", "Beer","Wine"];
+var allAlcoholButtons = ["Gin", "Tequila", "Whiskey",  "Liqueur", "Vermouth", "Rum", "Vodka", "Brandy", "Wine", "Champagne"];
 
 var AlcoholFilterButtons = React.createClass({
   chooseButtonStyle: function(item){

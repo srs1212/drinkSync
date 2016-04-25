@@ -6,15 +6,10 @@ var React = require('react-native');
 
 var {
   StyleSheet,
-  Text,
-  View,
   ActivityIndicatorIOS,
 } = React;
 
 var styles = StyleSheet.create({
-  title: {
-    fontWeight: '500',
-  },
   containerdataNotReady: {
     flex: 1, 
     justifyContent: 'center',
@@ -37,7 +32,13 @@ var Geolocation = React.createClass({
         var initialPosition = position;
         this.setState({initialPosition});
       },
-      (error) => alert(error.message),
+      (error) => {
+        console.log(error.message);
+        alert('You have denied location access to Drink Sync, therefore we have set it to Missoula, MT. Please go to Settings> General> Reset to see results for your current location.');
+        this.setState({
+         initialPosition: {coords: {latitude: 46.861321, longitude: -113.983213}}
+        });
+      },
       {enableHighAccuracy: true, timeout: 20000, maximumAge: 1000}
     );
     this.watchID = navigator.geolocation.watchPosition((position) => {
@@ -57,7 +58,6 @@ var Geolocation = React.createClass({
       )
   },
   render: function (){
-    // console.log('in geolocation', this.state.initialPosition);
     var  isDataReady = this.state.initialPosition === 'unknown' ? this.dataNotReady() : <DataAndLogic initialPosition={this.state.initialPosition} />
     return (
       isDataReady
