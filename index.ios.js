@@ -9,7 +9,7 @@ var Geolocation = require('./Geolocation');
 var drinkSync = React.createClass({
   getInitialState: function() {
     return {
-      legal: false
+      legal: true
     };
   },
   handleLegalSubmit: function() {

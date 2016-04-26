@@ -19,7 +19,7 @@ var DataAndLogic = React.createClass({
       userLocationLon: -114.1,
       temp: 0,
       precip: 0,
-      icon: null,
+      icon: 'rainy',
       date: null,
       day: null,
       initialLoad: true,
@@ -123,7 +123,7 @@ var DataAndLogic = React.createClass({
 
   render: function(){
     // console.log('user lat & lon', this.state.userLocationLat, this.state.userLocationLon);
-      console.log("DATE from D&L", this.state.dateToDisplay, "day from D&L", this.state.day);
+      // console.log("DATE from D&L", this.state.dateToDisplay, "day from D&L", this.state.day);
 
       return( 
               <MainNav
