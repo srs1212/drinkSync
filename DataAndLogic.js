@@ -7,6 +7,7 @@ var drinkList = new DrinkList();
 
 var DataAndLogic = React.createClass({
   getInitialState: function(){
+    console.log("get initial state");
     return {
       location: '',
       userLocationLat: 46.93,
@@ -28,7 +29,8 @@ var DataAndLogic = React.createClass({
         alcohol: []
         },
        sortedDrinkList: [],
-       filteredDrinkList: []
+       filteredDrinkList: [],
+       currentDrinkIndex: 0
       }   
   },
   componentWillMount: function(){
@@ -116,34 +118,35 @@ var DataAndLogic = React.createClass({
   
   handleNextDrinkButton: function(){
     // console.log("Length", this.state.sortedDrinkList.length );
-    if(this.state.sortedDrinkList.length === 1){
-      console.log("End of List");
+    var sortedDrinkList = this.state.sortedDrinkList;
+
+    var newIndex = this.state.currentDrinkIndex + 1;
+    console.log("next drink here", newIndex, sortedDrinkList.length);
+
+    if(newIndex < this.state.sortedDrinkList.length){
+      return this.setState({
+            drink: sortedDrinkList[newIndex],
+            currentDrinkIndex: newIndex });
+      } else {
       alert ("You've reached the end of our drink list");
-      return;
-    } 
-    this.state.sortedDrinkList.shift(); 
-
-    var nextDrink = this.state.sortedDrinkList;
-
-    this.setState({
-      drink: nextDrink[0],
-    });
+    }
+      
   },
 
    handlePreviousDrinkButton: function(){
-    // console.log("Length", this.state.sortedDrinkList.length );
-    if(this.state.sortedDrinkList.length === 1){
-      console.log("End of List");
-      alert ("You've reached the end of our drink list");
-      return;
-    } 
-    this.state.sortedDrinkList.shift(); 
+        var sortedDrinkList = this.state.sortedDrinkList;
 
-    var nextDrink = this.state.sortedDrinkList;
+    var newIndex = this.state.currentDrinkIndex - 1;
+    console.log("previous drink here", newIndex, sortedDrinkList.length);
 
-    this.setState({
-      drink: nextDrink[0],
-    });
+    if(newIndex >= 0){
+      return this.setState({
+            drink: sortedDrinkList[newIndex],
+            currentDrinkIndex: newIndex });
+      } else {
+      alert ("You're at the BEST DRINK!");
+    }
+      
   },
 
   render: function(){
@@ -163,6 +166,7 @@ var DataAndLogic = React.createClass({
               handleFilterAlcoholState = {this.handleFilterAlcoholState}
               handleApplyFilterButton = {this.handleApplyFilterButton}
               handleNextDrinkButton = {this.handleNextDrinkButton}
+              handlePreviousDrinkButton = {this.handlePreviousDrinkButton}
               />
           )
     }

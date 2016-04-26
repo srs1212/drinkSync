@@ -46,7 +46,8 @@ render: function() {
                 icon = {this.props.icon}
                 icon_url = {this.props.icon_url} 
                 drink = {this.props.drink}
-                handleNextDrinkButton = {this.props.handleNextDrinkButton} />
+                handleNextDrinkButton = {this.props.handleNextDrinkButton}
+                handlePreviousDrinkButton = {this.props.handlePreviousDrinkButton} />
 
             </ScrollableTabView>
             );

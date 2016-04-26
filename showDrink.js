@@ -72,7 +72,7 @@ var styles = StyleSheet.create({
     flex: 1
   },
 
-      showPreviousButton: {
+      showPrevButton: {
         flex: 1,
       },
 
@@ -123,15 +123,10 @@ var ShowDrink = React.createClass({
                 <View style={[styles.drinkNameWrapper, this.border('red')]}> 
                   <DrinkDetails drink = {this.props.drink}/>
                 </View>
-                <View style={[styles.showNextButton, this.border('red')]}> 
-                  <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
-                </View>
-
-
             </View>
                    <View style={[styles.bothButtons, this.border('orange')]}>  
-                     <View style={[styles.showNextButton, this.border('grey')]}> 
-                        <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
+                     <View style={[styles.showPrevButton, this.border('grey')]}> 
+                        <ShowPreviousButton handlePreviousDrinkButton = {this.props.handlePreviousDrinkButton} />
                      </View>
                       <View style={[styles.showNextButton, this.border('grey')]}> 
                         <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />

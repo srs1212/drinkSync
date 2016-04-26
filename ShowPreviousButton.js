@@ -37,7 +37,7 @@ var styles = StyleSheet.create({
 
 });
 
-var ShowNextButton = React.createClass({
+var ShowPreviousButton = React.createClass({
  render: function(){
    var displayDrinkName = this.props.drinkName;
    var image = this.props.image;
@@ -46,8 +46,8 @@ var ShowNextButton = React.createClass({
          <View style={[styles.container, this.border('green')]}>
            <View style={[styles.iconWrapper, this.border('red')]}>
                   <Button style={styles.buttonStyleUp}
-                    onPress={() => {this.props.handleNextDrinkButton()}}>
-                     Next Best Drink
+                    onPress={() => {this.props.handlePreviousDrinkButton()}}>
+                     Previous Best Drink
                   </Button> 
            </View>
          </View>
@@ -63,4 +63,4 @@ var ShowNextButton = React.createClass({
 
 
 
-module.exports = ShowNextButton;
+module.exports = ShowPreviousButton;
