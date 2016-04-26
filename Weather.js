@@ -3,7 +3,8 @@
 var React = require('react-native');
 var theDate = new Date();
 var timeAmPm = theDate.toLocaleTimeString().replace(/([\d]+:[\d]{2}).*([A-Z]{2}$)/, "$1$2");
-var dateToDisplay = "It's "  + timeAmPm + " on " + theDate.toString().substr(0,10);
+// var dateToDisplay = "It's "  + timeAmPm + " on " + theDate.toString().substr(0,10);
+
 
 var {
   StyleSheet,
@@ -24,20 +25,24 @@ var styles = StyleSheet.create({
     // paddingBottom: 15
   },
   textWrapper: { 
+    // flexDirection: 'column',
     flex: 10,
     justifyContent: 'center',
     alignItems: 'center'
     // paddingLeft: 10,
-    // paddingTop: 15
-
+    // paddingTop: 1
   },
-    textNow: {
-      // color: '#6f0909',
-      color: 'black',
-      fontFamily: 'Cochin-Bold',
-      fontSize: 15,
-    },
+  textNow: {
+    // flex: 1,
+    // flexWrap: 'wrap',
+    color: '#6f0909',
+    fontFamily: 'Cochin-Bold',
+    fontSize: 15,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+  },
   weathericon: {
+   // flex: 1,
    width: 50,
    height: 50,
 
@@ -49,11 +54,10 @@ var styles = StyleSheet.create({
 });
 
 var Weather = React.createClass({
- getDayOfWeek: function() {
-   var weekday = theDate.getDay();
-   return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][weekday];
- },
-
+  getDayOfWeek: function() {
+    var weekday = theDate.getDay();
+    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][weekday];
+  },
  drinkSyncRecommends: function() {
    var location = this.props.location
    var temp = this.props.temp
@@ -70,15 +74,14 @@ var Weather = React.createClass({
    } else {
      return (
             <View style={[styles.textWrapper, this.border('blue')]}>
-               <Text style={styles.textNow}>Enjoy your {temp}º {this.getDayOfWeek()}</Text> 
-               <Text style={styles.textNow}>in {location}. DrinkSync</Text>
-               <Text style={styles.textNow}>recommends ordering a...</Text>
+               <Text>Enjoy your {temp}º {this.getDayOfWeek()}</Text> 
+               <Text>in {location}. DrinkSync</Text>
+               <Text>recommends ordering a...</Text>
             </View>
             );
 
    }
  },
-
  render: function(){
    var location = this.props.location
    var temp = this.props.temp
@@ -103,4 +106,6 @@ return(
    }
  }
 });
+
 module.exports = Weather;
+
