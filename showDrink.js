@@ -42,10 +42,14 @@ var styles = StyleSheet.create({
   drinkNameWrapper: { 
     flex: 6,
   },
-  showNextButton: {
+  buttonsWrapper: {
     flex: 1,
+    flexDirection: 'row',
   },/////////////
 
+  button: {
+    flex: 1
+  },
   headerWrapper: {
     flex: 1
   },
@@ -66,21 +70,6 @@ var styles = StyleSheet.create({
     fontFamily: 'Cochin-BoldItalic',
     fontSize: 20 
   },
-
-  bothButtons: {
-    flexDirection: 'row',
-    flex: 1
-  },
-
-      showPrevButton: {
-        flex: 1,
-      },
-
-      showNextButton: {
-        flex: 1,
-      },
-
-
   drinkDetails: { 
     flex: 2.5,
     flexDirection: 'row',
@@ -105,9 +94,13 @@ var ShowDrink = React.createClass({
           color="black"/>
       )
   },
+        // isDrinkReady = ? this.dataNotReady() :  <DrinkDetails drink = {this.props.drink}/>
+    // var sortedDrink = this.props.sortedDrinkList[0];
+    // var filteredDrink = this.props.filteredDrinkList[0];
+    // console.log('in show drink', sortedDrink, filteredDrink );
   showDrink: function(){ 
-    return(   
-          <View style={styles.container}>
+    return (  
+        <View style={styles.container}>
 
             <View style={[styles.headerContainer, this.border('green')]}>
               <View style={styles.headerWrapper}>
@@ -116,28 +109,27 @@ var ShowDrink = React.createClass({
             </View> 
 
             <View style={[styles.bodyContainer, this.border('green')]}>
-
                 <View style={[styles.weatherWrapper, this.border('red')]}> 
                   <Weather location={this.props.location} temp={this.props.temp} icon={this.props.icon} icon_url={this.props.icon_url} />
                 </View>
                 <View style={[styles.drinkNameWrapper, this.border('red')]}> 
                   <DrinkDetails drink = {this.props.drink}/>
                 </View>
-            </View>
-                   <View style={[styles.bothButtons, this.border('orange')]}>  
-                     <View style={[styles.showPrevButton, this.border('grey')]}> 
-                        <ShowPreviousButton handlePreviousDrinkButton = {this.props.handlePreviousDrinkButton} />
-                     </View>
-                      <View style={[styles.showNextButton, this.border('grey')]}> 
-                        <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
-                     </View>
+
+                <View style={[styles.buttonsWrapper, this.border('red')]}> 
+                  <View style={[styles.button, this.border('blue')]}> 
+                    <ShowPreviousButton handlePreviousDrinkButton = {this.props.handlePreviousDrinkButton} sortedDrinkList = {this.props.sortedDrinkList} />
                   </View>
-          </View>
+                  <View style={[styles.button, this.border('blue')]}> 
+                    <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
+                  </View>
+                </View>
+            </View>
+        </View> 
 
           )
   },  
   render: function(){
-     // console.log('in show drink', this.props.drink);
     var  isDataReady = (this.props.location && this.props.drink.drinkName) === '' ? this.dataNotReady() : this.showDrink();
     return (
       isDataReady

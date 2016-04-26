@@ -20,33 +20,6 @@ var {
 } = React;
 
 
-                // <View style={[styles.drinkNameWrapper, this.border('pink')]}> 
-                //     <DrinkName image={this.props.drink ? this.props.drink.image : ''} 
-                //     drinkName={this.props.drink ? this.props.drink.drinkName : ''} />
-                // </View>
-                // <View style={[styles.drinkDetails, this.border('blue')]}> 
-                //     <View style={[styles.ingredientWrapper, this.border('green')]}>
-                //         <View> 
-                //            <Text style={[styles.ingredRecipText, this.border('yellow')]}>
-                //            Ingredients
-                //            </Text>
-                //         </View>
-                //         <View>
-                //         <Ingredients ingredients={this.props.drink ? this.props.drink.ingredients : ''} />
-                //         </View>
-                //     </View>
-                //     <View style={[styles.recipeWrapper, this.border('purple')]}>
-                //         <View> 
-                //            <Text style={[styles.ingredRecipText, this.border('orange')]}>
-                //            Recipe
-                //            </Text>
-                //         </View>
-                //         <View>
-                //         <Recipe recipe={this.props.drink ? this.props.drink.recipe : ''} />
-                //         </View>
-                //     </View>
-                // </View>
-
 var styles = StyleSheet.create({
   container: {
     flex: 1, 
@@ -84,7 +57,7 @@ var DrinkDetails = React.createClass({
     var ingredients = this.props.drink.ingredients
     var image = this.props.drink.image
 
-    console.log("in drink Details", ingredients);
+    // console.log("in drink Details", ingredients);
     return(   
           <View style={[styles.container, this.border('green')]}>
 

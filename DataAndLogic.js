@@ -10,8 +10,8 @@ var DataAndLogic = React.createClass({
     console.log("get initial state");
     return {
       location: '',
-      userLocationLat: 46.93,
-      userLocationLon: -114.1,
+      userLocationLat: null,
+      userLocationLon: null,
       temp: 0,
       precip: 0,
       icon: null,
@@ -20,6 +20,7 @@ var DataAndLogic = React.createClass({
       initialLoad: true,
       icon_url: '',
       mainNavPage: 1,
+      currentDrinkName: '',
       filterAlcohol: [],
       drink: {
         drinkName: '',
@@ -69,7 +70,7 @@ var DataAndLogic = React.createClass({
       icon_url = responseText.current_observation.icon_url;
       var sortedDrinkList = drinkList.getSortedDrinkList(temp, precip, day, season, time);
       var bestDrink = drinkList.getSortedDrinkList(temp, precip, day, season, time)[0];
-      console.log('fetching', sortedDrinkList);
+      // console.log('sorted drink', sortedDrinkList[0].drinkName);
       this.setState({
         temp: temp,
         location: location,
@@ -102,43 +103,37 @@ var DataAndLogic = React.createClass({
   handleApplyFilterButton: function(){
     var sortedDrinkList = this.state.sortedDrinkList;
     var filterAlcohol = this.state.filterAlcohol;
-    console.log("sortedDrinkList?", sortedDrinkList, "filtered etoh", filterAlcohol);
+    // console.log("sortedDrinkList?", sortedDrinkList, "filtered etoh", filterAlcohol);
     var filteredDrinkList = sortedDrinkList.filter( function(drink) {
       return drink.alcohol.every( function(alc) {
         return !filterAlcohol.includes(alc);
       });
     });
     this.fetchWeatherData(filteredDrinkList); 
-    console.log('minus alcohols', filteredDrinkList);
+    console.log('filtered drink', filteredDrinkList[0].drinkName);
     this.setState({
       mainNavPage: 1,
       initialLoad: false,
     });
   },  
-  
   handleNextDrinkButton: function(){
     // console.log("Length", this.state.sortedDrinkList.length );
     var sortedDrinkList = this.state.sortedDrinkList;
-
     var newIndex = this.state.currentDrinkIndex + 1;
     console.log("next drink here", newIndex, sortedDrinkList.length);
-
     if(newIndex < this.state.sortedDrinkList.length){
       return this.setState({
             drink: sortedDrinkList[newIndex],
             currentDrinkIndex: newIndex });
       } else {
-      alert ("You've reached the end of our drink list");
+      alert ("You've reached the last BEST DRINK");
     }
       
   },
-
    handlePreviousDrinkButton: function(){
         var sortedDrinkList = this.state.sortedDrinkList;
-
     var newIndex = this.state.currentDrinkIndex - 1;
     console.log("previous drink here", newIndex, sortedDrinkList.length);
-
     if(newIndex >= 0){
       return this.setState({
             drink: sortedDrinkList[newIndex],
@@ -150,6 +145,9 @@ var DataAndLogic = React.createClass({
   },
 
   render: function(){
+    // var sortedDrink = this.props.sortedDrinkList.length;
+    // var filteredDrink = this.props.filteredDrinkList.length;
+    // console.log('in data and logic', sortedDrink, filteredDrink );
       return( 
               <MainNav
               location = {this.state.location}
@@ -163,6 +161,8 @@ var DataAndLogic = React.createClass({
               filterAlcohol = {this.state.filterAlcohol}
               mainNavPage = {this.state.mainNavPage}
               initialLoad = {this.state.initialLoad}
+              sortedDrinkList = {this.state.sortedDrinkList}
+              filteredDrinkList = {this.state.filteredDrinkList}
               handleFilterAlcoholState = {this.handleFilterAlcoholState}
               handleApplyFilterButton = {this.handleApplyFilterButton}
               handleNextDrinkButton = {this.handleNextDrinkButton}
