@@ -52,9 +52,19 @@ var styles = StyleSheet.create({
     fontFamily: 'Cochin-BoldItalic',
     fontSize: 20 
   },
-  showNextButton: {
-    flex: 1,
+  bothButtons: {
+    flexDirection: 'row',
+    flex: 1
   },
+
+      showPreviousButton: {
+        flex: 1,
+      },
+
+      showNextButton: {
+        flex: 1,
+      },
+
 
   drinkDetails: { 
     flex: 2.5,
@@ -137,9 +147,14 @@ var ShowDrink = React.createClass({
                         </View>
                     </View>
                 </View>
-                 <View style={[styles.showNextButton, this.border('grey')]}> 
-                    <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
-                 </View>
+                   <View style={[styles.bothButtons, this.border('orange')]}>  
+                     <View style={[styles.showNextButton, this.border('grey')]}> 
+                        <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
+                     </View>
+                      <View style={[styles.showNextButton, this.border('grey')]}> 
+                        <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
+                     </View>
+                  </View>
           </View>
 
           )
