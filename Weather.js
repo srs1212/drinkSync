@@ -61,7 +61,7 @@ var Weather = React.createClass({
                {dateToDisplay}
               </Text>
                <Text style={styles.textNow}>
-               and {temp} deg. in {location} 
+                and {temp}&deg; in {location} 
               </Text>
              <Text style={styles.textNow}>
               Your DrinkSync perfect drink is a:
@@ -73,7 +73,7 @@ var Weather = React.createClass({
   border: function(color){
     return {
       borderColor: color,
-      borderWidth: 1
+      borderWidth: 0
     }
   }
 }); 

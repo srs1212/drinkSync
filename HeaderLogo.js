@@ -35,7 +35,7 @@ render: function(){
         <View style={[styles.container, this.border('yellow')]}>
           <View style={[styles.headerTop, this.border('blue')]}>
              <View style={[styles.imageContainer, this.border('yellow')]}>
-             <Image style={styles.image} source={{uri: 'http://i.imgur.com/k58TZ8S.jpg'}} />
+             <Image style={styles.image} source={{uri: 'http://i.imgur.com/fVEFTVh.jpg'}} />
              </View>
           </View>
         </View>

@@ -5,10 +5,10 @@ var DrinkName = require('./DrinkName');
 var ShowNextButton = require ('./ShowNextButton');
 var Ingredients = require('./Ingredients');
 var Recipe = require('./Recipe');
+var DrinkDetails = require('./DrinkDetails');
 var Dimensions = require('Dimensions');
 var windowSize = Dimensions.get('window');
 var HeaderLogo = require('./HeaderLogo');
-
 
 
 var {
@@ -20,8 +20,38 @@ var {
 } = React;
 
 var styles = StyleSheet.create({
+
+  //flex group 1
   container: {
     flex: 1, 
+  },////////////
+
+  //flex group 2 (green)
+  headerContainer: {
+    flex: 1
+  },  
+  bodyContainer: {
+    flex: 10
+  },////////////
+
+  //flex group 3 (red)
+  weatherWrapper: { 
+    flex: 1,
+  },
+  drinkNameWrapper: { 
+    flex: 6,
+  },
+  showNextButton: {
+    flex: 1,
+  },/////////////
+
+  headerWrapper: {
+    flex: 1
+  },
+  containerdataNotReady: {
+    flex: 1, 
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   bg: {
     position: 'absolute',
@@ -30,44 +60,17 @@ var styles = StyleSheet.create({
     width: windowSize.width,
     height: windowSize.height,
   },
-  containerdataNotReady: {
-    flex: 1, 
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
-  headerTop: {
-    flex: 1
-  },
-  weatherWrapper: { 
-    flex: 1,
-    paddingBottom: 5
-  },
-  drinkNameWrapper: { 
-    flex: 3.5,
-    paddingBottom: 5
-  },
   ingredRecipText: {
     color: '#6f0909',
     fontFamily: 'Cochin-BoldItalic',
     fontSize: 20 
-  },
-  showNextButton: {
-    flex: 1,
   },
 
   drinkDetails: { 
     flex: 2.5,
     flexDirection: 'row',
   },
-      ingredientWrapper: { 
-        flex: 1,
-        paddingLeft: 10
-      },
-      recipeWrapper: { 
-        flex: 1,
-        paddingRight: 10
-      },
-   buttonStyleUp: {
+  buttonStyleUp: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0, .4)',
     borderColor: '#6f0909',
@@ -78,7 +81,7 @@ var styles = StyleSheet.create({
   
 });
 //container -green
-  //headertop -blue
+  //headerWrapper -blue
   //weatherWrapper red
   //drinkNameWrapper -pink
   //drinkDetails  -blue
@@ -97,55 +100,36 @@ var ShowDrink = React.createClass({
       )
   },
   showDrink: function(){ 
-   // line 103 <Image source={{uri: 'http://i.imgur.com/23jLqI0.jpg'}} style={[styles.bg, this.border('yellow')]} /> 
     return(   
-          <View style={[styles.container, this.border('green')]}>
-          
-                <View style={[styles.headerTop, this.border('blue')]}>
-                   <HeaderLogo /> 
-                </View>
+          <View style={styles.container}>
+
+            <View style={[styles.headerContainer, this.border('green')]}>
+              <View style={styles.headerWrapper}>
+                 <HeaderLogo /> 
+              </View>
+            </View> 
+
+            <View style={[styles.bodyContainer, this.border('green')]}>
+
                 <View style={[styles.weatherWrapper, this.border('red')]}> 
-                    <Weather location={this.props.location} temp={this.props.temp}
-                     icon={this.props.icon} icon_url={this.props.icon_url} />
+                  <Weather location={this.props.location} temp={this.props.temp} icon={this.props.icon} icon_url={this.props.icon_url} />
                 </View>
-                <View style={[styles.drinkNameWrapper, this.border('pink')]}> 
-                    <DrinkName image={this.props.drink ? this.props.drink.image : ''} 
-                    drinkName={this.props.drink ? this.props.drink.drinkName : ''} />
-                    
+                <View style={[styles.drinkNameWrapper, this.border('red')]}> 
+                  <DrinkDetails drink = {this.props.drink}/>
                 </View>
-               
-                <View style={[styles.drinkDetails, this.border('blue')]}> 
-                    <View style={[styles.ingredientWrapper, this.border('green')]}>
-                        <View> 
-                           <Text style={[styles.ingredRecipText, this.border('yellow')]}>
-                           Ingredients
-                           </Text>
-                        </View>
-                        <View>
-                        <Ingredients ingredients={this.props.drink ? this.props.drink.ingredients : ''} />
-                        </View>
-                    </View>
-                    <View style={[styles.recipeWrapper, this.border('purple')]}>
-                        <View> 
-                           <Text style={[styles.ingredRecipText, this.border('orange')]}>
-                           Recipe
-                           </Text>
-                        </View>
-                        <View>
-                        <Recipe recipe={this.props.drink ? this.props.drink.recipe : ''} />
-                        </View>
-                    </View>
+                <View style={[styles.showNextButton, this.border('red')]}> 
+                  <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
                 </View>
-                 <View style={[styles.showNextButton, this.border('grey')]}> 
-                    <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
-                 </View>
+
+            </View>
+
           </View>
 
           )
   },  
   render: function(){
+     // console.log('in show drink', this.props.drink);
     var  isDataReady = (this.props.location && this.props.drink.drinkName) === '' ? this.dataNotReady() : this.showDrink();
-    // console.log('in is drinkis ready', this.props.drink.drinkName, this.props.location);
     return (
       isDataReady
       )
@@ -153,7 +137,7 @@ var ShowDrink = React.createClass({
   border: function(color){
     return {
       borderColor: color,
-      borderWidth: 1
+      borderWidth: 0
     }
   }
 }); 

@@ -5,12 +5,6 @@ var MainNav = require('./MainNav');
 var DrinkList = require ('./DrinkList');
 var drinkList = new DrinkList();
 
-// var ratingFactors = require ('./RatingFactors');
-// var userLocation = '59802';
-// var userLocationLat = '37.785834';
-// var userLocationLon = '-122.406417';
-// var fetchUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=' + userLocation + ',us&appid=22a1e092f3c7508f8ed419614d5ae7b5';
-
 var DataAndLogic = React.createClass({
   getInitialState: function(){
     return {
@@ -122,8 +116,7 @@ var DataAndLogic = React.createClass({
   },
 
   render: function(){
-    // console.log('user lat & lon', this.state.userLocationLat, this.state.userLocationLon);
-      console.log("DATE from D&L", this.state.dateToDisplay, "day from D&L", this.state.day);
+      // console.log("DATE from D&L", this.state.dateToDisplay, "day from D&L", this.state.day);
 
       return( 
               <MainNav

@@ -24,8 +24,6 @@ var styles = StyleSheet.create({
 
 var MainNav = React.createClass({
 render: function() {
-       // var changePage = this.props.changePage ? 0 : null;
-       // console.log('in MainNav', this.props.mainNavPage);
     return (
             <ScrollableTabView
               style={this.border('green')}
