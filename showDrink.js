@@ -81,7 +81,13 @@ var styles = StyleSheet.create({
     marginLeft: 3,
     marginRight: 3,
   },
-
+   bg: {
+    position: 'absolute',
+    left: 0,
+    bottom: 0,
+    width: windowSize.width,
+    height: windowSize.height,
+  },
   
 });
 
@@ -98,10 +104,9 @@ var ShowDrink = React.createClass({
     // var sortedDrink = this.props.sortedDrinkList[0];
     // var filteredDrink = this.props.filteredDrinkList[0];
     // console.log('in show drink', sortedDrink, filteredDrink );
-  showDrink: function(){ 
+  showDrink: function(){
     return (  
         <View style={styles.container}>
-
             <View style={[styles.headerContainer, this.border('green')]}>
               <View style={styles.headerWrapper}>
                  <HeaderLogo /> 
@@ -125,6 +130,7 @@ var ShowDrink = React.createClass({
                   </View>
                 </View>
             </View>
+            
         </View> 
 
           )

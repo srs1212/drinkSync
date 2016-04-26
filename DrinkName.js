@@ -11,6 +11,11 @@ var {
 var styles = StyleSheet.create({
  container: {
   flex: 1,
+  backgroundColor: 'transparent',
+  borderColor: '#6f0909',
+  borderWidth: 1,
+  // borderTopLeftRadius: 20,
+  // borderTopRightRadius: 20,
   justifyContent: 'center',
   alignItems: 'center'
  },
