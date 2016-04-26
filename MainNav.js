@@ -24,6 +24,9 @@ var styles = StyleSheet.create({
 
 var MainNav = React.createClass({
 render: function() {
+    //   var sortedDrink = this.props.sortedDrinkList.length;
+    // var filteredDrink = this.props.filteredDrinkList.length;
+    // console.log('in main nav', sortedDrink, filteredDrink );
     return (
             <ScrollableTabView
               style={this.border('green')}
@@ -46,6 +49,8 @@ render: function() {
                 icon = {this.props.icon}
                 icon_url = {this.props.icon_url} 
                 drink = {this.props.drink}
+                sortedDrinkList = {this.props.sortedDrinkList}
+                filteredDrinkList = {this.props.filteredDrinkList}
                 handleNextDrinkButton = {this.props.handleNextDrinkButton} />
 
             </ScrollableTabView>
