@@ -3,6 +3,7 @@ var React = require('react-native');
 var Weather = require('./Weather');
 var DrinkName = require('./DrinkName');
 var ShowNextButton = require ('./ShowNextButton');
+var ShowPreviousButton = require ('./ShowPreviousButton');
 var Ingredients = require('./Ingredients');
 var Recipe = require('./Recipe');
 var Dimensions = require('Dimensions');

@@ -33,7 +33,8 @@ var DataAndLogic = React.createClass({
         recipe: '',
         alcohol: []
         },
-       sortedDrinkList: []
+       sortedDrinkList: [],
+       filteredDrinkList: []
       }   
   },
   componentWillMount: function(){
@@ -51,7 +52,7 @@ var DataAndLogic = React.createClass({
     });
   },
 
-  fetchWeatherData: function(){
+  fetchWeatherData: function(arg){
     var fetchUrl = 'http://api.wunderground.com/api/0cbb2794fb744644/conditions/q/' + this.state.userLocationLat + ',' + this.state.userLocationLon + '.json';
     var temp = 0
     var location = ''
@@ -72,6 +73,7 @@ var DataAndLogic = React.createClass({
       icon_url = responseText.current_observation.icon_url;
       var sortedDrinkList = drinkList.getSortedDrinkList(temp, precip, day, season, time);
       var bestDrink = drinkList.getSortedDrinkList(temp, precip, day, season, time)[0];
+      console.log('fetching', sortedDrinkList);
       this.setState({
         temp: temp,
         location: location,
@@ -81,9 +83,14 @@ var DataAndLogic = React.createClass({
         time: time,
         icon: icon,
         icon_url: icon_url,
-        drink: bestDrink,
-        sortedDrinkList: sortedDrinkList
+ 
       });
+      if(arg){
+        this.setState({sortedDrinkList: arg })
+        this.setState({drink: this.state.sortedDrinkList[0] })
+        } else  {
+        this.setState ({sortedDrinkList: sortedDrinkList, drink: bestDrink,})
+        }
     })
     .catch((error) => {
       console.warn(error);
@@ -97,16 +104,40 @@ var DataAndLogic = React.createClass({
     });
   },
   handleApplyFilterButton: function(){
-    //moves page to drink page - now we have to remove those 'items' from the actual array
-    //use sortedDrinkList and filter through on each
-    // console.log('applying filter button');
+    var sortedDrinkList = this.state.sortedDrinkList;
+    var filterAlcohol = this.state.filterAlcohol;
+    console.log("sortedDrinkList?", sortedDrinkList, "filtered etoh", filterAlcohol);
+    var filteredDrinkList = sortedDrinkList.filter( function(drink) {
+      return drink.alcohol.every( function(alc) {
+        return !filterAlcohol.includes(alc);
+      });
+    });
+    this.fetchWeatherData(filteredDrinkList); 
+    console.log('minus alcohols', filteredDrinkList);
     this.setState({
       mainNavPage: 1,
       initialLoad: false,
     });
   },  
+  
   handleNextDrinkButton: function(){
-    console.log("Length", this.state.sortedDrinkList.length );
+    // console.log("Length", this.state.sortedDrinkList.length );
+    if(this.state.sortedDrinkList.length === 1){
+      console.log("End of List");
+      alert ("You've reached the end of our drink list");
+      return;
+    } 
+    this.state.sortedDrinkList.shift(); 
+
+    var nextDrink = this.state.sortedDrinkList;
+
+    this.setState({
+      drink: nextDrink[0],
+    });
+  },
+
+   handlePreviousDrinkButton: function(){
+    // console.log("Length", this.state.sortedDrinkList.length );
     if(this.state.sortedDrinkList.length === 1){
       console.log("End of List");
       alert ("You've reached the end of our drink list");
@@ -123,8 +154,6 @@ var DataAndLogic = React.createClass({
 
   render: function(){
     // console.log('user lat & lon', this.state.userLocationLat, this.state.userLocationLon);
-      console.log("DATE from D&L", this.state.dateToDisplay, "day from D&L", this.state.day);
-
       return( 
               <MainNav
               location = {this.state.location}
