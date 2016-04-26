@@ -28,10 +28,11 @@ var styles = StyleSheet.create({
     flex: 1,
   },
   drinkImageIngredientsWrapper: { 
-    flex: 3,
+    flex: 4,
   },
   drinkRecipe: { 
-    flex: 1.5,
+    flex: 2,
+    paddingBottom: 10
   },  
   // ingredRecipText: {
   //   color: '#6f0909',

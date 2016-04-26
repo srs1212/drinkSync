@@ -19,8 +19,9 @@ var styles = StyleSheet.create({
   },
   iconWrapper: { 
     flex: 4,
-    justifyContent: 'center',
-    alignItems: 'center' 
+    // justifyContent: 'flex-start',
+    alignItems: 'center' ,
+    // paddingBottom: 15
   },
   textWrapper: { 
     flex: 10,
@@ -31,53 +32,75 @@ var styles = StyleSheet.create({
 
   },
     textNow: {
-      color: '#6f0909',
+      // color: '#6f0909',
+      color: 'black',
       fontFamily: 'Cochin-Bold',
-      fontSize: 15
+      fontSize: 15,
     },
   weathericon: {
    width: 50,
    height: 50,
+
+ },
+ weathericonText: {
+    paddingBottom: 5,
+
  },
 });
 
 var Weather = React.createClass({
-  render: function(){
-    var location = this.props.location
-    var temp = this.props.temp
-    var icon = this.props.icon
-    var icon_url = this.props.icon_url
-    // console.log('here is the icon', icon, icon_url);
- return( 
-          <View style={[styles.container, this.border('green')]}>
-            <View style={[styles.iconWrapper, this.border('red')]}>
-              <Image style={styles.weathericon} source={{uri: icon_url}} />
-              <Text>
-              {icon}
-              </Text>
+ getDayOfWeek: function() {
+   var weekday = theDate.getDay();
+   return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][weekday];
+ },
+
+ drinkSyncRecommends: function() {
+   var location = this.props.location
+   var temp = this.props.temp
+   var icon = this.props.icon
+   var icon_url = this.props.icon_url
+   if ( temp >= 55 && temp <= 89 || icon === 'sunny' ) {
+     return (
+            <View style={[styles.textWrapper, this.border('blue')]}>
+               <Text>DrinkSync has run the numbers</Text> 
+               <Text>this beautiful {temp}º {this.getDayOfWeek()}</Text>
+               <Text>in {location} calls for a...</Text>
+             </View>
+             );
+   } else {
+     return (
+            <View style={[styles.textWrapper, this.border('blue')]}>
+               <Text style={styles.textNow}>Enjoy your {temp}º {this.getDayOfWeek()}</Text> 
+               <Text style={styles.textNow}>in {location}. DrinkSync</Text>
+               <Text style={styles.textNow}>recommends ordering a...</Text>
             </View>
-            <View style={[styles.textWrapper, this.border('black')]}>
-              <Text style={styles.textNow}>
-               {dateToDisplay}
-              </Text>
-               <Text style={styles.textNow}>
-                and {temp}&deg; in {location} 
-              </Text>
-             <Text style={styles.textNow}>
-              Your DrinkSync perfect drink is a:
-              </Text>
-            </View>
-          </View>
-          )
-  },
-  border: function(color){
-    return {
-      borderColor: color,
-      borderWidth: 0
-    }
-  }
-}); 
+            );
 
+   }
+ },
 
-
+ render: function(){
+   var location = this.props.location
+   var temp = this.props.temp
+   var icon = this.props.icon
+   var icon_url = this.props.icon_url
+return( 
+         <View style={[styles.container, this.border('green')]}>
+           <View style={[styles.iconWrapper, this.border('red')]}>
+             <Image style={styles.weathericon} source={{uri: icon_url}} />
+             <Text>
+             {icon}
+             </Text>
+           </View>
+              {this.drinkSyncRecommends()}
+         </View>
+         )
+ },
+ border: function(color){
+   return {
+     borderColor: color,
+     borderWidth: 0
+   }
+ }
+});
 module.exports = Weather;
