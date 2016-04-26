@@ -3,6 +3,7 @@ var React = require('react-native');
 var Weather = require('./Weather');
 var DrinkName = require('./DrinkName');
 var ShowNextButton = require ('./ShowNextButton');
+var ShowPreviousButton = require ('./ShowPreviousButton');
 var Ingredients = require('./Ingredients');
 var Recipe = require('./Recipe');
 var DrinkDetails = require('./DrinkDetails');
@@ -66,6 +67,20 @@ var styles = StyleSheet.create({
     fontSize: 20 
   },
 
+  bothButtons: {
+    flexDirection: 'row',
+    flex: 1
+  },
+
+      showPreviousButton: {
+        flex: 1,
+      },
+
+      showNextButton: {
+        flex: 1,
+      },
+
+
   drinkDetails: { 
     flex: 2.5,
     flexDirection: 'row',
@@ -80,15 +95,6 @@ var styles = StyleSheet.create({
 
   
 });
-//container -green
-  //headerWrapper -blue
-  //weatherWrapper red
-  //drinkNameWrapper -pink
-  //drinkDetails  -blue
-    //ingredients -green
-    //recipe -yellow
-
-//finish the weather syntax dd icons and button style to next Best Drink, format whole Drink page and incorporate the filter code
 
 var ShowDrink = React.createClass({
   dataNotReady: function(){
@@ -121,8 +127,16 @@ var ShowDrink = React.createClass({
                   <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
                 </View>
 
-            </View>
 
+            </View>
+                   <View style={[styles.bothButtons, this.border('orange')]}>  
+                     <View style={[styles.showNextButton, this.border('grey')]}> 
+                        <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
+                     </View>
+                      <View style={[styles.showNextButton, this.border('grey')]}> 
+                        <ShowNextButton handleNextDrinkButton = {this.props.handleNextDrinkButton} />
+                     </View>
+                  </View>
           </View>
 
           )

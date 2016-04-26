@@ -28,9 +28,9 @@ DrinkList.prototype.getSortedDrinkList = function(temp, precip, day, season, tim
 		return scoreB - scoreA;
 	};
 	var sortedArray = this._allDrinks.sort(comparator);
-	// console.log(sortedArray);
+	// console.log(sortedArray); works
 	return sortedArray;
-}
+};
 
 // DrinkList.prototype.bestDrink = function(precip){ //precip
 //  	return this._allDrinks.reduce(function(prev, cur){
