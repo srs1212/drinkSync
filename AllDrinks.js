@@ -375,7 +375,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Fizzy apple cocktail", 
+{"drinkName": "Fizzy Apple Cocktail", 
   "recipe": "Combine all three ingredients into a chilled glass and serve with ice and garnish.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Cup02.jpg/220px-Cup02.jpg", 
   "alcohol": ["Vodka",], 
@@ -403,7 +403,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Flaming volcano", 
+{"drinkName": "Flaming Volcano", 
   "recipe": "Combine all ingredients with 2 scoops of crushed ice in a blender, blend briefly, then pour into the volcano bowl. Pour some rum into the central crater of the volcano bowl and light it.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flaming_Volcano.jpg/220px-Flaming_Volcano.jpg", 
   "alcohol": ["Rum","Brandy",], 
@@ -459,11 +459,11 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Gin and tonic", 
+{"drinkName": "Gin & Tonic", 
   "recipe": "In a glass filled with ice cubes, add gin and tonic.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Gin_and_Tonic_with_ingredients.jpg/220px-Gin_and_Tonic_with_ingredients.jpg", 
   "alcohol": ["Gin",], 
-  "ingredients": ["Gin",], 
+  "ingredients": ["Gin", "Tonic"], 
   "drinkRating": {
     "weatherValue": {"wCold": 6, "wMod": 6, "wWarm": 8, "wHot": 9}, 
     "precipValue": {"pNone": 9, "pSome": 5}, 
@@ -487,7 +487,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Golden dream", 
+{"drinkName": "Golden Dream", 
   "recipe": "Shake with cracked ice. Strain into glass and serve.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Godlen-Dream_Mixed_Drink_Cocktail_%282360538105%29.jpg/220px-Godlen-Dream_Mixed_Drink_Cocktail_%282360538105%29.jpg", 
   "alcohol": ["Liqueur",], 
@@ -585,7 +585,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Irish coffee", 
+{"drinkName": "Irish Coffee", 
   "recipe": "Heat the coffee, whiskey and sugar; do not boil. Pour into glass and top with cream; serve hot.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/Irish_coffee_glass.jpg/220px-Irish_coffee_glass.jpg", 
   "alcohol": ["Whiskey",], 
@@ -613,7 +613,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Japanese slipper", 
+{"drinkName": "Japanese Slipper", 
   "recipe": "Shake together in a mixer with ice. Strain into glass, garnish and serve.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Japanese_slipper.jpg/220px-Japanese_slipper.jpg", 
   "alcohol": ["Liqueur",], 
@@ -716,7 +716,7 @@ var AllDrinks =
   "recipe": "Shake first 3 ingredients with ice and strain into ice-filled glass. Top with the lemonade or lemon-lime. Add ice and stir. Garnish with lemon slices and cherries.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Lynchburg_Lemonade%2C_Grindhouse_Killer_Burgers%2C_Atlanta_GA.jpg/220px-Lynchburg_Lemonade%2C_Grindhouse_Killer_Burgers%2C_Atlanta_GA.jpg", 
   "alcohol": ["Whiskey",], 
-  "ingredients": ["lemon-lime",], 
+  "ingredients": ["1¼ oz Tennessee whiskey", "¾ oz Triple sec", "2 oz Sour mix", "lemon-lime", "lemon slice", "cherries" ], 
   "drinkRating": {
     "weatherValue": {"wCold": 2, "wMod": 2, "wWarm": 5, "wHot": 10}, 
     "precipValue": {"pNone": 9, "pSome": 7}, 
@@ -796,11 +796,11 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Mint julep", 
+{"drinkName": "Mint Julep", 
   "recipe": "In a highball glass gently muddle the mint, sugar and water. Fill the glass with cracked ice, add Bourbon and stir well until the glass is well frosted. Garnish with a mint sprig.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Mint_Julep_im_Silberbecher.jpg/220px-Mint_Julep_im_Silberbecher.jpg", 
   "alcohol": ["Whiskey",], 
-  "ingredients": ["2 oz Bourbon whiskey","4 mint leaves","1 teaspoon powdered sugar","2 teaspoons water",], 
+  "ingredients": ["2 oz Bourbon whiskey","4 mint leaves","1 teaspoon powdered sugar","2 teaspoons water", "mint sprig"], 
   "drinkRating": {
     "weatherValue": {"wCold": 1, "wMod": 3, "wWarm": 6, "wHot": 9}, 
     "precipValue": {"pNone": 10, "pSome": 2}, 
@@ -824,11 +824,11 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Moscow mule", 
+{"drinkName": "Moscow Mule", 
   "recipe": "Combine vodka and ginger beer in a highball glass filled with ice. Add lime juice. Stir gently. Garnish with a lime slice and sprig of mint on the brim of the copper mug.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Moscow_Mule.jpg/220px-Moscow_Mule.jpg", 
   "alcohol": ["Vodka",], 
-  "ingredients": ["1½ oz (9 parts) vodka","¼ oz (1 part) lime juice","1¾ oz (24 parts) ginger beer",], 
+  "ingredients": ["1½ oz (9 parts) vodka","¼ oz (1 part) lime juice","1¾ oz (24 parts) ginger beer","lime slice", "sprig of mint"], 
   "drinkRating": {
     "weatherValue": {"wCold": 2, "wMod": 5, "wWarm": 10, "wHot": 8}, 
     "precipValue": {"pNone": 6, "pSome": 4}, 
@@ -870,7 +870,7 @@ var AllDrinks =
   "recipe": "Place sugar cube in old fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolved. Fill the glass with ice cubes and add whiskey. Garnish with orange twist, and a cocktail cherry.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Whiskey_Old_Fashioned1.jpg/220px-Whiskey_Old_Fashioned1.jpg", 
   "alcohol": ["Whiskey",], 
-  "ingredients": ["1½ oz Bourbon or Rye whiskey","2 dashes Angostura bitters","1 sugar cube","Few dashes plain water",], 
+  "ingredients": ["1½ oz Bourbon or Rye whiskey","2 dashes Angostura bitters","1 sugar cube","Few dashes plain water","orange twist", "cocktail cherry"], 
   "drinkRating": {
     "weatherValue": {"wCold": 7, "wMod": 9, "wWarm": 5, "wHot": 4}, 
     "precipValue": {"pNone": 4, "pSome": 7}, 
@@ -908,7 +908,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Piña colada", 
+{"drinkName": "Piña Colada", 
   "recipe": "Mix with crushed ice in blender until smooth. Pour into chilled glass, garnish and serve.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Pi%C3%B1a_Colada.jpg/220px-Pi%C3%B1a_Colada.jpg", 
   "alcohol": ["Rum",], 
@@ -922,11 +922,11 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Pink lady", 
+{"drinkName": "Pink Lady", 
   "recipe": "Shake ingredients very well with ice and strain into cocktail glass. Garnish with a cherry.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Pink_Lady_with_a_twist_of_lime%2C_in_a_cocktail_glass.jpg/220px-Pink_Lady_with_a_twist_of_lime%2C_in_a_cocktail_glass.jpg", 
   "alcohol": ["Gin",], 
-  "ingredients": ["1.5 oz. gin","4 dashes grenadine","1 egg white",], 
+  "ingredients": ["1.5 oz. gin","4 dashes grenadine","1 egg white","cherry"], 
   "drinkRating": {
     "weatherValue": {"wCold": 2, "wMod": 7, "wWarm": 8, "wHot": 5}, 
     "precipValue": {"pNone": 3, "pSome": 5}, 
@@ -950,7 +950,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Porto flip", 
+{"drinkName": "Porto Flip", 
   "recipe": "Shake ingredients together in a mixer with ice. Strain into glass, garnish and serve", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Porto_Flip.jpg/220px-Porto_Flip.jpg", 
   "alcohol": ["Wine","Brandy",], 
@@ -1020,7 +1020,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Sake bomb", 
+{"drinkName": "Sake Bomb", 
   "recipe": "The shot of sake is dropped into the beer, causing it to fizz violently. The drink should then be consumed immediately.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Sake_bomb_-_man_pounds_table_with_fist.jpg/220px-Sake_bomb_-_man_pounds_table_with_fist.jpg", 
   "alcohol": ["Wine",], 
@@ -1034,7 +1034,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Salty dog",
+{"drinkName": "Salty Dog",
   "recipe": "Shake gin and grapefruit juice in cocktail shaker. Strain into a salt-rimmed highball glass.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Salty_Dog.jpg/220px-Salty_Dog.jpg", 
   "alcohol": ["Gin","Vodka",], 
@@ -1066,7 +1066,7 @@ var AllDrinks =
   "recipe": "Build all ingredients in a highball glass filled with ice. Garnish with lime wedge.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b1/Cocktail_with_vodka.jpg/220px-Cocktail_with_vodka.jpg", 
   "alcohol": ["Vodka",], 
-  "ingredients": ["1½ oz Vodka","1¾ oz Cranberry juice","1 oz Grapefruit juice",], 
+  "ingredients": ["1½ oz Vodka","1¾ oz Cranberry juice","1 oz Grapefruit juice","lime wedge"], 
   "drinkRating": {
     "weatherValue": {"wCold": 1, "wMod": 4, "wWarm": 6, "wHot": 7}, 
     "precipValue": {"pNone": 9, "pSome": 3}, 
@@ -1108,7 +1108,7 @@ var AllDrinks =
   "recipe": "Pour all ingredients into cocktail shaker filled with ice cubes. Shake well. Strain into highball glass. Garnish with pineapple and cocktail cherry.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Singapore_Sling.jpg/220px-Singapore_Sling.jpg", 
   "alcohol": ["Gin","Liqueur",], 
-  "ingredients": ["1 oz Gin","½ oz Cherry Liqueur (cherry brandy)","¼ oz Cointreau","¼ oz DOM Bénédictine","½ oz Grenadine","1¾ oz Pineapple juice","½ oz Fresh lime juice","1 dash Angostura bitters",], 
+  "ingredients": ["1 oz Gin","½ oz Cherry Liqueur","¼ oz Cointreau","¼ oz DOM Bénédictine","½ oz Grenadine","1¾ oz Pineapple juice","½ oz Fresh lime juice","1 dash Angostura bitters",], 
   "drinkRating": {
     "weatherValue": {"wCold": 2, "wMod": 3, "wWarm": 6, "wHot": 9}, 
     "precipValue": {"pNone": 8, "pSome": 2}, 
@@ -1118,7 +1118,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Slippery nipple", 
+{"drinkName": "Slippery Nipple", 
   "recipe": "Pour the Baileys into a shot glass, then pour the Sambuca on top so that the two liquids do not mix.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/Slippery_Nipple.jpg/220px-Slippery_Nipple.jpg", 
   "alcohol": ["Liqueur",], 
@@ -1146,7 +1146,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Tequila and Tonic", 
+{"drinkName": "Tequila & Tonic", 
   "recipe": "In a glass filled with ice cubes, add tequila and tonic.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Tequila_%26_Tonic.jpg/220px-Tequila_%26_Tonic.jpg", 
   "alcohol": ["Tequila",], 
@@ -1188,7 +1188,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Tinto de verano", 
+{"drinkName": "Tinto de Verano", 
   "recipe": "Mix and serve well chilled.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Tinto_de_verano.jpg/220px-Tinto_de_verano.jpg", 
   "alcohol": ["Wine",], 
@@ -1244,7 +1244,7 @@ var AllDrinks =
   }
 },
 
-{"drinkName": "Whiskey sour", 
+{"drinkName": "Whiskey Sour", 
   "recipe": "Shake with ice. Strain into chilled glass, garnish and serve.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Whiskey_Sour.jpg/220px-Whiskey_Sour.jpg", 
   "alcohol": ["Whiskey",], 

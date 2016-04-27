@@ -26,7 +26,7 @@ var styles = StyleSheet.create({
    alignItems: 'center'
  },
   ingredientContainer: { 
-  flex: 4,
+  flex: 4.3,
   // paddingTop: 10,
    // justifyContent: 'flex-start',
    // justifyContent: 'space-around',
@@ -37,13 +37,13 @@ var styles = StyleSheet.create({
   // backgroundColor: 'rgba(0,0,0,0)'
   color: 'white',
   fontFamily: 'Cochin-BoldItalic',
-  fontSize: 25,
+  fontSize: 23,
   // paddingTop: 5,
  },
  IngredientText: {
   // backgroundColor: 'rgba(0,0,0,0)'
   color: 'white',
-  paddingBottom: 5,
+  paddingBottom: 4,
  }
 });
 

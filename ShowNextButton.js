@@ -29,12 +29,14 @@ var styles = StyleSheet.create({
  },
   buttonText: { 
     fontFamily: 'Cochin-Bold',
-    fontSize: 18
+    fontSize: 18,
+    color: 'white'
  },
   buttonStyleUp: {
     flex: 1,
     backgroundColor: 'rgba(0,0,0, .4)',
     borderColor: '#6f0909',
+    marginTop: 13,
     marginLeft: 8,
     marginRight: 15,
   },

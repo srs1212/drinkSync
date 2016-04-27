@@ -17,14 +17,33 @@ var styles = StyleSheet.create({
   // borderTopLeftRadius: 20,
   // borderTopRightRadius: 20,
   justifyContent: 'center',
-  alignItems: 'center'
+  alignItems: 'center',
+    // backgroundColor: '#6f0909',
+    borderColor: '#6f0909',
+    borderTopLeftRadius: 30 ,
+    borderTopRightRadius: 30,
+    //    color: 'white',
+    // fontFamily: 'Cochin-BoldItalic',
+    // // textDecorationLine: 'underline',
+    // fontSize: 40,
+    shadowColor: 'black', 
+    shadowOffset: { width: 3, height: 3 }, 
+    shadowOpacity: .7, shadowRadius: 6, 
  },
  drinkText: {
     color: '#6f0909',
     fontFamily: 'Cochin-BoldItalic',
     // textDecorationLine: 'underline',
-    fontSize: 40
+    paddingLeft: 5,
+    fontSize: 36,
+    backgroundColor: 'transparent',
   },
+
+
+  // simpleButton: { 
+  //   backgroundColor: '#5B29C1',
+  //  borderColor: '#48209A', borderWidth: 1, borderRadius: 4, paddingHorizontal: 20, paddingVertical: 15, shadowColor: 'darkgrey', shadowOffset: { width: 1, height: 1 }, shadowOpacity: 0.8, shadowRadius: 1, }, 
+  // simpleButtonText: { color: 'white', fontWeight: 'bold', fontSize: 16 }
 });
 
 var DrinkName = React.createClass({

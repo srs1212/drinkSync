@@ -3,7 +3,8 @@
 var React = require('react-native');
 var theDate = new Date();
 var timeAmPm = theDate.toLocaleTimeString().replace(/([\d]+:[\d]{2}).*([A-Z]{2}$)/, "$1$2");
-var dateToDisplay = "It's "  + timeAmPm + " on " + theDate.toString().substr(0,10);
+// var dateToDisplay = "It's "  + timeAmPm + " on " + theDate.toString().substr(0,10);
+
 
 var {
   StyleSheet,
@@ -19,65 +20,92 @@ var styles = StyleSheet.create({
   },
   iconWrapper: { 
     flex: 4,
-    justifyContent: 'center',
-    alignItems: 'center' 
+    // justifyContent: 'flex-start',
+    alignItems: 'center' ,
+    // paddingBottom: 15
   },
   textWrapper: { 
+    // flexDirection: 'column',
     flex: 10,
     justifyContent: 'center',
     alignItems: 'center'
     // paddingLeft: 10,
-    // paddingTop: 15
-
+    // paddingTop: 1
   },
-    textNow: {
-      color: '#6f0909',
-      fontFamily: 'Cochin-Bold',
-      fontSize: 15
-    },
+  textNow: {
+    // flex: 1,
+    // flexWrap: 'wrap',
+    color: '#6f0909',
+    fontFamily: 'Cochin-Bold',
+    fontSize: 15,
+    // justifyContent: 'center',
+    // alignItems: 'center',
+  },
   weathericon: {
+   // flex: 1,
    width: 50,
    height: 50,
+
+ },
+ weathericonText: {
+    paddingBottom: 5,
+
  },
 });
 
 var Weather = React.createClass({
-  render: function(){
-    var location = this.props.location
-    var temp = this.props.temp
-    var icon = this.props.icon
-    var icon_url = this.props.icon_url
-    // console.log('here is the icon', icon, icon_url);
- return( 
-          <View style={[styles.container, this.border('green')]}>
-            <View style={[styles.iconWrapper, this.border('red')]}>
-              <Image style={styles.weathericon} source={{uri: icon_url}} />
-              <Text>
-              {icon}
-              </Text>
-            </View>
-            <View style={[styles.textWrapper, this.border('black')]}>
-              <Text style={styles.textNow}>
-               {dateToDisplay}
-              </Text>
-               <Text style={styles.textNow}>
-                and {temp}&deg; in {location} 
-              </Text>
-             <Text style={styles.textNow}>
-              Your DrinkSync perfect drink is a:
-              </Text>
-            </View>
-          </View>
-          )
+  getDayOfWeek: function() {
+    var weekday = theDate.getDay();
+    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][weekday];
   },
-  border: function(color){
-    return {
-      borderColor: color,
-      borderWidth: 0
-    }
-  }
-}); 
+ drinkSyncRecommends: function() {
+   var location = this.props.location
+   var temp = this.props.temp
+   var icon = this.props.icon
+   var icon_url = this.props.icon_url
+   if ( temp >= 55 && temp <= 89 || icon === 'sunny' ) {
+     return (
+            <View style={[styles.textWrapper, this.border('blue')]}>
+               <Text>DrinkSync has run the numbers</Text> 
+               <Text>this beautiful {temp}º {this.getDayOfWeek()}</Text>
+               <Text>in {location} calls for a...</Text>
+             </View>
+             );
+   } else {
+     return (
+            <View style={[styles.textWrapper, this.border('blue')]}>
+               <Text>Enjoy your {temp}º {this.getDayOfWeek()}</Text> 
+               <Text>in {location}. DrinkSync</Text>
+               <Text>recommends ordering a...</Text>
+            </View>
+            );
 
-
+   }
+ },
+ render: function(){
+   var location = this.props.location
+   var temp = this.props.temp
+   var icon = this.props.icon
+   var icon_url = this.props.icon_url
+return( 
+         <View style={[styles.container, this.border('green')]}>
+           <View style={[styles.iconWrapper, this.border('red')]}>
+             <Image style={styles.weathericon} source={{uri: icon_url}} />
+             <Text>
+             {icon}
+             </Text>
+           </View>
+              {this.drinkSyncRecommends()}
+         </View>
+         )
+ },
+ border: function(color){
+   return {
+     borderColor: color,
+     borderWidth: 0
+   }
+ }
+});
 
 module.exports = Weather;
+

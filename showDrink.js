@@ -40,7 +40,7 @@ var styles = StyleSheet.create({
     flex: 1,
   },
   drinkNameWrapper: { 
-    flex: 6,
+    flex: 5,
   },
   buttonsWrapper: {
     flex: 1,
