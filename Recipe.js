@@ -29,7 +29,7 @@ var styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0)',
     fontFamily: 'Cochin-Bold',
     fontSize: 16,
-        paddingLeft: 8,
+    paddingLeft: 8,
     paddingRight: 8,
     // color: '#6f0909',
    }

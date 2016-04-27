@@ -22,7 +22,7 @@ var styles = StyleSheet.create({
     flex: 4,
     // justifyContent: 'flex-start',
     alignItems: 'center' ,
-    // paddingBottom: 15
+    paddingTop: 5
   },
   textWrapper: { 
     // flexDirection: 'column',
@@ -76,7 +76,7 @@ var Weather = React.createClass({
             <View style={[styles.textWrapper, this.border('blue')]}>
                <Text>Enjoy your {temp}º {this.getDayOfWeek()}</Text> 
                <Text>in {location}. DrinkSync</Text>
-               <Text>recommends ordering a...</Text>
+               <Text>recommends a...</Text>
             </View>
             );
 
