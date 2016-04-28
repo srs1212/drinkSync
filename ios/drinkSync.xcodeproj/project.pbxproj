@@ -276,7 +276,8 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 			);
 			name = drinkSync;
-			sourceTree = "<group>";
+			path = /Users/evanadmin/code/drinkSync/ios;
+			sourceTree = "<absolute>";
 		};
 		146834001AC3E56700842450 /* Products */ = {
 			isa = PBXGroup;
@@ -734,6 +735,7 @@
 				INFOPLIST_FILE = drinkSync/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.drinkSync.drinkSync;
 				PRODUCT_NAME = drinkSync;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -756,6 +758,7 @@
 				INFOPLIST_FILE = drinkSync/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.drinkSync.drinkSync;
 				PRODUCT_NAME = drinkSync;
 				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;

@@ -142,12 +142,12 @@ var AllDrinks =
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Bloody_Mary.jpg/220px-Bloody_Mary.jpg", 
   "alcohol": ["Vodka",], 
   "ingredients": ["1½ oz (3 parts) Vodka","3 oz (6 parts) Tomato juice","½ oz (1 part) Lemon juice","2 to 3 dashes of Worcestershire Sauce","Tabasco","Celery salt","Pepper",], 
-  "drinkRating": {
-    "weatherValue": {"wCold": 3, "wMod": 4, "wWarm": 6, "wHot": 7}, 
-    "precipValue": {"pNone": 4, "pSome": 7}, 
-    "seasonValue":{"sSpr": 4, "sSum": 6, "sFal": 8, "sWin": 3}, 
-    "dayValue": {"dMTRS": 5, "dW": 7, "dFS": 9}, 
-    "timeValue": {"tMrn": 5, "tAft": 6, "tNt": 8, "wSleep": 7}
+ "drinkRating": {
+    "weatherValue": {"wCold": 8, "wMod": 7, "wWarm": 7, "wHot": 6}, 
+    "precipValue": {"pNone": 4, "pSome": 9}, 
+    "seasonValue":{"sSpr": 6, "sSum": 5, "sFal": 8, "sWin": 10}, 
+    "dayValue": {"dMTRS": 8, "dW": 8, "dFS": 10}, 
+    "timeValue": {"tMrn": 10, "tAft": 8, "tNt": 5, "wSleep": 5}
   }
 },
 
@@ -234,6 +234,21 @@ var AllDrinks =
     "timeValue": {"tMrn": 4, "tAft": 6, "tNt": 7, "wSleep": 5}
   }
 },
+
+{"drinkName": "Casesar", 
+  "recipe": "Worcestershire Sauce, Sriracha or lime Cholula, lemon juice, olive juice, salt and pepper. Rim with celery salt, fill pint glass with ice - add ingredients - shake passionately & garnish. ", 
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Caesar_Cocktail.JPG/220px-Caesar_Cocktail.JPG", 
+  "alcohol": ["Vodka",], 
+  "ingredients": ["3 parts Vodka","9 Clamato juice", "Cap of Lemon juice", "2 to 3 dashes of Worcestershire Sauce", "Sriracha", "Celery salt", "Pepper",], 
+  "drinkRating": {
+    "weatherValue": {"wCold": 8, "wMod": 7, "wWarm": 7, "wHot": 6}, 
+    "precipValue": {"pNone": 4, "pSome": 9}, 
+    "seasonValue":{"sSpr": 6, "sSum": 5, "sFal": 8, "sWin": 10}, 
+    "dayValue": {"dMTRS": 9, "dW": 9, "dFS": 10}, 
+    "timeValue": {"tMrn": 10, "tAft": 8, "tNt": 5, "wSleep": 5}
+  }
+},
+
 
 {"drinkName": "Caipirinha", 
   "recipe": "Place lime and sugar into old fashioned glass and muddle (mash the two ingredients together using a muddler or a wooden spoon). Fill the glass with crushed ice and add the Cachaça.", 
@@ -557,6 +572,19 @@ var AllDrinks =
   }
 },
 
+{"drinkName": "Huckleberry Hound", 
+  "recipe": "Shake ingredients with ice, then pour into the glass and serve over ice - garnish with Montana Huckleberries", 
+  "image": "http://www.trbimg.com/img-538660e1/turbine/ctn-liquor-cabinet-maggie-mcflys-20140528-001/1050/1050x591", 
+  "alcohol": ["Vodka",], 
+  "ingredients": ["2 oz. 44 North Huckleberry Vodka", "1 oz. Huckleberry syrup", "Lemonade or Limeade"], 
+  "drinkRating": {
+    "weatherValue": {"wCold": 2, "wMod": 7, "wWarm": 9, "wHot": 10}, 
+    "precipValue": {"pNone": 9, "pSome": 4}, 
+    "seasonValue":{"sSpr": 7, "sSum": 9, "sFal": 6, "sWin": 4}, 
+    "dayValue": {"dMTRS": 8, "dW": 8, "dFS": 9}, 
+    "timeValue": {"tMrn": 0, "tAft": 6, "tNt": 9, "wSleep": 0}
+  }
+},
 {"drinkName": "Hurricane", 
   "recipe": "Shake ingredients with ice, then pour into the glass and serve over ice.", 
   "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Hurricane_cocktail.jpg/220px-Hurricane_cocktail.jpg", 
@@ -566,8 +594,8 @@ var AllDrinks =
     "weatherValue": {"wCold": 2, "wMod": 3, "wWarm": 8, "wHot": 9}, 
     "precipValue": {"pNone": 8, "pSome": 4}, 
     "seasonValue":{"sSpr": 7, "sSum": 9, "sFal": 6, "sWin": 4}, 
-    "dayValue": {"dMTRS": 0, "dW": 5, "dFS": 9}, 
-    "timeValue": {"tMrn": 0, "tAft": 0, "tNt": 8, "wSleep": 0}
+    "dayValue": {"dMTRS": 1, "dW": 5, "dFS": 9}, 
+    "timeValue": {"tMrn": 0, "tAft": 5, "tNt": 8, "wSleep": 0}
   }
 },
 
@@ -760,11 +788,11 @@ var AllDrinks =
   "alcohol": ["Tequila",], 
   "ingredients": ["1 oz (7 parts) tequila","¾ oz (4 parts) Cointreau","½ oz (3 parts) lime juice",], 
   "drinkRating": {
-    "weatherValue": {"wCold": 2, "wMod": 4, "wWarm": 9, "wHot": 10}, 
+    "weatherValue": {"wCold": 2, "wMod": 4, "wWarm": 8, "wHot": 10}, 
     "precipValue": {"pNone": 9, "pSome": 2}, 
     "seasonValue":{"sSpr": 8, "sSum": 10, "sFal": 3, "sWin": 3}, 
-    "dayValue": {"dMTRS": 6, "dW": 8, "dFS": 9}, 
-    "timeValue": {"tMrn": 1, "tAft": 9, "tNt": 9, "wSleep": 1}
+    "dayValue": {"dMTRS": 5, "dW": 8, "dFS": 9}, 
+    "timeValue": {"tMrn": 1, "tAft": 7, "tNt": 9, "wSleep": 1}
   }
 },
 
@@ -792,7 +820,7 @@ var AllDrinks =
     "precipValue": {"pNone": 8, "pSome": 4}, 
     "seasonValue":{"sSpr": 9, "sSum": 8, "sFal": 5, "sWin": 4}, 
     "dayValue": {"dMTRS": 6, "dW": 7, "dFS": 9}, 
-    "timeValue": {"tMrn": 9, "tAft": 9, "tNt": 3, "wSleep": 0}
+    "timeValue": {"tMrn": 9, "tAft": 4, "tNt": 3, "wSleep": 0}
   }
 },
 
@@ -830,9 +858,9 @@ var AllDrinks =
   "alcohol": ["Vodka",], 
   "ingredients": ["1½ oz (9 parts) vodka","¼ oz (1 part) lime juice","1¾ oz (24 parts) ginger beer","lime slice", "sprig of mint"], 
   "drinkRating": {
-    "weatherValue": {"wCold": 2, "wMod": 5, "wWarm": 10, "wHot": 8}, 
+    "weatherValue": {"wCold": 2, "wMod": 5, "wWarm": 8, "wHot": 9}, 
     "precipValue": {"pNone": 6, "pSome": 4}, 
-    "seasonValue":{"sSpr": 10, "sSum": 8, "sFal": 4, "sWin": 2}, 
+    "seasonValue":{"sSpr": 9, "sSum": 8, "sFal": 4, "sWin": 2}, 
     "dayValue": {"dMTRS": 6, "dW": 7, "dFS": 8}, 
     "timeValue": {"tMrn": 2, "tAft": 8, "tNt": 9, "wSleep": 4}
   }

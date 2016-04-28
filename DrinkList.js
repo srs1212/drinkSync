@@ -28,7 +28,7 @@ DrinkList.prototype.getSortedDrinkList = function(temp, precip, day, season, tim
 		return scoreB - scoreA;
 	};
 	var sortedArray = this._allDrinks.sort(comparator);
-	// console.log(sortedArray); works
+	console.log(sortedArray)
 	return sortedArray;
 };
 
@@ -42,18 +42,19 @@ DrinkList.prototype.getSortedDrinkList = function(temp, precip, day, season, tim
 function drinkScore (drink, temp, precip, day, season, time) {
 	precip = precip || 0;
 	day = day || 0;
+
 	var score =  weatherValueRated( weatherValue(drink, temp), ratingFactors ) 
 				+ precipValueRated(precipValue(drink, precip), ratingFactors )
 				+ dayValueRated( dayValue(drink, day), ratingFactors )
 				+ seasonValueRated ( seasonValue(drink, season), ratingFactors)
 				+ timeValueRated ( timeValue(drink, time), ratingFactors);	
-	// console.log("SCORE", weatherValueRated( weatherValue(drink, temp), ratingFactors ),
-	// 			precipValueRated(precipValue(drink, precip), ratingFactors ),
-	// 			dayValueRated( dayValue(drink, day), ratingFactors ),
-	// 			seasonValueRated( seasonValue(drink, season), ratingFactors),
-	// 			timeAmPm, hoursForTime,
-	// 			timeValueRated ( timeValue(drink, time), ratingFactors),
-	// 			drink.drinkName, score);
+	console.log("SCORE", weatherValueRated( weatherValue(drink, temp), ratingFactors ),
+				precipValueRated(precipValue(drink, precip), ratingFactors ),
+				dayValueRated( dayValue(drink, day), ratingFactors ),
+				seasonValueRated( seasonValue(drink, season), ratingFactors),
+				// timeAmPm, hoursForTime,
+				timeValueRated ( timeValue(drink, time), ratingFactors),
+				drink.drinkName, score);
 
 	return score;
 };

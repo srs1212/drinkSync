@@ -56,27 +56,28 @@ var styles = StyleSheet.create({
 var Weather = React.createClass({
   getDayOfWeek: function() {
     var weekday = theDate.getDay();
-    return ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"][weekday];
+    return ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"][weekday];
   },
  drinkSyncRecommends: function() {
    var location = this.props.location
    var temp = this.props.temp
+   var tempClean = this.props.temp.toFixed([0]);
    var icon = this.props.icon
    var icon_url = this.props.icon_url
-   if ( temp >= 55 && temp <= 89 || icon === 'sunny' ) {
+   if ( temp >= 64 && temp <= 89 && icon === 'sunny' ) {
      return (
             <View style={[styles.textWrapper, this.border('blue')]}>
                <Text>DrinkSync has run the numbers</Text> 
-               <Text>this beautiful {temp}º {this.getDayOfWeek()}</Text>
+               <Text>this beautiful {tempClean}º {this.getDayOfWeek()}</Text>
                <Text>in {location} calls for a...</Text>
              </View>
              );
    } else {
      return (
             <View style={[styles.textWrapper, this.border('blue')]}>
-               <Text>Enjoy your {temp}º {this.getDayOfWeek()}</Text> 
-               <Text>in {location}. DrinkSync</Text>
-               <Text>recommends a...</Text>
+               <Text>Enjoy {location}'s {tempClean}º {this.getDayOfWeek()}.</Text> 
+               <Text>Given the day, time & temp </Text>
+               <Text>DrinkSync recommends a...</Text>
             </View>
             );
 
